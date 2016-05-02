@@ -1,0 +1,1 @@
+email=pawel.kumar@revv.co.in|password=revv1234|deviceType=ios|deviceName=WEB|deviceToken=revv_desktop|appVersion=1.0|
