@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Weekday"
+           tests="4"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.527">
+  <properties />
+  
+  
+            <testcase name="bookAPI" time="0.434" classname="com.revv.util.weekDay" />
+                <testcase name="getCarInfo" time="0.429" classname="com.revv.util.weekDay" />
+                <testcase name="PostRESTAPI" time="1.259" classname="com.revv.util.weekDay" />
+                <testcase name="getPriceInfo" time="0.405" classname="com.revv.util.weekDay" />
+      
+</testsuite>

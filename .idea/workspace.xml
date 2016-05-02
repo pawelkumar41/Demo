@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a00fb33d-60da-4f60-85c4-6ce1880cef01" name="Default" comment="" />
+    <list default="true" id="a00fb33d-60da-4f60-85c4-6ce1880cef01" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/reportng_1_1_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/velocity_dep_1_4.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/revv/Database/Connection.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revv/util/weekDay.class" afterPath="$PROJECT_DIR$/target/classes/com/revv/util/weekDay.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RevvApp.iml" afterPath="$PROJECT_DIR$/RevvApp.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demoApplication.log" afterPath="$PROJECT_DIR$/demoApplication.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revv/util/weekDay.java" afterPath="$PROJECT_DIR$/src/main/java/com/revv/util/weekDay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testsuite/Peakseason.xml" afterPath="$PROJECT_DIR$/testsuite/Peakseason.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testsuite/Weekday.xml" afterPath="$PROJECT_DIR$/testsuite/Weekday.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testsuite/Weekend.xml" afterPath="$PROJECT_DIR$/testsuite/Weekend.xml" />
+    </list>
     <ignored path="RevvApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -34,52 +48,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="weekDay.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/util/weekDay.java">
+      <file leaf-file-name="Weekday.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testsuite/Weekday.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#12135#12161#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-4.375">
+              <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weekEnd.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/util/weekEnd.java">
+      <file leaf-file-name="overview.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test-output/html/overview.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5758#5774#0" expanded="true" />
-                <element signature="e#12657#12683#0" expanded="false" />
-              </folding>
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="peakSeason.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/util/peakSeason.java">
+      <file leaf-file-name="reportng.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test-output/html/reportng.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5761#5777#0" expanded="true" />
-                <element signature="e#12660#12686#0" expanded="false" />
-              </folding>
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="peakSeason.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/testdata/peakSeason.txt">
+      <file leaf-file-name="reportng.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test-output/html/reportng.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="69" selection-start-line="0" selection-start-column="69" selection-end-line="0" selection-end-column="69" />
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sorttable.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test-output/html/sorttable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="suite1_test1_results.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test-output/html/suite1_test1_results.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="34.583332">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="suites.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test-output/html/suites.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -88,49 +121,21 @@
       <file leaf-file-name="Peakseason.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testsuite/Peakseason.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state vertical-scroll-proportion="-8.125">
+              <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="weekEnd.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/testdata/weekEnd.txt">
+      <file leaf-file-name="MongoConnection.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/Database/MongoConnection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="53" selection-start-line="0" selection-start-column="53" selection-end-line="0" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="weekDay.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/testdata/weekDay.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="150" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Weekday.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testsuite/Weekday.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Connection.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/Database/Connection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46551725">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-              <folding />
+            <state vertical-scroll-proportion="0.21052632">
+              <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,8 +143,8 @@
       <file leaf-file-name="Weekend.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testsuite/Weekend.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625">
-              <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+            <state vertical-scroll-proportion="-4.375">
+              <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -153,6 +158,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -172,22 +180,25 @@
         <option value="$PROJECT_DIR$/src/main/java/com/revv/ruleengine/rule.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/Login/LoginRevv.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/util/base.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/revv/Database/Connection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/common/ExcelDataProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/testdata/logindetails" />
         <option value="$PROJECT_DIR$/src/test/java/Weekday.java" />
         <option value="$PROJECT_DIR$/testsuite/ok.xml" />
-        <option value="$PROJECT_DIR$/testsuite/Weekend.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/testdata/logindetails.txt" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/testdata/carINFO.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/common/commons.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/revv/util/weekDay.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/util/weekEnd.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/util/peakSeason.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/testdata/weekEnd.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/revv/testdata/peakSeason.txt" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/revv/Database/MongoDBJDBC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/revv/util/weekDay.java" />
+        <option value="$PROJECT_DIR$/testsuite/Weekend.xml" />
         <option value="$PROJECT_DIR$/testsuite/Peakseason.xml" />
+        <option value="$PROJECT_DIR$/testsuite/Weekday.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/revv/Database/Connection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/revv/Database/MongoConnection.java" />
       </list>
     </option>
   </component>
@@ -322,10 +333,6 @@
               <option name="myItemId" value="RevvApp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -348,6 +355,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="testsuite" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RevvApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RevvApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test-output" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -384,6 +405,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -442,10 +467,6 @@
               <option name="myItemId" value="revv" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="testdata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -477,36 +498,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RevvApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="RevvApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="revv" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -515,11 +506,11 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.44827586" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/json-20090211.jar!/" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/guice-3.0.jar!/" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -535,7 +526,7 @@
       <recent name="$PROJECT_DIR$/src/com.revv/Util" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekend.xml">
+  <component name="RunManager">
     <configuration default="false" name="weekDay" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -552,39 +543,6 @@
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
-    <configuration default="false" name="weekDay.getPriceInfo" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.revv.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="RevvApp" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="com.revv.util" />
-      <option name="MAIN_CLASS_NAME" value="com.revv.util.weekDay" />
-      <option name="METHOD_NAME" value="getPriceInfo" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -684,6 +642,26 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="false" name="MongoConnection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.revv.Database.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.revv.Database.MongoConnection" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="RevvApp" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -966,18 +944,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="TestNG.weekDay" />
-      <item index="1" class="java.lang.String" itemvalue="TestNG.weekDay.getPriceInfo" />
-      <item index="2" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" />
-      <item index="3" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Peakseason.xml" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekend.xml" />
+      <item index="1" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" />
+      <item index="2" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Peakseason.xml" />
+      <item index="3" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekend.xml" />
+      <item index="4" class="java.lang.String" itemvalue="Application.MongoConnection" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekend.xml" />
+        <item index="0" class="java.lang.String" itemvalue="Application.MongoConnection" />
         <item index="1" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" />
         <item index="2" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Peakseason.xml" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.weekDay" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG.weekDay.getPriceInfo" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekend.xml" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.weekDay" />
       </list>
     </recent_temporary>
   </component>
@@ -998,37 +976,37 @@
     <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Peakseason_xml - 2016.05.02 at 12h 52m 20s.xml">
       <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Peakseason.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekday_xml - 2016.05.01 at 18h 05m 12s.xml">
-      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" configurationId="TestNG" />
+    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Peakseason_xml - 2016.05.02 at 17h 40m 20s.xml">
+      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Peakseason.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekday_xml - 2016.05.01 at 18h 06m 03s.xml">
-      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekday_xml - 2016.05.01 at 18h 07m 19s.xml">
-      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekday_xml - 2016.05.01 at 18h 16m 49s.xml">
-      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" configurationId="TestNG" />
+    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Peakseason_xml - 2016.05.02 at 17h 42m 19s.xml">
+      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Peakseason.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekday_xml - 2016.05.02 at 12h 54m 35s.xml">
+      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekday_xml - 2016.05.02 at 17h 31m 59s.xml">
+      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekday_xml - 2016.05.02 at 17h 35m 50s.xml">
+      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekday_xml - 2016.05.02 at 17h 39m 02s.xml">
+      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekday_xml - 2016.05.02 at 17h 42m 29s.xml">
+      <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekday_xml - 2016.05.02 at 17h 43m 53s.xml">
       <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekday.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="_Users_pawelkumar_Documents_test_Automation_RevvApp_testsuite_Weekend_xml - 2016.05.02 at 12h 54m 49s.xml">
       <configuration name="/Users/pawelkumar/Documents/test/Automation/RevvApp/testsuite/Weekend.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="weekDay - 2016.04.30 at 16h 04m 11s.xml">
-      <configuration name="weekDay" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="weekDay - 2016.04.30 at 16h 04m 34s.xml">
-      <configuration name="weekDay" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="weekDay_getPriceInfo - 2016.04.30 at 15h 51m 25s.xml">
-      <configuration name="weekDay.getPriceInfo" configurationId="TestNG" />
-    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1266" height="709" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1038,7 +1016,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2001634" sideWeight="0.4878444" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.821718" sideWeight="0.49671593" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.48460293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48460293" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26797387" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1093,7 +1071,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="36" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1102,96 +1080,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/resty-0.3.2.jar!/META-INF/maven/us.monoid.web/resty/pom.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/CompareCSV.jar!/au/com/bytecode/opencsv/bean/ColumnPositionMappingStrategy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="32" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/util/weekDay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12135#12161#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/resty-0.3.2.jar!/META-INF/maven/us.monoid.web/resty/pom.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/CompareCSV.jar!/au/com/bytecode/opencsv/bean/ColumnPositionMappingStrategy.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="17" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/httpclient-4.3.5.jar!/org/apache/http/client/methods/HttpEntityEnclosingRequestBase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.5925926">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/httpclient-4.3.5.jar!/org/apache/http/client/methods/HttpPost.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.148148">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/httpcore-4.3.2.jar!/org/apache/http/message/BasicHeader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9629629">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/httpcore-4.3.2.jar!/org/apache/http/entity/AbstractHttpEntity.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.851852">
@@ -1325,14 +1213,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Downloads/json-20131018.jar!/org/json/JSONException.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.7407407">
@@ -1407,31 +1287,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/testdata/logindetails.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="113" selection-start-line="0" selection-start-column="113" selection-end-line="0" selection-end-column="113" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/common/commons.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/util/peakSeason.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5761#5777#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5761#5777#0" expanded="false" />
             <element signature="e#12660#12686#0" expanded="false" />
           </folding>
         </state>
@@ -1445,24 +1307,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/util/weekDay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="30" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#12135#12161#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/util/weekEnd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5758#5774#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5758#5774#0" expanded="false" />
             <element signature="e#12657#12683#0" expanded="false" />
           </folding>
         </state>
@@ -1484,35 +1335,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testsuite/Peakseason.xml">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state vertical-scroll-proportion="-12.291667">
+          <caret line="91" column="16" selection-start-line="91" selection-start-column="16" selection-end-line="91" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testsuite/Weekday.xml">
+    <entry file="file://$PROJECT_DIR$/.idea/copyright/profiles_settings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__org_testng_testng_6_8.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/testdata/logindetails.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="113" selection-start-line="0" selection-start-column="113" selection-end-line="0" selection-end-column="113" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/common/commons.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3820034">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/util/weekDay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="292" column="12" selection-start-line="292" selection-start-column="12" selection-end-line="292" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#12129#12155#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8-sources.jar!/org/testng/TestNG.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="901" column="0" selection-start-line="901" selection-start-column="0" selection-end-line="901" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-output/html/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-output/html/overview.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-output/html/reportng.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-output/html/reportng.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-output/html/sorttable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-output/html/suite1_test1_results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="34.583332">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-output/html/suites.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testsuite/Weekend.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="23" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/Database/Connection.java">
+    <entry file="file://$PROJECT_DIR$/testsuite/Peakseason.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46551725">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        <state vertical-scroll-proportion="-8.125">
+          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="8" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testsuite/Weekday.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.375">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/revv/Database/MongoConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21052632">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1525,7 +1503,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.44827586" />
               </list>
             </option>
           </splitter-proportions>
@@ -1537,7 +1515,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.2" />
+                <option value="0.44827586" />
               </list>
             </option>
           </splitter-proportions>
@@ -1593,7 +1571,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>httpclient-4.3.5</last-edited>
+          <last-edited>guice-3.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

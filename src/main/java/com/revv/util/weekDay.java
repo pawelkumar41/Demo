@@ -263,15 +263,10 @@ System.out.println("sssssssss"+has.get("customerId"));
             String promoCodeAmount=has.get("promoCodeAmount");
             String customerid=has.get("customerId");
 
-
-
-
-
             //Define a postRequest request
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/booking/bookByAdmin");
 
             postRequest.addHeader("content-type", "application/json");
-
 
             //postRequest.setEntity(userEntity);
             JSONObject object = new JSONObject();
@@ -294,7 +289,6 @@ System.out.println("sssssssss"+has.get("customerId"));
 
             String message;
             message = object.toString();
-
 
             postRequest.setEntity(new StringEntity(message, "UTF8"));
             //Send the request; It will immediately return the response in HttpResponse object if any

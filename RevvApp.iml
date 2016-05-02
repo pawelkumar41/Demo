@@ -14,6 +14,8 @@
     <orderEntry type="library" name="httpclient-4.3.5" level="project" />
     <orderEntry type="library" name="mongo-java-driver-3.2.2" level="project" />
     <orderEntry type="library" name="json-20131018" level="project" />
+    <orderEntry type="library" name="reportng-1.1.4" level="project" />
+    <orderEntry type="library" name="velocity-dep-1.4" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: junit:junit:3.8.1" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.resteasy:resteasy-jaxrs:2.3.1.GA" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.resteasy:jaxrs-api:2.3.1.GA" level="project" />
@@ -43,5 +45,12 @@
     <orderEntry type="library" name="Maven: org.apache.poi:poi:3.2-FINAL" level="project" />
     <orderEntry type="library" name="Maven: log4j:log4j:1.2.13" level="project" />
     <orderEntry type="library" name="Maven: net.sourceforge.jexcelapi:jxl:2.6.8-seam" level="project" />
+    <orderEntry type="library" name="Maven: org.uncommons:reportng:1.1.4" level="project" />
+    <orderEntry type="library" name="Maven: velocity:velocity:1.4" level="project" />
+    <orderEntry type="library" name="Maven: velocity:velocity-dep:1.4" level="project" />
+    <orderEntry type="library" name="Maven: com.google.inject:guice:3.0" level="project" />
+    <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
+    <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
+    <orderEntry type="library" name="guice-3.0" level="project" />
   </component>
 </module>

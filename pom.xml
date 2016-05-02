@@ -94,12 +94,24 @@
         <artifactId>testng</artifactId>
         <version>6.8</version>
     </dependency>
-
-
+    <dependency>
+        <groupId>org.uncommons</groupId>
+        <artifactId>reportng</artifactId>
+        <version>1.1.4</version>
+    </dependency>
+    <dependency>
+        <groupId>velocity</groupId>
+        <artifactId>velocity-dep</artifactId>
+        <version>1.4</version>
+    </dependency>
+    <dependency>
+        <groupId>com.google.inject</groupId>
+        <artifactId>guice</artifactId>
+        <version>3.0</version>
+    </dependency>
 </dependencies>
 <build>
     <finalName>RevvApiTest</finalName>
-
     <plugins>
         <plugin>
             <groupId>com.revv.util</groupId>

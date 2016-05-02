@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Main Test Suite" verbose="5" parallel="classes" thread-count="10">
-    <test name="test1">
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+    <test name="Weekday">
         <classes>
             <class name="com.revv.util.weekDay"/>
+            <class name="com.revv.util.weekEnd"/>
+            <class name="com.revv.util.peakSeason"/>
         </classes>
 
     </test>
