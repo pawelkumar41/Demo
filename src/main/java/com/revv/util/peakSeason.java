@@ -118,7 +118,7 @@ public class peakSeason {
 
         {
             HashMap<String,String> bookingdetails=null;
-            bookingdetails=getHashmapfromtxt("weekDay.txt");
+            bookingdetails=getHashmapfromtxt("peakSeason.txt");
             //Define a postRequest request
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/carInfo/startDate="+bookingdetails.get("startdate")+"&endDate="+bookingdetails.get("endDate")+"&longitude="+bookingdetails.get("longi")+"&latitude="+bookingdetails.get("lat")+"&carInfoID=0&bookingId=0");
 
@@ -189,7 +189,7 @@ public class peakSeason {
 
             System.out.println("dddddddddddd"+_id);
             HashMap<String,String> bookingdetails=null;
-            bookingdetails=getHashmapfromtxt("weekDay.txt");
+            bookingdetails=getHashmapfromtxt("peakSeason.txt");
             //Define a postRequest request
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/booking/carModelID="+_id+"&startDate="+bookingdetails.get("startdate")+"&endDate="+bookingdetails.get("endDate")+"&location="+bookingdetails.get("address")+"&latitude="+bookingdetails.get("lat")+"&longitude="+bookingdetails.get("longi")+"&bookingId=0");
 

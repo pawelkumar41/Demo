@@ -29,12 +29,6 @@ public static String customerid="";
      * @throws Exception
      */
 
-   // public static void main(String args[]){
-     //   PostRESTAPI();
-
-    //}
-
-
 
     public static DefaultHttpClient httpClient = new DefaultHttpClient();
     @Test(priority = 1)
@@ -198,7 +192,6 @@ System.out.println("dddddddddddd"+_id);
             String finaloutput = output.toString();
             JSONObject obj = new JSONObject(finaloutput);
             obj = obj.getJSONObject("data");
-            //JSONObject obj1 = new JSONObject(data);
             org.json.JSONArray arr = obj.getJSONArray("carDetails");
             String tot_id = "";
             for (int j = 0; j < arr.length(); j++) {

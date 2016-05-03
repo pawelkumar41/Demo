@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.527">
+           time="15.062">
   <properties />
   
   
-            <testcase name="bookAPI" time="0.434" classname="com.revv.util.weekDay" />
-                <testcase name="getCarInfo" time="0.429" classname="com.revv.util.weekDay" />
-                <testcase name="PostRESTAPI" time="1.259" classname="com.revv.util.weekDay" />
-                <testcase name="getPriceInfo" time="0.405" classname="com.revv.util.weekDay" />
+            <testcase name="getPriceInfo" time="0.526" classname="com.revv.util.weekDay" />
+                <testcase name="bookAPI" time="3.669" classname="com.revv.util.weekDay" />
+                <testcase name="getCarInfo" time="1.353" classname="com.revv.util.weekDay" />
+                <testcase name="PostRESTAPI" time="9.514" classname="com.revv.util.weekDay" />
       
 </testsuite>

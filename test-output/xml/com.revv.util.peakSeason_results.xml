@@ -4,13 +4,13 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="2.523">
+           time="14.055">
   <properties />
   
   
-            <testcase name="bookAPI" time="0.434" classname="com.revv.util.peakSeason" />
-                <testcase name="PostRESTAPI" time="1.259" classname="com.revv.util.peakSeason" />
-                <testcase name="getPriceInfo" time="0.393" classname="com.revv.util.peakSeason" />
-                <testcase name="getCarInfo" time="0.437" classname="com.revv.util.peakSeason" />
+            <testcase name="getCarInfo" time="0.379" classname="com.revv.util.peakSeason" />
+                <testcase name="bookAPI" time="4.033" classname="com.revv.util.peakSeason" />
+                <testcase name="getPriceInfo" time="2.427" classname="com.revv.util.peakSeason" />
+                <testcase name="PostRESTAPI" time="7.216" classname="com.revv.util.peakSeason" />
       
 </testsuite>
