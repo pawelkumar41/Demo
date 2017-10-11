@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Weekday"
-           tests="4"
+           tests="5"
            failures="0"
            errors="0"
            skipped="0"
-           time="14.055">
+           time="7.354">
   <properties />
   
   
-            <testcase name="PostRESTAPI" time="8.486" classname="com.revv.util.weekEnd" />
-                <testcase name="getCarInfo" time="0.786" classname="com.revv.util.weekEnd" />
-                <testcase name="getPriceInfo" time="0.350" classname="com.revv.util.weekEnd" />
-                <testcase name="bookAPI" time="4.433" classname="com.revv.util.weekEnd" />
+            <testcase name="book" time="3.323" classname="com.revv.util.weekEnd" />
+                <testcase name="getCarInfo" time="0.780" classname="com.revv.util.weekEnd" />
+                <testcase name="userLogin" time="0.068" classname="com.revv.util.weekEnd" />
+                <testcase name="adminLogin" time="3.077" classname="com.revv.util.weekEnd" />
+                <testcase name="getPriceInfoWeekday" time="0.106" classname="com.revv.util.weekEnd" />
       
 </testsuite>

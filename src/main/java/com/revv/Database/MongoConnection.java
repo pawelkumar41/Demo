@@ -1,8 +1,11 @@
+/*
 package com.revv.Database;
 
+*/
 /**
  * Created by pawelkumar on 02/05/16.
- */
+ *//*
+
 import com.mongodb.MongoClient;
 import com.mongodb.MongoException;
 import com.mongodb.WriteConcern;
@@ -41,4 +44,4 @@ public class MongoConnection {
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
         }
     }
-}
+}*/

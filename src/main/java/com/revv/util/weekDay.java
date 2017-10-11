@@ -1,13 +1,16 @@
 package com.revv.util;
 
+import com.revv.common.commons;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.utils.DateUtils;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
+import java.util.Date;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
@@ -16,14 +19,21 @@ import static com.revv.common.commons.getHashmapfromtxt;
 
 public class weekDay {
 
-public static String customerid="";
-    public static    String startdate="";
-    public static String endDate="";
-    public static  String longi="";
-    public static  String lat="";
-    String model;
-    static String _id="";
-    static HashMap<String,String> has=new HashMap<String,String>();
+    private static String customerid = "";
+    private static String accessToken = "";
+    private static String endDate = "";
+    private static String startDate = "";
+    private static String longitude1 = "";
+    private static String longitude2 = "";
+    private static String latitude1 = "";
+    private static String latitude2 = "";
+    private static String carModelId = "";
+    private static String model;
+    private static String bookingIDForCustomer="";
+    private static String _id = "";
+    private static String adminid = "";
+    private static String priceInfoId = "";
+    static HashMap<String, String> has = new HashMap<String, String>();
     /**
      * @param args
      * @throws Exception
@@ -31,52 +41,42 @@ public static String customerid="";
 
 
     public static DefaultHttpClient httpClient = new DefaultHttpClient();
+
     @Test(priority = 1)
-    public static void PostRESTAPI()  throws Exception {
+    public static void adminLogin() throws Exception {
         try
 
         {
-            HashMap<String,String> userDetails=null;
-            userDetails=getHashmapfromtxt("logindetails.txt");
-            System.out.println("xyz");
+            HashMap<String, String> adminDetails = null;
+            adminDetails = getHashmapfromtxt("adminlogin.txt");
             //Define a postRequest request
-            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/customer/login");
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/login");
             //Set the API media type in http content-type header
             postRequest.addHeader("content-type", "application/json");
-            //Set the request post body
-            // StringEntity userEntity = new StringEntity(writer.getBuffer().toString());
-            //postRequest.setEntity(userEntity);
             JSONObject object = new JSONObject();
-            object.put("email",userDetails.get("email"));
-            object.put("password", userDetails.get("password"));
-            object.put("deviceType", userDetails.get("deviceType"));
-            object.put("deviceName", userDetails.get("deviceName"));
-            object.put("deviceToken", userDetails.get("deviceToken"));
-            object.put("appVersion", userDetails.get("appVersion"));
+            object.put("email", adminDetails.get("email"));
+            object.put("password", adminDetails.get("password"));
             String message;
             message = object.toString();
             postRequest.setEntity(new StringEntity(message, "UTF8"));
-            //Send the request; It will immediately return the response in HttpResponse object if any
             HttpResponse response = httpClient.execute(postRequest);
-            //verify the valid error code first
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
             }
             //read response
-            BufferedReader br = new BufferedReader(
-                    new InputStreamReader((response.getEntity().getContent())));
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
             String output;
-            JSONObject object1 =null;
+            JSONObject object1 = null;
             while ((output = br.readLine()) != null) {
-                object1 = new JSONObject(output);
+                object = new JSONObject(output);
             }
-            String resMessage = object1.getString("message");
-            object1=object1.getJSONObject("data");
-          // object1= new JSONObject(data);
-             customerid=object1.getString("customerID");
-            //return customerid;
-            //bookAPI();
+            String resMessage = object.getString("message");
+            object1 = object.getJSONObject("data");
+            adminid = object1.getString("_id");
+            System.out.println("++Pawel++" + adminid);
+            accessToken = object1.getString("accessToken");
+            System.out.println("++Pawel++" + accessToken);
 
         } finally
 
@@ -88,62 +88,93 @@ public static String customerid="";
     }
 
     @Test(priority = 2)
-    public static void  getCarInfo()  throws Exception {
+    public static void userLogin() throws Exception {
+        try
+
+        {
+            HashMap<String, String> userDetails = null;
+            userDetails = getHashmapfromtxt("logindetails.txt");
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v2/customer/login");
+            postRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("email", userDetails.get("email"));
+            object.put("password", userDetails.get("password"));
+            object.put("deviceType", userDetails.get("deviceType"));
+            object.put("deviceName", userDetails.get("deviceName"));
+            object.put("deviceToken", userDetails.get("deviceToken"));
+            object.put("appVersion", userDetails.get("appVersion"));
+            String message;
+            message = object.toString();
+            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(postRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object = new JSONObject(output);
+            }
+            String resMessage = object.getString("message");
+            object1 = object.getJSONObject("data");
+            customerid = object1.getString("customerID");
+            System.out.println("++Pawel++" + customerid);
+
+        } finally
+
+        {
+            //Important: Close the connect
+            //  httpClient.getConnectionManager().shutdown();
+        }
+
+    }
+
+    @Test(priority = 3)
+    public static void getCarInfo() throws Exception {
 
         try
 
         {
-            HashMap<String,String> bookingdetails=null;
-            bookingdetails=getHashmapfromtxt("weekDay.txt");
-            //Define a postRequest request
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/carInfo/startDate="+bookingdetails.get("startdate")+"&endDate="+bookingdetails.get("endDate")+"&longitude="+bookingdetails.get("longi")+"&latitude="+bookingdetails.get("lat")+"&carInfoID=0&bookingId=0");
-
+            HashMap<String, String> bookingdetails;
+            bookingdetails = getHashmapfromtxt("weekDay.txt");
+            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + customerid + "&deviceType=panel");
             getRequest.addHeader("content-type", "application/json");
-
-
-            //Send the request; It will immediately return the response in HttpResponse object if any
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
             HttpResponse response = httpClient.execute(getRequest);
-            //verify the valid error code first
             int statusCode = response.getStatusLine().getStatusCode();
-            // JSONParser parser=new JSONParser();
-
-
-            //read response
-            BufferedReader br = new BufferedReader(
-                    new InputStreamReader((response.getEntity().getContent())));
-            StringBuilder output=new StringBuilder();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode + "Pawel Status Code");
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            StringBuilder output = new StringBuilder();
             String out;
             while ((out = br.readLine()) != null) {
                 output.append(out);
             }
-
-
-
-            String finaloutput=output.toString();
-            JSONObject obj = new JSONObject(finaloutput);
-            //String data=obj.getString("data");
-            obj=obj.getJSONObject("data");
-            //JSONObject obj1 = new JSONObject(data);
-            org.json.JSONArray arr = obj.getJSONArray("carDetails");
-            String tot_id="";
-            String model="";
-            HashMap<String,String> id=new HashMap<String, String>();
-            for (int j = 0; j < arr.length(); j++) {
-                JSONObject obj2 = arr.getJSONObject(j);
-                model = obj2.getString("model");
-                _id=obj2.getString("_id");
-                try {
-                    id.put(obj2.getString("model"), obj2.getString("_id"));
-                }
-                catch(Exception e){
-                    e.printStackTrace();
-                }
-
-
+            String finalOutput = output.toString();
+            JSONObject obj = new JSONObject(finalOutput);
+            obj = obj.getJSONObject("data");
+            System.out.println("++++++++++++");
+            org.json.JSONArray arr = obj.getJSONArray("carModels");
+            HashMap<String, String> id = new HashMap<String, String>();
+            // for(int i=0;i<arr.length();i++){
+            JSONObject obj2 = arr.getJSONObject(0);
+            obj2.toString();
+            System.out.println(obj2);
+            carModelId = obj2.getString("_id");
+            model = obj2.getString("model");
+            try {
+                id.put(obj2.getString("_id"), obj2.getString("model"));
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            //return id;
-            //getPriceInfo(tot_id);
-
+            System.out.println(carModelId);
+            System.out.println(model);
 
         } finally
 
@@ -153,78 +184,49 @@ public static String customerid="";
         }
     }
 
-    @Test(priority = 3)
-    public static void getPriceInfo() throws Exception {
+    @Test(priority = 4)
+    public static void getPriceInfoWeekday() throws Exception {
 
         try
 
         {
-
-
-            // has.put("carid","55fb29862fa41dba37c67c49");
-
-System.out.println("dddddddddddd"+_id);
-            HashMap<String,String> bookingdetails=null;
-            bookingdetails=getHashmapfromtxt("weekDay.txt");
+            HashMap<String, String> bookingdetails = null;
+            bookingdetails = getHashmapfromtxt("weekDay.txt");
             //Define a postRequest request
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/booking/carModelID="+_id+"&startDate="+bookingdetails.get("startdate")+"&endDate="+bookingdetails.get("endDate")+"&location="+bookingdetails.get("address")+"&latitude="+bookingdetails.get("lat")+"&longitude="+bookingdetails.get("longi")+"&bookingId=0");
-
-            getRequest.addHeader("content-type", "application/json");
-
-
-            //Send the request; It will immediately return the response in HttpResponse object if any
-            HttpResponse response = httpClient.execute(getRequest);
-            //verify the valid error code first
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v1/booking/setPriceInfo");
+            System.out.println(postRequest);
+            postRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("customerID", customerid);
+            object.put("accessToken", accessToken);
+            object.put("carModelID", carModelId);
+            object.put("latitude", bookingdetails.get("latitude1"));
+            object.put("longitude", bookingdetails.get("longitude1"));
+            object.put("startDate", bookingdetails.get("startdate"));
+            object.put("endDate", bookingdetails.get("enddate"));
+            object.put("promoCodeName", "");
+            object.put("deviceType", bookingdetails.get("panel"));
+            object.put("pricingType", 1);
+            object.put("bookingID", "0");
+            object.put("adminID", adminid);
+            object.put("useRevvCredit", false);
+            String message;
+            message = object.toString();
+            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(postRequest);
             int statusCode = response.getStatusLine().getStatusCode();
-            // JSONParser parser=new JSONParser();
-
-
-            //read response
-            BufferedReader br = new BufferedReader(
-                    new InputStreamReader((response.getEntity().getContent())));
-            StringBuilder output = new StringBuilder();
-            String out;
-            while ((out = br.readLine()) != null) {
-                output.append(out);
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
             }
-
-
-            String finaloutput = output.toString();
-            JSONObject obj = new JSONObject(finaloutput);
-            obj = obj.getJSONObject("data");
-            org.json.JSONArray arr = obj.getJSONArray("carDetails");
-            String tot_id = "";
-            for (int j = 0; j < arr.length(); j++) {
-                JSONObject obj2 = arr.getJSONObject(j);
-                has.put("carid",_id);
-                has.put("startDate",obj2.getString("startDate"));
-                has.put("endDate",obj2.getString("endDate"));
-                has.put("address",obj2.getString("address"));
-                has.put("latitude", String.valueOf(obj2.getDouble("latitude")));
-                has.put("longitude",String.valueOf(obj2.getDouble("longitude")));
-                has.put("duration",obj2.getString("duration"));
-                has.put("bookingCharges",String.valueOf(obj2.getDouble("bookingCharges")));
-                has.put("total",String.valueOf(obj2.getDouble("total")));
-                has.put("securityCharges",String.valueOf(obj2.getDouble("securityCharges")));
-                has.put("fuelInsuranceTaxes",obj2.getString("fuelInsuranceTaxes"));
-                has.put("homeDelivery",String.valueOf(obj2.getDouble("homeDelivery")));
-                has.put("priceInfoID",obj2.getString("priceInfoID"));
-                has.put("promoCodeName",obj2.getString("promoCodeName"));
-                try {
-                    has.put("promoCodeAmount",obj2.getString("promoCodeAmount"));
-
-                }catch(Exception e) {
-                    has.put("promoCodeAmount", "0");
-                }
-                has.put("customerId",customerid);
-
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
             }
-System.out.println("sssssssss"+has.get("customerId"));
-
-           // return has;
-            //  bookAPI("55fb29862fa41dba37c67c49",startDate,endDate,address,latitude,longitude,duration,bookingCharges,total,securityCharges,fuelInsuranceTaxes,homeDelivery,priceInfoID,promoCodeName,promoCodeAmount);
-
-
+            String resMessage = object1.getString("message");
+            object1 = object1.getJSONObject("data");
+            priceInfoId = object1.getString("priceInfoId");
         } finally
 
         {
@@ -233,85 +235,57 @@ System.out.println("sssssssss"+has.get("customerId"));
         }
     }
 
-    @Test(priority = 4)
-    public static void bookAPI() throws Exception {
+    @Test(priority = 5)
+    public static void book() throws Exception {
 
         try
 
         {
-            String carid=has.get("carid");
-            String startDate=has.get("startDate");
-            String endDate=has.get("endDate");
-            String address=has.get("address");
-            String latitude=has.get("latitude");
-            String longitude=has.get("longitude");
-            String duration=has.get("duration");
-            String bookingCharges=has.get("bookingCharges");
-            String total=has.get("total");
-            String securityCharges=has.get("securityCharges");
-            String fuelInsuranceTaxes=has.get("fuelInsuranceTaxes");
-            String homeDelivery=has.get("homeDelivery");
-            String priceInfoID=has.get("priceInfoID");
-            String promoCodeName=has.get("promoCodeName");
-            String promoCodeAmount=has.get("promoCodeAmount");
-            String customerid=has.get("customerId");
-
-            //Define a postRequest request
+            HashMap<String, String> bookingdetails = null;
+            bookingdetails = getHashmapfromtxt("weekDay.txt");
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/booking/bookByAdmin");
-
             postRequest.addHeader("content-type", "application/json");
-
-            //postRequest.setEntity(userEntity);
             JSONObject object = new JSONObject();
             object.put("customerID", customerid);
-            object.put("carModelID", carid);
-            object.put("startDate", startDate);
-            object.put("endDate", endDate);
-            object.put("pickUpLocation", address);
-            object.put("latitude", latitude);
-            object.put("longitude", longitude);
-            object.put("duration", duration);
-            object.put("bookingCharges", bookingCharges);
-            object.put("totalAmount", total);
-            object.put("securityDeposit", securityCharges);
-            object.put("fuelInsuranceTaxes", fuelInsuranceTaxes);
-            object.put("homeDeliveryCharge", homeDelivery);
-            object.put("priceInfoID", priceInfoID);
-            object.put("promoCodeName",promoCodeName);
-            object.put("promoCodeAmount",promoCodeAmount);
-
+            object.put("accessToken", accessToken);
+            object.put("carModelID", carModelId);
+            object.put("latitude1", bookingdetails.get("latitude1"));
+            object.put("latitude2", bookingdetails.get("latitude2"));
+            object.put("longitude1", bookingdetails.get("longitude1"));
+            object.put("longitude2", bookingdetails.get("longitude2"));
+            object.put("startDate", bookingdetails.get("startdate"));
+            object.put("endDate", bookingdetails.get("enddate"));
+            object.put("alternateIDProofType", "2");
+            object.put("adminID", adminid);
+            object.put("pickUpLocation1", bookingdetails.get("pickUpLocation1"));
+            object.put("pickUpLocation2", bookingdetails.get("pickUpLocation2"));
+            object.put("priceInfoID", priceInfoId);
             String message;
             message = object.toString();
-
             postRequest.setEntity(new StringEntity(message, "UTF8"));
-            //Send the request; It will immediately return the response in HttpResponse object if any
             HttpResponse response = httpClient.execute(postRequest);
-            //verify the valid error code first
             int statusCode = response.getStatusLine().getStatusCode();
-            //if (statusCode != 201) {
-            //throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            //}
-
-            //read response
-            BufferedReader br = new BufferedReader(
-                    new InputStreamReader((response.getEntity().getContent())));
-            String output;
-            JSONObject obj =null;
-
-            while ((output = br.readLine()) != null) {
-                obj = new JSONObject(output);
+            if (statusCode != 201) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
             }
-           // return obj.getString("message");
-
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            object1 = object1.getJSONObject("data");
+            bookingIDForCustomer = object1.getString("bookingIDForCustomer");
+            System.out.println("++Pawel++" + bookingIDForCustomer);
         } finally
 
         {
             //Important: Close the connect
-            //  httpClient.getConnectionManager().shutdown();
+            // httpClient.getConnectionManager().shutdown();
         }
+
+
     }
-
-
-
-
 }

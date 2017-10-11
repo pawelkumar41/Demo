@@ -10,7 +10,7 @@
             <class name="com.revv.util.weekDay"/>
             <class name="com.revv.util.weekEnd"/>
             <class name="com.revv.util.peakSeason"/>
-        </classes>
+          </classes>
 
-    </test>
-</suite>
+      </test>
+  </suite>
