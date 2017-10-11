@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a00fb33d-60da-4f60-85c4-6ce1880cef01" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/testdata/weekDay.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/revv/Database/MongoConnection.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revv/common/commons.class" afterPath="$PROJECT_DIR$/target/classes/com/revv/common/commons.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revv/util/peakSeason.class" afterPath="$PROJECT_DIR$/target/classes/com/revv/util/peakSeason.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revv/util/weekDay.class" afterPath="$PROJECT_DIR$/target/classes/com/revv/util/weekDay.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/revv/util/weekEnd.class" afterPath="$PROJECT_DIR$/target/classes/com/revv/util/weekEnd.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/json_20131018.xml" afterPath="$PROJECT_DIR$/.idea/libraries/json_20131018.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/RevvApp.iml" afterPath="$PROJECT_DIR$/RevvApp.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demoApplication.log" afterPath="$PROJECT_DIR$/demoApplication.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revv/Database/MongoConnection.java" afterPath="$PROJECT_DIR$/src/main/java/com/revv/Database/MongoConnection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revv/common/commons.java" afterPath="$PROJECT_DIR$/src/main/java/com/revv/common/commons.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revv/testdata/logindetails.txt" afterPath="$PROJECT_DIR$/src/main/java/com/revv/testdata/logindetails.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revv/testdata/weekDay.txt" afterPath="$PROJECT_DIR$/src/main/java/com/revv/testdata/weekDay.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revv/util/peakSeason.java" afterPath="$PROJECT_DIR$/src/main/java/com/revv/util/peakSeason.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revv/util/weekDay.java" afterPath="$PROJECT_DIR$/src/main/java/com/revv/util/weekDay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/revv/util/weekEnd.java" afterPath="$PROJECT_DIR$/src/main/java/com/revv/util/weekEnd.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/html/overview.html" afterPath="$PROJECT_DIR$/test-output/html/overview.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/html/suite1_test1_results.html" afterPath="$PROJECT_DIR$/test-output/html/suite1_test1_results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/xml/com.revv.util.peakSeason_results.xml" afterPath="$PROJECT_DIR$/test-output/xml/com.revv.util.peakSeason_results.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/xml/com.revv.util.weekDay_results.xml" afterPath="$PROJECT_DIR$/test-output/xml/com.revv.util.weekDay_results.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test-output/xml/com.revv.util.weekEnd_results.xml" afterPath="$PROJECT_DIR$/test-output/xml/com.revv.util.weekEnd_results.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testsuite/Weekday.xml" afterPath="$PROJECT_DIR$/testsuite/Weekday.xml" />
-    </list>
+    <list default="true" id="a00fb33d-60da-4f60-85c4-6ce1880cef01" name="Default" comment="" />
     <ignored path="RevvApp.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
