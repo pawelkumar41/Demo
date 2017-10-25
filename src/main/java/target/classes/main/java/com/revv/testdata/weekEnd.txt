@@ -1,1 +1,0 @@
-startdate=2016-05-19T18:30:00.000Z|endDate=2016-05-20T04:30:00.000Z|longi=77.0578855|lat=28.4603762|address=Sector%2029,%20Gurgaon,%20Haryana,%20India

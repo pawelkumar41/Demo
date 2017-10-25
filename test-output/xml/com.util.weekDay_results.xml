@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="5.702">
+           time="7.349">
   <properties />
-            <testcase name="cancelWeekdayBooking" time="0.042" classname="com.util.WeekDay">
+            <testcase name="cancelWeekdayBooking" time="0.037" classname="com.util.WeekDay">
                 <failure type="java.lang.RuntimeException"
                   message="Failed with HTTP error code : 401"
               >
@@ -31,13 +31,13 @@
           </testcase>
   
   
-            <testcase name="book" time="1.376" classname="com.util.WeekDay" />
-                <testcase name="main" time="0.860" classname="com.util.WeekDay" />
-                <testcase name="getPriceInfoWeekday" time="0.105" classname="com.util.WeekDay" />
-                <testcase name="modifyBooking" time="1.972" classname="com.util.WeekDay" />
-                <testcase name="getPriceInfoModifyWeekday" time="0.176" classname="com.util.WeekDay" />
-                <testcase name="userLogin" time="0.062" classname="com.util.WeekDay" />
-                <testcase name="getCarInfo" time="0.778" classname="com.util.WeekDay" />
-                <testcase name="getCarModifyInfo" time="0.331" classname="com.util.WeekDay" />
+            <testcase name="main" time="1.063" classname="com.util.WeekDay" />
+                <testcase name="getCarModifyInfo" time="0.382" classname="com.util.WeekDay" />
+                <testcase name="getPriceInfoWeekday" time="0.150" classname="com.util.WeekDay" />
+                <testcase name="modifyBooking" time="3.007" classname="com.util.WeekDay" />
+                <testcase name="userLogin" time="0.089" classname="com.util.WeekDay" />
+                <testcase name="getPriceInfoModifyWeekday" time="0.153" classname="com.util.WeekDay" />
+                <testcase name="getCarInfo" time="1.058" classname="com.util.WeekDay" />
+                <testcase name="book" time="1.410" classname="com.util.WeekDay" />
       
 </testsuite>

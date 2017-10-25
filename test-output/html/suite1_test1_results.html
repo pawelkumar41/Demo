@@ -12,7 +12,7 @@
 <body>
 <h1>WeekdayAutomation</h1>
 <p>
-  Test duration: 21.768s
+  Test duration: 25.053s
 </p>
 
 
@@ -20,15 +20,15 @@
   <table class="resultsTable">
     <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
-        <td colspan="3" class="group">com.util.PeakSeason</td>
+        <td colspan="3" class="group">com.util.WeekDay</td>
       </tr>
             
 <tr>
   <td class="method">
-                  peakCancelBooking
+                  cancelWeekdayBooking
       </td>
   <td class="duration">
-    1.044s
+    0.037s
   </td>
   <td class="result">
         
@@ -37,7 +37,7 @@
 
         <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>java.lang.RuntimeException: Failed with HTTP error code : 401</b></a><br />
     <div class="stackTrace" id="exception-0">
-              com.util.PeakSeason.peakCancelBooking(PeakSeason.java:476)<br />
+              com.util.WeekDay.cancelWeekdayBooking(WeekDay.java:476)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -55,15 +55,15 @@
       </td>
 </tr>
           <tr>
-        <td colspan="3" class="group">com.util.WeekDay</td>
+        <td colspan="3" class="group">com.util.WeekEnd</td>
       </tr>
             
 <tr>
   <td class="method">
-                  cancelWeekdayBooking
+                  weekendCancelBooking
       </td>
   <td class="duration">
-    0.042s
+    1.039s
   </td>
   <td class="result">
         
@@ -72,7 +72,7 @@
 
         <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse"><b>java.lang.RuntimeException: Failed with HTTP error code : 401</b></a><br />
     <div class="stackTrace" id="exception-1">
-              com.util.WeekDay.cancelWeekdayBooking(WeekDay.java:476)<br />
+              com.util.WeekEnd.weekendCancelBooking(WeekEnd.java:474)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
               sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
               sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
@@ -103,7 +103,7 @@
                   adminLogin
       </td>
   <td class="duration">
-    0.860s
+    1.070s
   </td>
   <td class="result">
         
@@ -117,7 +117,7 @@
                   book
       </td>
   <td class="duration">
-    1.342s
+    1.374s
   </td>
   <td class="result">
         
@@ -131,7 +131,7 @@
                   getCarInfo
       </td>
   <td class="duration">
-    0.686s
+    1.121s
   </td>
   <td class="result">
         
@@ -145,7 +145,7 @@
                   getCarModifyInfo
       </td>
   <td class="duration">
-    0.296s
+    0.297s
   </td>
   <td class="result">
         
@@ -159,7 +159,7 @@
                   getPriceInfoModifyPeak
       </td>
   <td class="duration">
-    0.115s
+    0.108s
   </td>
   <td class="result">
         
@@ -173,7 +173,7 @@
                   getPriceInfoWeekday
       </td>
   <td class="duration">
-    0.128s
+    0.111s
   </td>
   <td class="result">
         
@@ -187,7 +187,21 @@
                   modifyBooking
       </td>
   <td class="duration">
-    1.989s
+    3.156s
+  </td>
+  <td class="result">
+        
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  peakCancelBooking
+      </td>
+  <td class="duration">
+    3.536s
   </td>
   <td class="result">
         
@@ -201,7 +215,7 @@
                   userLogin
       </td>
   <td class="duration">
-    0.061s
+    0.084s
   </td>
   <td class="result">
         
@@ -219,7 +233,7 @@
                   book
       </td>
   <td class="duration">
-    1.376s
+    1.410s
   </td>
   <td class="result">
         
@@ -233,7 +247,7 @@
                   getCarInfo
       </td>
   <td class="duration">
-    0.778s
+    1.058s
   </td>
   <td class="result">
         
@@ -247,7 +261,7 @@
                   getCarModifyInfo
       </td>
   <td class="duration">
-    0.331s
+    0.382s
   </td>
   <td class="result">
         
@@ -261,7 +275,7 @@
                   getPriceInfoModifyWeekday
       </td>
   <td class="duration">
-    0.176s
+    0.153s
   </td>
   <td class="result">
         
@@ -275,7 +289,7 @@
                   getPriceInfoWeekday
       </td>
   <td class="duration">
-    0.105s
+    0.150s
   </td>
   <td class="result">
         
@@ -289,7 +303,7 @@
                   main
       </td>
   <td class="duration">
-    0.860s
+    1.063s
   </td>
   <td class="result">
         
@@ -303,7 +317,7 @@
                   modifyBooking
       </td>
   <td class="duration">
-    1.972s
+    3.007s
   </td>
   <td class="result">
         
@@ -317,7 +331,7 @@
                   userLogin
       </td>
   <td class="duration">
-    0.062s
+    0.089s
   </td>
   <td class="result">
         
@@ -335,7 +349,7 @@
                   adminLogin
       </td>
   <td class="duration">
-    0.861s
+    1.073s
   </td>
   <td class="result">
         
@@ -349,7 +363,7 @@
                   book
       </td>
   <td class="duration">
-    1.355s
+    1.311s
   </td>
   <td class="result">
         
@@ -363,7 +377,7 @@
                   getCarInfo
       </td>
   <td class="duration">
-    0.990s
+    1.056s
   </td>
   <td class="result">
         
@@ -377,7 +391,7 @@
                   getCarModifyInfo
       </td>
   <td class="duration">
-    0.310s
+    0.284s
   </td>
   <td class="result">
         
@@ -391,7 +405,7 @@
                   getPriceInfoModifyWeekend
       </td>
   <td class="duration">
-    0.120s
+    0.168s
   </td>
   <td class="result">
         
@@ -405,7 +419,7 @@
                   getPriceInfoWeekday
       </td>
   <td class="duration">
-    0.123s
+    0.135s
   </td>
   <td class="result">
         
@@ -419,7 +433,7 @@
                   modifyBookingWeekend
       </td>
   <td class="duration">
-    1.828s
+    1.715s
   </td>
   <td class="result">
         
@@ -433,21 +447,7 @@
                   userLogin
       </td>
   <td class="duration">
-    0.086s
-  </td>
-  <td class="result">
-        
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  weekendCancelBooking
-      </td>
-  <td class="duration">
-    3.872s
+    0.066s
   </td>
   <td class="result">
         

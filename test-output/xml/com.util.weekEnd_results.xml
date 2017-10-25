@@ -1,21 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="WeekdayAutomation"
            tests="9"
-           failures="0"
+           failures="1"
            errors="0"
            skipped="0"
-           time="9.545">
+           time="6.847">
   <properties />
+            <testcase name="weekendCancelBooking" time="1.039" classname="com.util.WeekEnd">
+                <failure type="java.lang.RuntimeException"
+                  message="Failed with HTTP error code : 401"
+              >
+<![CDATA[java.lang.RuntimeException: Failed with HTTP error code : 401
+  com.util.WeekEnd.weekendCancelBooking(WeekEnd.java:474)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:497)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+      </failure>
+
+          </testcase>
   
   
-            <testcase name="getPriceInfoWeekday" time="0.123" classname="com.util.WeekEnd" />
-                <testcase name="getPriceInfoModifyWeekend" time="0.120" classname="com.util.WeekEnd" />
-                <testcase name="getCarModifyInfo" time="0.310" classname="com.util.WeekEnd" />
-                <testcase name="book" time="1.355" classname="com.util.WeekEnd" />
-                <testcase name="getCarInfo" time="0.990" classname="com.util.WeekEnd" />
-                <testcase name="modifyBookingWeekend" time="1.828" classname="com.util.WeekEnd" />
-                <testcase name="weekendCancelBooking" time="3.872" classname="com.util.WeekEnd" />
-                <testcase name="adminLogin" time="0.861" classname="com.util.WeekEnd" />
-                <testcase name="userLogin" time="0.086" classname="com.util.WeekEnd" />
+            <testcase name="getCarModifyInfo" time="0.284" classname="com.util.WeekEnd" />
+                <testcase name="book" time="1.311" classname="com.util.WeekEnd" />
+                <testcase name="getCarInfo" time="1.056" classname="com.util.WeekEnd" />
+                <testcase name="adminLogin" time="1.073" classname="com.util.WeekEnd" />
+                <testcase name="modifyBookingWeekend" time="1.715" classname="com.util.WeekEnd" />
+                <testcase name="getPriceInfoWeekday" time="0.135" classname="com.util.WeekEnd" />
+                <testcase name="userLogin" time="0.066" classname="com.util.WeekEnd" />
+                <testcase name="getPriceInfoModifyWeekend" time="0.168" classname="com.util.WeekEnd" />
       
 </testsuite>
