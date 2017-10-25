@@ -418,7 +418,6 @@ public class WeekEnd {
             object.put("longitude2", bookingdetails.get("longitude2"));
             object.put("startDate", bookingdetails.get("startdate"));
             object.put("endDate", bookingdetails.get("enddate"));
-            //object.put("alternateIDProofType", "2");
             object.put("bookingID",bookingIDForCustomer);
             object.put("adminID", adminid);
             object.put("pickUpLocation1", bookingdetails.get("pickUpLocation1"));
