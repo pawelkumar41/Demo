@@ -4,14 +4,14 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="7.354">
+           time="3.964">
   <properties />
   
   
-            <testcase name="book" time="3.323" classname="com.revv.util.weekEnd" />
-                <testcase name="getCarInfo" time="0.780" classname="com.revv.util.weekEnd" />
-                <testcase name="userLogin" time="0.068" classname="com.revv.util.weekEnd" />
-                <testcase name="adminLogin" time="3.077" classname="com.revv.util.weekEnd" />
-                <testcase name="getPriceInfoWeekday" time="0.106" classname="com.revv.util.weekEnd" />
+            <testcase name="adminLogin" time="0.836" classname="com.util.WeekEnd" />
+                <testcase name="getCarInfo" time="1.593" classname="com.util.WeekEnd" />
+                <testcase name="userLogin" time="0.123" classname="com.util.WeekEnd" />
+                <testcase name="book" time="1.259" classname="com.util.WeekEnd" />
+                <testcase name="getPriceInfoWeekday" time="0.153" classname="com.util.WeekEnd" />
       
 </testsuite>

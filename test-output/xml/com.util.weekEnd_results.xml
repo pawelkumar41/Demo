@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="WeekdayAutomation"
+           tests="9"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="9.545">
+  <properties />
+  
+  
+            <testcase name="getPriceInfoWeekday" time="0.123" classname="com.util.WeekEnd" />
+                <testcase name="getPriceInfoModifyWeekend" time="0.120" classname="com.util.WeekEnd" />
+                <testcase name="getCarModifyInfo" time="0.310" classname="com.util.WeekEnd" />
+                <testcase name="book" time="1.355" classname="com.util.WeekEnd" />
+                <testcase name="getCarInfo" time="0.990" classname="com.util.WeekEnd" />
+                <testcase name="modifyBookingWeekend" time="1.828" classname="com.util.WeekEnd" />
+                <testcase name="weekendCancelBooking" time="3.872" classname="com.util.WeekEnd" />
+                <testcase name="adminLogin" time="0.861" classname="com.util.WeekEnd" />
+                <testcase name="userLogin" time="0.086" classname="com.util.WeekEnd" />
+      
+</testsuite>

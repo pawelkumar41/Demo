@@ -1,17 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="Weekday"
            tests="5"
-           failures="0"
+           failures="2"
            errors="0"
            skipped="0"
-           time="7.462">
+           time="2.407">
   <properties />
+            <testcase name="getPriceInfoWeekday" time="0.173" classname="com.util.PeakSeason">
+                <failure type="java.lang.RuntimeException"
+                  message="Failed with HTTP error code : 401"
+              >
+                    <![CDATA[java.lang.RuntimeException: Failed with HTTP error code : 401
+  com.util.PeakSeason.getPriceInfoWeekday(peakSeason.java:219)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:497)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+                </failure>
+
+          </testcase>
+            <testcase name="book" time="0.002" classname="com.util.PeakSeason">
+                <failure type="java.lang.IllegalStateException"
+                  message="Invalid use of BasicClientConnManager: connection still allocated.
+Make sure to release the connection before allocating another one."
+              >
+                    <![CDATA[java.lang.IllegalStateException: Invalid use of BasicClientConnManager: connection still allocated.
+Make sure to release the connection before allocating another one.
+  org.apache.http.util.Asserts.check(Asserts.java:34)
+  org.apache.http.impl.conn.BasicClientConnectionManager.getConnection(BasicClientConnectionManager.java:160)
+  org.apache.http.impl.conn.BasicClientConnectionManager$1.getConnection(BasicClientConnectionManager.java:142)
+  org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:423)
+  org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:863)
+  org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+  org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:106)
+  com.util.PeakSeason.book(peakSeason.java:266)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:497)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
+  org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
+  org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
+  org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
+  org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
+  org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
+  java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+  java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+  java.lang.Thread.run(Thread.java:745)
+]]>
+                </failure>
+
+          </testcase>
   
   
-            <testcase name="getPriceInfoWeekday" time="0.117" classname="com.revv.util.peakSeason" />
-                <testcase name="getCarInfo" time="0.866" classname="com.revv.util.peakSeason" />
-                <testcase name="adminLogin" time="3.077" classname="com.revv.util.peakSeason" />
-                <testcase name="userLogin" time="0.077" classname="com.revv.util.peakSeason" />
-                <testcase name="book" time="3.325" classname="com.revv.util.peakSeason" />
+            <testcase name="getCarInfo" time="1.278" classname="com.util.PeakSeason" />
+                <testcase name="userLogin" time="0.118" classname="com.util.PeakSeason" />
+                <testcase name="adminLogin" time="0.836" classname="com.util.PeakSeason" />
       
 </testsuite>

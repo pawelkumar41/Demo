@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Weekday1"
+           tests="5"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="3.581">
+  <properties />
+  
+  
+            <testcase name="userLogin" time="0.052" classname="com.util.WeekDay" />
+                <testcase name="main" time="1.451" classname="com.util.WeekDay" />
+                <testcase name="getPriceInfoWeekday" time="0.099" classname="com.util.WeekDay" />
+                <testcase name="getCarInfo" time="0.669" classname="com.util.WeekDay" />
+                <testcase name="book" time="1.310" classname="com.util.WeekDay" />
+      
+</testsuite>

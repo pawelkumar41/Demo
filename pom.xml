@@ -105,7 +105,7 @@
                 <goal>exec</goal>
             </goals>
             <configuration>
-                <mainClass>com.revv.util.WeekDay</mainClass>
+                <mainClass>com.util.WeekDay</mainClass>
                 <classpathScope>test</classpathScope>
 
             </configuration>
