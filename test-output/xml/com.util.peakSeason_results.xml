@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="PeakSeasonAutomation"
+<testsuite name="WeekdayAutomation"
            tests="9"
            failures="0"
            errors="0"
            skipped="0"
-           time="9.220">
+           time="8.344">
   <properties />
   
   
-            <testcase name="getCarInfo" time="0.787" classname="com.util.PeakSeason" />
-                <testcase name="userLogin" time="0.116" classname="com.util.PeakSeason" />
-                <testcase name="getPriceInfoWeekday" time="0.134" classname="com.util.PeakSeason" />
-                <testcase name="book" time="1.323" classname="com.util.PeakSeason" />
-                <testcase name="getPriceInfoModifyPeak" time="0.120" classname="com.util.PeakSeason" />
-                <testcase name="modifyBooking" time="1.791" classname="com.util.PeakSeason" />
-                <testcase name="adminLogin" time="0.821" classname="com.util.PeakSeason" />
-                <testcase name="getCarModifyInfo" time="0.389" classname="com.util.PeakSeason" />
-                <testcase name="peakCancelBooking" time="3.739" classname="com.util.PeakSeason" />
+            <testcase name="book" time="1.431" classname="com.util.PeakSeason" />
+                <testcase name="adminLogin" time="0.799" classname="com.util.PeakSeason" />
+                <testcase name="userLogin" time="0.060" classname="com.util.PeakSeason" />
+                <testcase name="getPriceInfoWeekday" time="0.108" classname="com.util.PeakSeason" />
+                <testcase name="getCarModifyInfo" time="0.251" classname="com.util.PeakSeason" />
+                <testcase name="getCarInfo" time="0.414" classname="com.util.PeakSeason" />
+                <testcase name="getPriceInfoModifyPeak" time="0.092" classname="com.util.PeakSeason" />
+                <testcase name="modifyBooking" time="1.702" classname="com.util.PeakSeason" />
+                <testcase name="peakCancelBooking" time="3.487" classname="com.util.PeakSeason" />
       
 </testsuite>

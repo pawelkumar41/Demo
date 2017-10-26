@@ -137,7 +137,7 @@ public class WeekEnd {
 
         {
             HashMap<String, String> bookingdetails;
-            bookingdetails = commons.getHashmapfromtxt("WeekEnd.txt");
+            bookingdetails = commons.getHashmapfromtxt("weekEnd.txt");
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + customerid + "&deviceType=panel");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -190,7 +190,7 @@ public class WeekEnd {
 
         {
             HashMap<String, String> bookingdetails = null;
-            bookingdetails = commons.getHashmapfromtxt("WeekEnd.txt");
+            bookingdetails = commons.getHashmapfromtxt("weekEnd.txt");
             //Define a postRequest request
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v1/booking/setPriceInfo");
             System.out.println(postRequest);
@@ -241,7 +241,7 @@ public class WeekEnd {
 
         {
             HashMap<String, String> bookingdetails = null;
-            bookingdetails = commons.getHashmapfromtxt("WeekEnd.txt");
+            bookingdetails = commons.getHashmapfromtxt("weekEnd.txt");
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/booking/bookByAdmin");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
