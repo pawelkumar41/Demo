@@ -7,10 +7,10 @@
     </listeners>
     <test name="WeekdayAutomation">
         <classes>
-            <class name="com.util.WeekDay"/>
-          </classes>
+            <class name="com.util.PromoCode"/>
+        </classes>
 
-      </test>
-  </suite>
+    </test>
+</suite>
 
 
