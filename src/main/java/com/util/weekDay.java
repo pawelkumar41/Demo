@@ -7,12 +7,14 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.poi.hssf.record.formula.functions.Weekday;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import com.Database.*;
 
 public class WeekDay {
 
@@ -279,7 +281,9 @@ public class WeekDay {
             object1 = object1.getJSONObject("data");
             bookingIDForCustomer = object1.getString("bookingIDForCustomer");
             System.out.println("++Pawel++" + bookingIDForCustomer);
-        } finally
+            MongoConnection.dtdb("bookingIDForCustomer",bookingIDForCustomer);
+        }
+        finally
 
         {
             //Important: Close the connect
