@@ -4,9 +4,9 @@
            failures="1"
            errors="0"
            skipped="0"
-           time="5.621">
+           time="3.584">
   <properties />
-            <testcase name="book" time="2.640" classname="com.util.WeekDay">
+            <testcase name="book" time="1.986" classname="com.util.WeekDay">
                 <failure type="java.lang.AssertionError"
                   message="expected [true] but found [false]"
               >
@@ -15,7 +15,7 @@
   org.testng.Assert.failNotEquals(Assert.java:494)
   org.testng.Assert.assertTrue(Assert.java:42)
   org.testng.Assert.assertTrue(Assert.java:52)
-  com.Database.MongoConnection.dtdb(MongoConnection.java:40)
+  com.Database.MongoConnection.dtdb(MongoConnection.java:35)
   com.util.WeekDay.book(WeekDay.java:286)
   sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
   sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -36,9 +36,9 @@
           </testcase>
   
   
-            <testcase name="getPriceInfoWeekday" time="0.404" classname="com.util.WeekDay" />
-                <testcase name="main" time="0.589" classname="com.util.WeekDay" />
-                <testcase name="getCarInfo" time="1.681" classname="com.util.WeekDay" />
-                <testcase name="userLogin" time="0.307" classname="com.util.WeekDay" />
+            <testcase name="main" time="1.038" classname="com.util.WeekDay" />
+                <testcase name="getCarInfo" time="0.417" classname="com.util.WeekDay" />
+                <testcase name="getPriceInfoWeekday" time="0.098" classname="com.util.WeekDay" />
+                <testcase name="userLogin" time="0.045" classname="com.util.WeekDay" />
       
 </testsuite>

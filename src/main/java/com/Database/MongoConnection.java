@@ -32,12 +32,11 @@ public class MongoConnection {
                 while(cursor.hasNext()) {
                     dbresponse=dbresponse.concat(cursor.next().toString());
                     System.out.println(dbresponse);
-                    Assert.assertTrue(dbresponse.contains("bookingIDForCustomer"));
+                    Assert.assertTrue(dbresponse.contains("bookingIDForCustomer1"));
                 }
             } finally {
                 cursor.close();
             }
-            Assert.assertTrue(dbresponse.contains("bookingIDForCustomer"));
 
         }
     }
