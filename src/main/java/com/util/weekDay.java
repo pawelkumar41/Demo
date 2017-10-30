@@ -296,7 +296,7 @@ public class WeekDay {
 
     }
 
-    /*@Test(priority = 6)
+    @Test(priority = 6)
 
     public static void getCarModifyInfo() throws Exception {
 
@@ -663,5 +663,4 @@ public class WeekDay {
 
 
     }
-*/
 }
