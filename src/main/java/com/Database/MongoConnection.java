@@ -10,6 +10,8 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.ParallelScanOptions;
 import com.mongodb.ServerAddress;
+import org.testng.Assert;
+
 import java.util.Arrays;
 
 public class MongoConnection {
@@ -25,13 +27,17 @@ public class MongoConnection {
             System.out.println(coll.getCount());
             BasicDBObject query=new BasicDBObject(bookingIDForCustomer,realbookingIDForCustomer);
             DBCursor cursor = coll.find(query);
+            String dbresponse="";
             try {
                 while(cursor.hasNext()) {
-                    System.out.println(cursor.next());
+                    dbresponse=dbresponse.concat(cursor.next().toString());
+                    System.out.println(dbresponse);
+                    Assert.assertTrue(dbresponse.contains("bookingIDForCustomer"));
                 }
             } finally {
                 cursor.close();
             }
+            Assert.assertTrue(dbresponse.contains("bookingIDForCustomer"));
 
         }
     }
