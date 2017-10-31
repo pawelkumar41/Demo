@@ -10,11 +10,18 @@ import com.mongodb.DBObject;
 import com.mongodb.MongoClient;
 import com.mongodb.ParallelScanOptions;
 import com.mongodb.ServerAddress;
+import org.json.JSONObject;
 import org.testng.Assert;
+import org.testng.*;
+import org.json.JSONObject.*;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class MongoConnection {
+    public static String dbresponse="";
+    public static String DBResponse="";
 
     public static void dtdb (String bookingIDForCustomer, String realbookingIDForCustomer){
 
@@ -32,7 +39,8 @@ public class MongoConnection {
                 while(cursor.hasNext()) {
                     dbresponse=dbresponse.concat(cursor.next().toString());
                     System.out.println(dbresponse);
-                    Assert.assertTrue(dbresponse.contains("bookingIDForCustomer1"));
+                    Assert.assertTrue(dbresponse.contains("bookingIDForCustomer"));
+                    //JSONObject user = new JSONObject(dbresponse.concat(cursor.next().toString()));
                 }
             } finally {
                 cursor.close();

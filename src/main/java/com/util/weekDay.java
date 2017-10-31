@@ -46,6 +46,7 @@ public class WeekDay {
     public static DefaultHttpClient httpClient = new DefaultHttpClient();
 
     @Test(priority = 1)
+    //Below method is used to fetch admin details
     public static void main() throws Exception {
         try
 
@@ -91,6 +92,7 @@ public class WeekDay {
     }
 
     @Test(priority = 2)
+    //Below method is used to fetch user details
     public static void userLogin() throws Exception {
         try
 
@@ -136,6 +138,7 @@ public class WeekDay {
     }
 
     @Test(priority = 3)
+    //Below method is used to fetch cars available
     public static void getCarInfo() throws Exception {
 
         try
@@ -189,6 +192,7 @@ public class WeekDay {
     }
 
     @Test(priority = 4)
+    //Below method is used to fetch generated priceinfo for booking creation
     public static void getPriceInfoWeekday() throws Exception {
 
         try
@@ -240,6 +244,7 @@ public class WeekDay {
     }
 
     @Test(priority = 5)
+    //Below method is used to create booking
     public static void book() throws Exception {
 
         try
@@ -297,7 +302,7 @@ public class WeekDay {
     }
 
     @Test(priority = 6)
-
+    //Below method is used to fetch available cars for modification
     public static void getCarModifyInfo() throws Exception {
 
         try
@@ -353,7 +358,7 @@ public class WeekDay {
     }
 
     @Test(priority = 7)
-
+    //Below method is used to fetch priceinfo for modification
     public static void getPriceInfoModifyWeekday() throws Exception {
 
         try
@@ -407,8 +412,7 @@ public class WeekDay {
 
 
     @Test(priority = 8)
-
-
+    //Below method is to modify booking for x hrs i.e. addition of hrs
     public static void modifyBooking() throws Exception {
 
         try
@@ -463,7 +467,7 @@ public class WeekDay {
     }
 
     @Test(priority = 9)
-
+    // Below method is used to fetch available cars
     public static void getCarModifyInfo1() throws Exception {
 
         try
@@ -519,6 +523,7 @@ public class WeekDay {
     }
 
     @Test(priority = 10)
+    //Below method is used to fetch priceinfo for further modification
     public static void getPriceInfoModifyWeekday1() throws Exception {
 
         try
@@ -572,6 +577,7 @@ public class WeekDay {
 
 
     @Test(priority = 11)
+    //Below method is used to modify booking, subtract x hrs
     public static void modifyBooking1() throws Exception {
 
         try
@@ -626,6 +632,7 @@ public class WeekDay {
     }
 
     @Test(priority = 12)
+    //Cancel booking
     public static void cancelWeekdayBooking() throws Exception {
         try
 
