@@ -1,8 +1,8 @@
-/.idea/*
 /demoApplication.log
 /target/*
 /test-output/*
-.idea/workspace.xml
-test-output/*
-
-
+/.idea/workspace.xml
+/.idea/artifacts/*
+/.idea/copyright/*
+/.idea/libraries/*
+/.idea/**
