@@ -21,7 +21,7 @@ import java.util.Arrays;
 
 public class MongoConnection {
     public static String dbresponse="";
-    public static String DBResponse="";
+    //public static String DBResponse="";
 
     public static void dtdb (String bookingIDForCustomer, String realbookingIDForCustomer){
 
