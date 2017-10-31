@@ -2,7 +2,3 @@
 /target/*
 /test-output/*
 
-/.idea/artifacts/*
-/.idea/copyright/*
-/.idea/libraries/*
-/.idea/**
