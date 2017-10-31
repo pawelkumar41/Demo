@@ -2,3 +2,7 @@
 /demoApplication.log
 /target/*
 /test-output/*
+.idea/workspace.xml
+test-output/*
+
+

@@ -4,21 +4,21 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="11.332">
+           time="10.885">
   <properties />
   
   
-            <testcase name="userLogin" time="0.066" classname="com.util.WeekDay" />
-                <testcase name="book" time="2.526" classname="com.util.WeekDay" />
-                <testcase name="getPriceInfoWeekday" time="0.102" classname="com.util.WeekDay" />
-                <testcase name="getCarInfo" time="0.566" classname="com.util.WeekDay" />
-                <testcase name="getPriceInfoModifyWeekday" time="0.107" classname="com.util.WeekDay" />
-                <testcase name="cancelWeekdayBooking" time="2.990" classname="com.util.WeekDay" />
-                <testcase name="modifyBooking1" time="1.708" classname="com.util.WeekDay" />
-                <testcase name="getCarModifyInfo1" time="0.285" classname="com.util.WeekDay" />
-                <testcase name="getPriceInfoModifyWeekday1" time="0.101" classname="com.util.WeekDay" />
-                <testcase name="getCarModifyInfo" time="0.274" classname="com.util.WeekDay" />
-                <testcase name="main" time="0.809" classname="com.util.WeekDay" />
-                <testcase name="modifyBooking" time="1.798" classname="com.util.WeekDay" />
+            <testcase name="modifyBooking1" time="1.716" classname="com.util.WeekDay" />
+                <testcase name="getCarModifyInfo1" time="0.340" classname="com.util.WeekDay" />
+                <testcase name="book" time="2.227" classname="com.util.WeekDay" />
+                <testcase name="getCarModifyInfo" time="0.255" classname="com.util.WeekDay" />
+                <testcase name="main" time="0.780" classname="com.util.WeekDay" />
+                <testcase name="getPriceInfoWeekday" time="0.098" classname="com.util.WeekDay" />
+                <testcase name="modifyBooking" time="1.806" classname="com.util.WeekDay" />
+                <testcase name="getPriceInfoModifyWeekday1" time="0.099" classname="com.util.WeekDay" />
+                <testcase name="getPriceInfoModifyWeekday" time="0.103" classname="com.util.WeekDay" />
+                <testcase name="cancelWeekdayBooking" time="2.888" classname="com.util.WeekDay" />
+                <testcase name="getCarInfo" time="0.479" classname="com.util.WeekDay" />
+                <testcase name="userLogin" time="0.094" classname="com.util.WeekDay" />
       
 </testsuite>
