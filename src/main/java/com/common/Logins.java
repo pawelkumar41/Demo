@@ -35,7 +35,6 @@ public class Logins {
 
         }
 
-        //@Test(priority = 1)
         //Below method is used to fetch admin details
         public static void adminLogin() throws Exception {
             try
@@ -82,7 +81,6 @@ public class Logins {
         }
 
        // @Test(priority = 2)
-        //Below method is used to fetch user details
         public static void userLogin() throws Exception {
             try
 
