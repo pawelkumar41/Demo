@@ -11,7 +11,7 @@ import java.util.*;
 /**
  * Created by pawelkumar on 19/04/16.
  */
-public class commons {
+public class Commons {
 
     public static HashMap<String, String> getHashmapfromtxt(String filename) throws FileNotFoundException {
         HashMap<String, String> hash = new HashMap<String, String>();

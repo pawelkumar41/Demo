@@ -21,7 +21,6 @@ import java.util.Arrays;
 
 public class MongoConnection {
     public static String dbresponse="";
-    //public static String DBResponse="";
 
     public static void dtdb (String bookingIDForCustomer, String realbookingIDForCustomer){
 
@@ -34,7 +33,6 @@ public class MongoConnection {
             System.out.println(coll.getCount());
             BasicDBObject query=new BasicDBObject(bookingIDForCustomer,realbookingIDForCustomer);
             DBCursor cursor = coll.find(query);
-            String dbresponse="";
             try {
                 while(cursor.hasNext()) {
                     dbresponse=dbresponse.concat(cursor.next().toString());

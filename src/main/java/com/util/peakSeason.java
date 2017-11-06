@@ -1,6 +1,8 @@
 package com.util;
 
-import com.common.commons;
+import com.common.Commons;
+import com.common.Logins;
+import org.apache.commons.logging.Log;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -14,7 +16,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 
-import static com.common.commons.getHashmapfromtxt;
+import static com.common.Commons.getHashmapfromtxt;
 
 public class PeakSeason {
 
@@ -45,98 +47,11 @@ public class PeakSeason {
     public static DefaultHttpClient httpClient = new DefaultHttpClient();
 
     @Test(priority = 1)
-    //Below method is used to fetch admin details
-    public static void adminLogin() throws Exception {
-        try
-
-        {
-            HashMap<String, String> adminDetails = null;
-            adminDetails = getHashmapfromtxt("adminlogin.txt");
-            //Define a postRequest request
-            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/login");
-            //Set the API media type in http content-type header
-            postRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            object.put("email", adminDetails.get("email"));
-            object.put("password", adminDetails.get("password"));
-            String message;
-            message = object.toString();
-            postRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(postRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            //read response
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-            JSONObject object1 = null;
-            while ((output = br.readLine()) != null) {
-                object = new JSONObject(output);
-            }
-            String resMessage = object.getString("message");
-            object1 = object.getJSONObject("data");
-            adminid = object1.getString("_id");
-            System.out.println("++Pawel++" + adminid);
-            accessToken = object1.getString("accessToken");
-            System.out.println("++Pawel++" + accessToken);
-
-        } finally
-
-        {
-            //Important: Close the connect
-            //  httpClient.getConnectionManager().shutdown();
-        }
-
+    public static void login() throws Exception {
+        Logins.main();
     }
 
     @Test(priority = 2)
-    //Below method is used to fetch user details
-    public static void userLogin() throws Exception {
-        try
-
-        {
-            HashMap<String, String> userDetails = null;
-            userDetails = getHashmapfromtxt("logindetails.txt");
-            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v2/customer/login");
-            postRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            object.put("email", userDetails.get("email"));
-            object.put("password", userDetails.get("password"));
-            object.put("deviceType", userDetails.get("deviceType"));
-            object.put("deviceName", userDetails.get("deviceName"));
-            object.put("deviceToken", userDetails.get("deviceToken"));
-            object.put("appVersion", userDetails.get("appVersion"));
-            String message;
-            message = object.toString();
-            postRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(postRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-            JSONObject object1 = null;
-            while ((output = br.readLine()) != null) {
-                object = new JSONObject(output);
-            }
-            String resMessage = object.getString("message");
-            object1 = object.getJSONObject("data");
-            customerid = object1.getString("customerID");
-            c_accessToken=object1.getString("accessToken");
-            System.out.println("++Pawel++" + customerid);
-
-        } finally
-
-        {
-            //Important: Close the connect
-            //  httpClient.getConnectionManager().shutdown();
-        }
-
-    }
-
-    @Test(priority = 3)
     //Below method is used to fetch cars available
     public static void getCarInfo() throws Exception {
 
@@ -145,7 +60,7 @@ public class PeakSeason {
         {
             HashMap<String, String> bookingdetails;
             bookingdetails = getHashmapfromtxt("peakSeason.txt");
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + customerid + "&deviceType=panel");
+            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + Logins.customerid + "&deviceType=panel");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             String message;
@@ -190,7 +105,7 @@ public class PeakSeason {
         }
     }
 
-    @Test(priority = 4)
+    @Test(priority = 3)
     //Below method is used to fetch generated priceinfo for booking creation
     public static void getPriceInfoWeekday() throws Exception {
 
@@ -204,8 +119,8 @@ public class PeakSeason {
             System.out.println(postRequest);
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
-            object.put("customerID", customerid);
-            object.put("accessToken", accessToken);
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.accessToken);
             object.put("carModelID", carModelId);
             object.put("latitude", bookingdetails.get("latitude1"));
             object.put("longitude", bookingdetails.get("longitude1"));
@@ -215,7 +130,7 @@ public class PeakSeason {
             object.put("deviceType", bookingdetails.get("panel"));
             object.put("pricingType", 1);
             object.put("bookingID", "0");
-            object.put("adminID", adminid);
+            object.put("adminID", Logins.adminid);
             object.put("useRevvCredit", false);
             String message;
             message = object.toString();
@@ -242,7 +157,7 @@ public class PeakSeason {
         }
     }
 
-    @Test(priority = 5)
+    @Test(priority = 4)
     //Below method is used to create booking
     public static void book() throws Exception {
 
@@ -254,8 +169,8 @@ public class PeakSeason {
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/booking/bookByAdmin");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
-            object.put("customerID", customerid);
-            object.put("accessToken", accessToken);
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.accessToken);
             object.put("carModelID", carModelId);
             object.put("latitude1", bookingdetails.get("latitude1"));
             object.put("latitude2", bookingdetails.get("latitude2"));
@@ -264,7 +179,7 @@ public class PeakSeason {
             object.put("startDate", bookingdetails.get("startdate"));
             object.put("endDate", bookingdetails.get("enddate"));
             object.put("alternateIDProofType", "2");
-            object.put("adminID", adminid);
+            object.put("adminID", Logins.adminid);
             object.put("pickUpLocation1", bookingdetails.get("pickUpLocation1"));
             object.put("pickUpLocation2", bookingdetails.get("pickUpLocation2"));
             object.put("priceInfoID", priceInfoId);
@@ -297,7 +212,7 @@ public class PeakSeason {
 
     }
 
-    @Test(priority = 6)
+    @Test(priority = 5)
     //Below method is used to fetch available cars for modification
     public static void getCarModifyInfo() throws Exception {
 
@@ -305,8 +220,8 @@ public class PeakSeason {
 
         {
             HashMap<String, String> bookingdetails;
-            bookingdetails = commons.getHashmapfromtxt("peakSeasonModify.txt");
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=" + bookingIDForCustomer + "?" + "customerID=" + customerid);
+            bookingdetails = Commons.getHashmapfromtxt("peakSeasonModify.txt");
+            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=" + bookingIDForCustomer + "?" + "customerID=" + Logins.customerid);
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             String message;
@@ -353,7 +268,7 @@ public class PeakSeason {
 
     }
 
-    @Test(priority = 7)
+    @Test(priority = 6)
     //Below method is used to fetch priceinfo for modification
     public static void getPriceInfoModifyPeak() throws Exception {
 
@@ -361,14 +276,14 @@ public class PeakSeason {
 
         {
             HashMap<String, String> bookingdetails = null;
-            bookingdetails = commons.getHashmapfromtxt("peakSeasonModify.txt");
+            bookingdetails = Commons.getHashmapfromtxt("peakSeasonModify.txt");
             //Define a postRequest request
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v1/booking/setPriceInfo");
             System.out.println(postRequest);
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
-            object.put("customerID", customerid);
-            object.put("accessToken", accessToken);
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.accessToken);
             object.put("carModelID", carModelId);
             object.put("latitude", bookingdetails.get("latitude1"));
             object.put("longitude", bookingdetails.get("longitude1"));
@@ -378,7 +293,7 @@ public class PeakSeason {
             object.put("deviceType", bookingdetails.get("panel"));
             object.put("pricingType", 1);
             object.put("bookingID", "0");
-            object.put("adminID", adminid);
+            object.put("adminID", Logins.adminid);
             object.put("useRevvCredit", false);
             String message;
             message = object.toString();
@@ -405,7 +320,7 @@ public class PeakSeason {
         }
     }
 
-    @Test(priority = 8)
+    @Test(priority = 7)
 
     //Below method is to modify booking for x hrs i.e. addition of hrs
     public static void modifyBooking() throws Exception {
@@ -414,12 +329,12 @@ public class PeakSeason {
 
         {
             HashMap<String, String> bookingdetails = null;
-            bookingdetails = commons.getHashmapfromtxt("peakSeasonModify.txt");
+            bookingdetails = Commons.getHashmapfromtxt("peakSeasonModify.txt");
             HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/modifyBookingByAdmin");
             putRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
-            object.put("customerID", customerid);
-            object.put("accessToken", accessToken);
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.accessToken);
             object.put("carModelID", carModelId);
             object.put("latitude1", bookingdetails.get("latitude1"));
             object.put("latitude2", bookingdetails.get("latitude2"));
@@ -428,7 +343,7 @@ public class PeakSeason {
             object.put("startDate", bookingdetails.get("startdate"));
             object.put("endDate", bookingdetails.get("enddate"));
             object.put("bookingID", bookingIDForCustomer);
-            object.put("adminID", adminid);
+            object.put("adminID", Logins.adminid);
             object.put("pickUpLocation1", bookingdetails.get("pickUpLocation1"));
             object.put("pickUpLocation2", bookingdetails.get("pickUpLocation2"));
             object.put("priceInfoID", priceInfoId1);
@@ -461,7 +376,7 @@ public class PeakSeason {
 
     }
 
-    @Test(priority = 9)
+    @Test(priority = 8)
     // Below method is used to fetch available cars
     public static void getCarModifyInfo_1() throws Exception {
 
@@ -469,8 +384,8 @@ public class PeakSeason {
 
         {
             HashMap<String, String> bookingdetails;
-            bookingdetails = commons.getHashmapfromtxt("peakSeasonModify.txt");
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate1") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + customerid);
+            bookingdetails = Commons.getHashmapfromtxt("peakSeasonModify.txt");
+            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate1") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             String message;
@@ -517,7 +432,7 @@ public class PeakSeason {
 
     }
 
-    @Test(priority = 10)
+    @Test(priority = 9)
     //Below method is used to fetch priceinfo for further modification
     public static void getPriceInfoModifyWeekend_1() throws Exception {
 
@@ -525,14 +440,14 @@ public class PeakSeason {
 
         {
             HashMap<String, String> bookingdetails = null;
-            bookingdetails = commons.getHashmapfromtxt("peakSeasonModify.txt");
+            bookingdetails = Commons.getHashmapfromtxt("peakSeasonModify.txt");
             //Define a postRequest request
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v1/booking/setPriceInfo");
             System.out.println(postRequest);
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
-            object.put("customerID", customerid);
-            object.put("accessToken", accessToken);
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.accessToken);
             object.put("carModelID", carModelId);
             object.put("latitude", bookingdetails.get("latitude1"));
             object.put("longitude", bookingdetails.get("longitude1"));
@@ -542,7 +457,7 @@ public class PeakSeason {
             object.put("deviceType", bookingdetails.get("panel"));
             object.put("pricingType", 1);
             object.put("bookingID", "0");
-            object.put("adminID", adminid);
+            object.put("adminID", Logins.adminid);
             object.put("useRevvCredit", false);
             String message;
             message = object.toString();
@@ -571,7 +486,7 @@ public class PeakSeason {
 
 
 
-    @Test(priority = 11)
+    @Test(priority = 10)
     //Below method is used to modify booking, subtract x hrs
     public static void modifyBooking_1() throws Exception {
 
@@ -579,12 +494,12 @@ public class PeakSeason {
 
         {
             HashMap<String, String> bookingdetails = null;
-            bookingdetails = commons.getHashmapfromtxt("peakSeasonModify.txt");
+            bookingdetails = Commons.getHashmapfromtxt("peakSeasonModify.txt");
             HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/modifyBookingByAdmin");
             putRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
-            object.put("customerID", customerid);
-            object.put("accessToken", accessToken);
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.accessToken);
             object.put("carModelID", carModelId);
             object.put("latitude1", bookingdetails.get("latitude1"));
             object.put("latitude2", bookingdetails.get("latitude2"));
@@ -593,7 +508,7 @@ public class PeakSeason {
             object.put("startDate", bookingdetails.get("startdate"));
             object.put("endDate", bookingdetails.get("enddate1"));
             object.put("bookingID",bookingIDForCustomer);
-            object.put("adminID", adminid);
+            object.put("adminID", Logins.adminid);
             object.put("pickUpLocation1", bookingdetails.get("pickUpLocation1"));
             object.put("pickUpLocation2", bookingdetails.get("pickUpLocation2"));
             object.put("priceInfoID", getPriceInfoId2);
@@ -627,7 +542,7 @@ public class PeakSeason {
     }
 
 
-    @Test(priority = 12)
+    @Test(priority = 11)
     //Cancel booking
     public static void peakCancelBooking() throws Exception {
         try {
@@ -635,8 +550,8 @@ public class PeakSeason {
             HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/cancel");
             putRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
-            object.put("customerID", customerid);
-            object.put("accessToken", c_accessToken);
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.c_accessToken);
             object.put("bookingID", bookingIDForCustomer);
             String message;
             message = object.toString();
