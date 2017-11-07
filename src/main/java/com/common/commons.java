@@ -20,10 +20,6 @@ public class Commons {
         try {
 
             String line = br.readLine();
-
-            //  while (line != null) {
-
-            // line = br.readLine();
             String[] dataArray = line.substring(0, line.length() - 1).split("\\|");
 
 
@@ -34,7 +30,6 @@ public class Commons {
                     String[] pair = record.split("\\=");
                     hash.put(pair[0], pair[1].trim());
                 }
-                //  }
             }
         } catch (IOException e) {
             e.printStackTrace();
