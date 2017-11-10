@@ -15,7 +15,7 @@ public class Commons {
 
     public static HashMap<String, String> getHashmapfromtxt(String filename) throws FileNotFoundException {
         HashMap<String, String> hash = new HashMap<String, String>();
-        BufferedReader br = new BufferedReader(new FileReader("/Users/pawelkumar/Documents/revvautomation/src/main/java/com/testdata/" + filename));
+        BufferedReader br = new BufferedReader(new FileReader("./src/main/java/com/testdata/" + filename));
 
         try {
 
