@@ -98,6 +98,9 @@
             <configuration>
                 <suiteXmlFiles>
                     <suiteXmlFile>WeekdayAutomation.xml</suiteXmlFile>
+                    <suiteXmlFile>WeekendAutomation.xml</suiteXmlFile>
+                    <suiteXmlFile>PromoCodeAutomation.xml</suiteXmlFile>
+                    <suiteXmlFile>PeakSeasonAutomation.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
         </plugin>
