@@ -17,6 +17,7 @@ import java.util.HashMap;
 public class Logins {
 
     public static String customerid = "";
+    public static String android_customerid="";
     public static String accessToken = "";
     public static String c_accessToken = "";
     private static String _id = "";
@@ -28,6 +29,7 @@ public class Logins {
     public static void main() throws Exception {
         Logins.adminLogin();
         Logins.userLogin();
+        Logins.androidUserLogin();
 
     }
 
@@ -107,6 +109,51 @@ public class Logins {
             String resMessage = object.getString("message");
             object1 = object.getJSONObject("data");
             customerid = object1.getString("customerID");
+            c_accessToken = object1.getString("accessToken");
+            System.out.println("++Pawel++" + customerid);
+
+        } finally
+
+        {
+            //Important: Close the connect
+            //  httpClient.getConnectionManager().shutdown();
+        }
+
+    }
+
+
+    public static void androidUserLogin() throws Exception {
+        try
+
+        {
+            HashMap<String, String> userDetails = null;
+            userDetails = Commons.getHashmapfromtxt("androidLogin.txt");
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v2/customer/login");
+            postRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("email", userDetails.get("email"));
+            object.put("password", userDetails.get("password"));
+            object.put("deviceType", userDetails.get("deviceType"));
+            object.put("deviceName", userDetails.get("deviceName"));
+            object.put("deviceToken", userDetails.get("deviceToken"));
+            object.put("appVersion", userDetails.get("appVersion"));
+            String message;
+            message = object.toString();
+            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(postRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object = new JSONObject(output);
+            }
+            String resMessage = object.getString("message");
+            object1 = object.getJSONObject("data");
+            android_customerid = object1.getString("customerID");
             c_accessToken = object1.getString("accessToken");
             System.out.println("++Pawel++" + customerid);
 
