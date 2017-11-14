@@ -15,9 +15,11 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+
 import com.Database.*;
 import com.common.*;
 
@@ -25,7 +27,7 @@ public class WeekDay {
 
     private static String customerid = "";
     private static String accessToken = "";
-    private static String c_accessToken="";
+    private static String c_accessToken = "";
     private static String endDate = "";
     private static String startDate = "";
     private static String longitude1 = "";
@@ -34,12 +36,12 @@ public class WeekDay {
     private static String latitude2 = "";
     private static String carModelId = "";
     private static String model;
-    private static String bookingIDForCustomer="";
+    private static String bookingIDForCustomer = "";
     private static String _id = "";
     private static String adminid = "";
     private static String priceInfoId = "";
-    private static String priceInfoId1="";
-    private static String getPriceInfoId2="";
+    private static String priceInfoId1 = "";
+    private static String getPriceInfoId2 = "";
     static HashMap<String, String> has = new HashMap<String, String>();
 
 
@@ -59,8 +61,8 @@ public class WeekDay {
         {
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("androidWeekDay.txt");
-           // HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + Logins.customerid + "&deviceType=panel");
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" +"deviceType=android&" +"appVersion=206&" +"customerID="+Logins.android_customerid);
+            // HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + Logins.customerid + "&deviceType=panel");
+            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "deviceType=android&" + "appVersion=206&" + "customerID=" + Logins.android_customerid);
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             String message;
@@ -129,9 +131,9 @@ public class WeekDay {
             object.put("promoCodeName", "");
             object.put("deviceType", bookingdetails.get("android"));
             object.put("pricingType", 1);
-            object.put("appVersion","212");
+            object.put("appVersion", "212");
             object.put("bookingID", "0");
-            object.put("useRevvCredit", false);
+            object.put("useRevvCredit", true);
             String message;
             message = object.toString();
             postRequest.setEntity(new StringEntity(message, "UTF8"));
@@ -149,12 +151,73 @@ public class WeekDay {
             String resMessage = object1.getString("message");
             object1 = object1.getJSONObject("data");
             priceInfoId = object1.getString("priceInfoId");
-            System.out.println("Pawel Ki Price info"+priceInfoId);
+            System.out.println("Pawel Ki Price info" + priceInfoId);
         } finally
 
         {
             //Important: Close the connect
             // httpClient.getConnectionManager().shutdown();
         }
+    }
+
+    @Test(priority = 4)
+    //Below method is used to create booking
+    public static void book() throws Exception {
+
+        try
+
+        {
+            HashMap<String, String> bookingdetails = null;
+            bookingdetails = Commons.getHashmapfromtxt("androidWeekDay.txt");
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v2/booking/book");
+            postRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.c_accessToken);
+            object.put("carModelID", carModelId);
+            object.put("latitude1", bookingdetails.get("latitude1"));
+            object.put("latitude2", bookingdetails.get("latitude2"));
+            object.put("longitude1", bookingdetails.get("longitude1"));
+            object.put("longitude2", bookingdetails.get("longitude2"));
+            object.put("startDate", bookingdetails.get("startdate"));
+            object.put("endDate", bookingdetails.get("enddate"));
+            object.put("alternateIDProofType", "2");
+            object.put("pickUpLocation1", bookingdetails.get("pickUpLocation1"));
+            object.put("pickUpLocation2", bookingdetails.get("pickUpLocation2"));
+            object.put("priceInfoID", priceInfoId);
+            object.put("deviceType","android");
+            object.put("appVersion","212");
+            object.put("pricingType",1);
+            object.put("deviceID","APA91bHbn-n5UufM14YBQjYGjal8belCXmQtwVQhoeZ8phfQsfsRuZgc_hoPNA9o3oCpVjnOvrwiI-Vog2_4EpzNa3DAeoIJ_UMnhcRIzAsi1JNbrjKpdYg");
+            String message;
+            message = object.toString();
+            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(postRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 201) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            object1 = object1.getJSONObject("data");
+            bookingIDForCustomer = object1.getString("bookingID");
+            System.out.println("++Pawel++" + bookingIDForCustomer);
+            MongoConnection.dtdb("bookingIDForCustomer", bookingIDForCustomer);
+
+
+        } finally
+
+        {
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
+        }
+
+
     }
 }
