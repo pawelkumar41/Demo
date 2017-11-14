@@ -220,4 +220,44 @@ public class WeekDay {
 
 
     }
+
+    @Test(priority = 5)
+    //Cancel booking
+    public static void cancelWeekdayBooking() throws Exception {
+        try
+
+        {
+            HashMap<String, String> bookingdetails = null;
+            HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/cancel");
+            putRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.c_accessToken);
+            object.put("bookingID", bookingIDForCustomer);
+            String message;
+            message = object.toString();
+            putRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(putRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 218) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            object1 = object1.getJSONObject("data");
+        } finally
+
+        {
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
+        }
+
+
+    }
 }

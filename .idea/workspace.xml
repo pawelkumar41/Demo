@@ -4,6 +4,7 @@
     <list default="true" id="a00fb33d-60da-4f60-85c4-6ce1880cef01" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/android/WeekDay.java" afterPath="$PROJECT_DIR$/src/main/java/com/android/WeekDay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/testsuite/WeekdayAutomation.xml" afterPath="$PROJECT_DIR$/testsuite/WeekdayAutomation.xml" />
     </list>
     <ignored path="RevvApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -57,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/android/WeekDay.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="208" column="63" selection-start-line="208" selection-start-column="63" selection-end-line="208" selection-end-column="63" />
+              <caret line="223" column="22" selection-start-line="223" selection-start-column="22" selection-end-line="223" selection-end-column="22" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,8 +69,8 @@
       <file leaf-file-name="WeekdayAutomation.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testsuite/WeekdayAutomation.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4116638">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.23156089">
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -99,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="211" column="5" selection-start-line="154" selection-start-column="4" selection-end-line="211" selection-end-column="5" />
+              <caret line="581" column="5" selection-start-line="543" selection-start-column="4" selection-end-line="581" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1044,8 +1045,8 @@
     <history-entry file="_Users_pawelkumar_Documents_revvautomation_testsuite_WeekdayAutomation_xml - 2017.11.14 at 14h 22m 51s.xml">
       <configuration name="/Users/pawelkumar/Documents/revvautomation/testsuite/WeekdayAutomation.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_testsuite_testng_xml - 2017.11.13 at 17h 08m 54s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/testsuite/testng.xml" configurationId="TestNG" />
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_testsuite_WeekdayAutomation_xml - 2017.11.14 at 14h 23m 33s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/testsuite/WeekdayAutomation.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="_Users_pawelkumar_Documents_revvautomation_testsuite_testng_xml - 2017.11.13 at 17h 09m 11s.xml">
       <configuration name="/Users/pawelkumar/Documents/revvautomation/testsuite/testng.xml" configurationId="TestNG" />
@@ -1486,16 +1487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="211" column="5" selection-start-line="154" selection-start-column="4" selection-end-line="211" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/androidWeekDay.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1512,10 +1503,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="581" column="5" selection-start-line="543" selection-start-column="4" selection-end-line="581" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/android/WeekDay.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="208" column="63" selection-start-line="208" selection-start-column="63" selection-end-line="208" selection-end-column="63" />
+          <caret line="223" column="22" selection-start-line="223" selection-start-column="22" selection-end-line="223" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1524,8 +1525,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testsuite/WeekdayAutomation.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4116638">
-          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.23156089">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
           <folding />
         </state>
       </provider>
