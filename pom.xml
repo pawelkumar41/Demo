@@ -101,6 +101,7 @@
                     <suiteXmlFile>WeekendAutomation.xml</suiteXmlFile>
                     <suiteXmlFile>PromoCodeAutomation.xml</suiteXmlFile>
                     <suiteXmlFile>PeakSeasonAutomation.xml</suiteXmlFile>
+                    <suiteXmlFile>androidWeekDay.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
         </plugin>
