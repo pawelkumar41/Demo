@@ -279,6 +279,121 @@ public class WeekDay {
     }
 
     @Test(priority = 6)
+    //Below method is used to fetch priceinfo for modification
+    public static void getPriceInfoModifyWeekday() throws Exception {
+
+        try
+
+        {
+            HashMap<String, String> bookingdetails = null;
+            bookingdetails = Commons.getHashmapfromtxt("androidWeekDayModify.txt");
+            //Define a postRequest request
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v1/booking/setPriceInfo");
+            System.out.println(postRequest);
+            postRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.c_accessToken);
+            object.put("carModelID", carModelId);
+            object.put("latitude", bookingdetails.get("latitude1"));
+            object.put("longitude", bookingdetails.get("longitude1"));
+            object.put("startDate", bookingdetails.get("startdate1"));
+            object.put("endDate", bookingdetails.get("enddate1"));
+            object.put("promoCodeName", "");
+            object.put("deviceType", "android");
+            object.put("appVersion","212");
+            object.put("pricingType", 1);
+            object.put("bookingID", bookingIDForCustomer);
+            object.put("useRevvCredit", true);
+            String message;
+            message = object.toString();
+            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(postRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            object1 = object1.getJSONObject("data");
+            priceInfoId1 = object1.getString("priceInfoId");
+            System.out.println(priceInfoId1);
+        } finally
+
+        {
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
+        }
+    }
+
+    @Test(priority = 7)
+    //Below method is to modify booking for x hrs i.e. addition of hrs
+    public static void modifyBooking() throws Exception {
+
+        try
+
+        {
+            HashMap<String, String> bookingdetails = null;
+            bookingdetails = Commons.getHashmapfromtxt("androidWeekDayModify.txt");
+            HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/v2/booking/modify");
+            putRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("customerID", Logins.customerid);
+            object.put("accessToken", Logins.c_accessToken);
+            object.put("carModelID", carModelId);
+            object.put("latitude1", bookingdetails.get("latitude1"));
+            object.put("latitude2", bookingdetails.get("latitude2"));
+            object.put("longitude1", bookingdetails.get("longitude1"));
+            object.put("longitude2", bookingdetails.get("longitude2"));
+            object.put("startDate", bookingdetails.get("startdate"));
+            object.put("endDate", bookingdetails.get("enddate"));
+            object.put("bookingID",bookingIDForCustomer);
+            object.put("pickUpLocation1", bookingdetails.get("pickUpLocation1"));
+            object.put("pickUpLocation2", bookingdetails.get("pickUpLocation2"));
+            object.put("priceInfoID", priceInfoId1);
+            object.put("zipcode","000");
+            object.put("carInfoID",MongoConnection.carInfoID);
+            object.put("bookingCharges",1308.0);
+            object.put("modificationCharges",200.0);
+            object.put("total",1808.0);
+            object.put("deviceType","android");
+            object.put("appVersion","212");
+            String message;
+            message = object.toString();
+            putRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(putRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            object1 = object1.getJSONObject("data");
+            //bookingIDForCustomer = object1.getString("bookingIDForCustomer");
+            System.out.println("++Pawel++" + bookingIDForCustomer);
+        } finally
+
+        {
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
+        }
+
+
+    }
+
+
+    @Test(priority = 7)
     //Cancel booking
     public static void cancelWeekdayBooking() throws Exception {
         try
