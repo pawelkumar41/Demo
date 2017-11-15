@@ -42,6 +42,8 @@ public class WeekDay {
     private static String priceInfoId = "";
     private static String priceInfoId1 = "";
     private static String getPriceInfoId2 = "";
+    public static String carInfoID="";
+    private static String test231="";
     static HashMap<String, String> has = new HashMap<String, String>();
 
 
@@ -210,7 +212,6 @@ public class WeekDay {
             System.out.println("++Pawel++" + bookingIDForCustomer);
             MongoConnection.dtdb("bookingIDForCustomer", bookingIDForCustomer);
 
-
         } finally
 
         {
@@ -222,6 +223,62 @@ public class WeekDay {
     }
 
     @Test(priority = 5)
+    //Below method is used to fetch available cars for modification
+    public static void getCarModifyInfo() throws Exception {
+
+        try
+
+        {
+            HashMap<String, String> bookingdetails;
+            bookingdetails = Commons.getHashmapfromtxt("androidWeekDayModify.txt");
+            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID="+MongoConnection.carInfoID+"&bookingId="+bookingIDForCustomer+"?"+ "deviceType=android&" + "appVersion=206&"+ "customerID=" + Logins.customerid);
+            getRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode + "Pawel Status Code");
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            StringBuilder output = new StringBuilder();
+            String out;
+            while ((out = br.readLine()) != null) {
+                output.append(out);
+            }
+            String finalOutput = output.toString();
+            JSONObject obj = new JSONObject(finalOutput);
+            obj = obj.getJSONObject("data");
+            System.out.println("++++++++++++");
+            org.json.JSONArray arr = obj.getJSONArray("carModels");
+            HashMap<String, String> id = new HashMap<String, String>();
+            // for(int i=0;i<arr.length();i++){
+            JSONObject obj2 = arr.getJSONObject(0);
+            obj2.toString();
+            System.out.println(obj2);
+            carModelId = obj2.getString("_id");
+            model = obj2.getString("model");
+            try {
+                id.put(obj2.getString("_id"), obj2.getString("model"));
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println(carModelId);
+            System.out.println(model);
+
+        } finally
+
+        {
+            //Important: Close the connect
+            //  httpClient.getConnectionManager().shutdown();
+        }
+
+
+    }
+
+    @Test(priority = 6)
     //Cancel booking
     public static void cancelWeekdayBooking() throws Exception {
         try

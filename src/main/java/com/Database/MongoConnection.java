@@ -21,6 +21,7 @@ import java.util.Arrays;
 
 public class MongoConnection {
     public static String dbresponse="";
+    public static String carInfoID="";
 
     public static void dtdb (String bookingIDForCustomer, String realbookingIDForCustomer){
 
@@ -36,9 +37,8 @@ public class MongoConnection {
             try {
                 while(cursor.hasNext()) {
                     dbresponse=dbresponse.concat(cursor.next().toString());
-                    System.out.println(dbresponse);
+                    carInfoID=cursor.curr().get("carInfoID").toString();
                     Assert.assertTrue(dbresponse.contains("bookingIDForCustomer"));
-                    //JSONObject user = new JSONObject(dbresponse.concat(cursor.next().toString()));
                 }
             } finally {
                 cursor.close();
