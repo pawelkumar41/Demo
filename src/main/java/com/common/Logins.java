@@ -29,7 +29,7 @@ public class Logins {
     public static void main() throws Exception {
         Logins.adminLogin();
         Logins.userLogin();
-        Logins.androidUserLogin();
+        //Logins.androidUserLogin();
 
     }
 
@@ -122,7 +122,7 @@ public class Logins {
     }
 
 
-    public static void androidUserLogin() throws Exception {
+    /*public static void androidUserLogin() throws Exception {
         try
 
         {
@@ -164,6 +164,6 @@ public class Logins {
             //  httpClient.getConnectionManager().shutdown();
         }
 
-    }
+    }*/
 
 }

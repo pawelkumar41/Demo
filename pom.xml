@@ -74,6 +74,21 @@
         <artifactId>guice</artifactId>
         <version>3.0</version>
     </dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-api</artifactId>
+        <version>2.46.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-chrome-driver</artifactId>
+        <version>2.46.0</version>
+    </dependency>
+    <dependency>
+        <groupId>org.seleniumhq.selenium</groupId>
+        <artifactId>selenium-firefox-driver</artifactId>
+        <version>2.46.0</version>
+    </dependency>
 </dependencies>
 <build>
     <finalName>RevvApiTest</finalName>
@@ -98,10 +113,9 @@
             <configuration>
                 <suiteXmlFiles>
                     <suiteXmlFile>WeekdayAutomation.xml</suiteXmlFile>
-                    <suiteXmlFile>WeekendAutomation.xml</suiteXmlFile>
+                    <!--<suiteXmlFile>WeekendAutomation.xml</suiteXmlFile>
                     <suiteXmlFile>PromoCodeAutomation.xml</suiteXmlFile>
-                    <suiteXmlFile>PeakSeasonAutomation.xml</suiteXmlFile>
-                    <suiteXmlFile>androidWeekDay.xml</suiteXmlFile>
+                    <suiteXmlFile>PeakSeasonAutomation.xml</suiteXmlFile>-->
                 </suiteXmlFiles>
             </configuration>
         </plugin>
