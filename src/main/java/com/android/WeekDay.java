@@ -392,8 +392,8 @@ public class WeekDay {
 
     }
 
-
-    @Test(priority = 7)
+/*
+    @Test(enabled = false)
     //Cancel booking
     public static void cancelWeekdayBooking() throws Exception {
         try
@@ -431,5 +431,5 @@ public class WeekDay {
         }
 
 
-    }
+    }*/
 }

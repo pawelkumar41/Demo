@@ -7,11 +7,8 @@
     </listeners>
     <test name="WeekdayAutomation">
         <classes>
-            <!--<class name="com.util.WeekDay"/>-->
-            <class name="com.android.WeekDay"/>
+            <class name="com.util.WeekDay"/>
         </classes>
 
     </test>
 </suite>
-
-

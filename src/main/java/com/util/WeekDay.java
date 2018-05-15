@@ -1,7 +1,8 @@
 package com.util;
 
+import com.Database.MongoConnection;
 import com.common.Commons;
-import org.apache.commons.logging.Log;
+import com.common.Logins;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -14,8 +15,6 @@ import org.testng.annotations.Test;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
-import com.Database.*;
-import com.common.*;
 
 public class WeekDay {
 
