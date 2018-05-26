@@ -581,7 +581,7 @@ public class WeekDay {
 
     }
     @Test(priority = 12)
-    public static void manitblock() throws Exception {
+    public static void maintBlock() throws Exception {
         try
 
         {

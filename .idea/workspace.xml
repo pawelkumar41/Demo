@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a00fb33d-60da-4f60-85c4-6ce1880cef01" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/util/WeekDay.class" afterPath="$PROJECT_DIR$/target/classes/com/util/WeekDay.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/demoApplication.log.1" afterPath="$PROJECT_DIR$/demoApplication.log.1" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java" afterPath="$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" afterPath="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" />
     </list>
     <ignored path="RevvApp.iws" />
@@ -88,8 +85,8 @@
       <file leaf-file-name="WeekDay.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.25864908">
-              <caret line="583" column="54" selection-start-line="583" selection-start-column="54" selection-end-line="583" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.6540362">
+              <caret line="580" column="0" selection-start-line="580" selection-start-column="0" selection-end-line="580" selection-end-column="0" />
               <folding>
                 <element signature="e#11211#11227#0" expanded="true" />
                 <element signature="e#18885#18901#0" expanded="true" />
@@ -1023,8 +1020,8 @@
     <history-entry file="_Users_pawelkumar_Documents_revvautomation_WeekdayAutomation_xml - 2018.05.27 at 01h 52m 35s.xml">
       <configuration name="/Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_testsuite_WeekdayAutomation_xml - 2018.05.15 at 17h 01m 20s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/testsuite/WeekdayAutomation.xml" configurationId="TestNG" />
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_WeekdayAutomation_xml - 2018.05.27 at 02h 08m 12s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="_Users_pawelkumar_Documents_revvautomation_testsuite_WeekdayAutomation_xml - 2018.05.15 at 17h 02m 25s.xml">
       <configuration name="/Users/pawelkumar/Documents/revvautomation/testsuite/WeekdayAutomation.xml" configurationId="TestNG" />
@@ -1458,14 +1455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekEnd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="340" column="61" selection-start-line="340" selection-start-column="57" selection-end-line="340" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WeekdayAutomation.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-8.125">
@@ -1474,10 +1463,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekEnd.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="340" column="61" selection-start-line="340" selection-start-column="57" selection-end-line="340" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25864908">
-          <caret line="583" column="54" selection-start-line="583" selection-start-column="54" selection-end-line="583" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.6540362">
+          <caret line="580" column="0" selection-start-line="580" selection-start-column="0" selection-end-line="580" selection-end-column="0" />
           <folding>
             <element signature="e#11211#11227#0" expanded="true" />
             <element signature="e#18885#18901#0" expanded="true" />
