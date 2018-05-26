@@ -5,6 +5,7 @@ import org.testng.Assert;
 public class MongoConnection {
     public static String dbresponse="";
     public static String carInfoID="";
+    //protected static String
 
     public static void dtdb (String bookingIDForCustomer, String realbookingIDForCustomer){
 
@@ -13,10 +14,15 @@ public class MongoConnection {
             DB db = mongoClient.getDB("drive_car");
             System.out.println("Connect to database successfully");
             DBCollection coll=db.getCollection("bookingdetails");
+            DBCollection coll1=db.getCollection("maintblock");
             DBObject myDoc=coll.findOne();
             System.out.println(coll.getCount());
             BasicDBObject query=new BasicDBObject(bookingIDForCustomer,realbookingIDForCustomer);
+            BasicDBObject query1 = new BasicDBObject();
+            query1.append("active", 1);
             DBCursor cursor = coll.find(query);
+            coll1.remove(query1);
+
             try {
                 while(cursor.hasNext()) {
                     dbresponse=dbresponse.concat(cursor.next().toString());

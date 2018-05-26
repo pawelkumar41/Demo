@@ -35,6 +35,7 @@ public class WeekDay {
     private static String priceInfoId = "";
     private static String priceInfoId1="";
     private static String getPriceInfoId2="";
+    private static String accessLevel="";
     static HashMap<String, String> has = new HashMap<String, String>();
 
 
@@ -579,4 +580,51 @@ public class WeekDay {
 
 
     }
+    @Test(priority = 12)
+    public static void manitblock() throws Exception {
+        try
+
+        {
+            MongoConnection.dtdb("bookingIDForCustomer",bookingIDForCustomer);
+            HashMap<String, String> bookingdetails = null;
+            HttpPost putRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/5698b013edb73b4fe14090da/controlPanel/addMaintenanceInfo");
+            putRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("accessLevel", 0);
+            object.put("accessToken", Logins.accessToken);
+            object.put("availType", "[0]");
+            object.put("blockType","1");
+            object.put("bookingID","");
+            object.put("comments","Staging test on maintblock");
+            object.put("endDate","2018-06-30T01:00:00.000Z");
+            object.put("reason","Others");
+            object.put("registrationNumber","KA03AE0376");
+            object.put("startDate","2018-06-27T18:30:00.000Z");
+            String message;
+            message = object.toString();
+            putRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(putRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            object1 = object1.getJSONObject("data");
+        } finally
+
+        {
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
+        }
+
+
+    }
+
 }
