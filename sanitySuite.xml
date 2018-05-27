@@ -5,7 +5,7 @@
         <listener class-name="org.uncommons.reportng.HTMLReporter"/>
         <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
     </listeners>
-    <test name="WeekdayAutomation">
+    <test name="sanitySuite">
         <classes>
             <class name="com.util.WeekDay"/>
             <class name="com.util.WeekEnd"/>

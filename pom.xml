@@ -119,7 +119,7 @@
             <version>2.20.1</version>
             <configuration>
                 <suiteXmlFiles>
-                    <suiteXmlFile>WeekdayAutomation.xml</suiteXmlFile>
+                    <suiteXmlFile>sanitySuite.xml</suiteXmlFile>
                     <!--<suiteXmlFile>WeekendAutomation.xml</suiteXmlFile>-->
                     <!--<suiteXmlFile>PromoCodeAutomation.xml</suiteXmlFile>-->
                     <!--<suiteXmlFile>PeakSeasonAutomation.xml</suiteXmlFile>-->
