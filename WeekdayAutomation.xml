@@ -8,6 +8,7 @@
     <test name="WeekdayAutomation">
         <classes>
             <class name="com.util.WeekDay"/>
+            <class name="com.util.WeekEnd"/>
         </classes>
 
     </test>
