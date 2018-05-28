@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="a00fb33d-60da-4f60-85c4-6ce1880cef01" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sanitySuite.xml" afterPath="$PROJECT_DIR$/sanitySuite.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java" afterPath="$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" afterPath="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" />
     </list>
     <ignored path="RevvApp.iws" />
@@ -43,46 +45,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.416666">
-              <caret line="126" column="28" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeekdayAutomation.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testsuite/WeekdayAutomation.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.0">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sanitySuite.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23156089">
-              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeekDay.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WeekDay.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="703" column="11" selection-start-line="703" selection-start-column="11" selection-end-line="703" selection-end-column="11" />
+            <state vertical-scroll-proportion="82.55725">
+              <caret line="735" column="57" selection-start-line="735" selection-start-column="57" selection-end-line="735" selection-end-column="57" />
               <folding>
                 <element signature="e#3489#3505#0" expanded="true" />
                 <element signature="e#11211#11227#0" expanded="true" />
                 <element signature="e#18885#18901#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MongoConnection.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,6 +84,16 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sanitySuite.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.75">
+              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -169,7 +161,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/testdata/weekEnd.txt" />
         <option value="$PROJECT_DIR$/src/main/java/com/testdata/weekendModify.txt" />
         <option value="$PROJECT_DIR$/WeekendAutomation.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java" />
         <option value="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" />
         <option value="$PROJECT_DIR$/target/surefire-reports/old/Main Test Suite/WeekdayAutomation.properties" />
         <option value="$PROJECT_DIR$/target/surefire-reports/old/Main Test Suite/WeekendAutomation.properties" />
@@ -177,6 +168,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/util/WeekEnd.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/sanitySuite.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" />
       </list>
     </option>
@@ -435,6 +427,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RevvApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="revvautomation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Database" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -979,9 +1001,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 15h 10m 23s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 15h 12m 56s.xml">
       <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
     </history-entry>
@@ -1000,14 +1019,17 @@
     <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 15h 53m 43s.xml">
       <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_testsuite_WeekendAutomation_xml - 2018.03.15 at 12h 31m 56s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/testsuite/WeekendAutomation.xml" configurationId="TestNG" />
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 15h 57m 05s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_testsuite_WeekendAutomation_xml - 2018.05.27 at 14h 00m 26s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/testsuite/WeekendAutomation.xml" configurationId="TestNG" />
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 18h 37m 35s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_testsuite_WeekendAutomation_xml - 2018.05.27 at 14h 00m 30s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/testsuite/WeekendAutomation.xml" configurationId="TestNG" />
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 18h 40m 51s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 18h 43m 08s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1021,7 +1043,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="727" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.49673203" order="9" side_tool="false" content_ui="tabs" />
@@ -1032,7 +1054,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.49673203" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.77480316" sideWeight="0.4749596" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7496063" sideWeight="0.4644588" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7496063" sideWeight="0.4644588" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26655897" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1356,16 +1378,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/WeekendAutomation.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2572899">
@@ -1408,7 +1420,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.416666">
+        <state vertical-scroll-proportion="3.2418525">
           <caret line="126" column="28" selection-start-line="126" selection-start-column="28" selection-end-line="126" selection-end-column="28" />
           <folding />
         </state>
@@ -1416,29 +1428,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testsuite/WeekdayAutomation.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.0">
+        <state vertical-scroll-proportion="0.4116638">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75">
+          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="33" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="703" column="11" selection-start-line="703" selection-start-column="11" selection-end-line="703" selection-end-column="11" />
+        <state vertical-scroll-proportion="82.55725">
+          <caret line="735" column="57" selection-start-line="735" selection-start-column="57" selection-end-line="735" selection-end-column="57" />
           <folding>
             <element signature="e#3489#3505#0" expanded="true" />
             <element signature="e#11211#11227#0" expanded="true" />
             <element signature="e#18885#18901#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23156089">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>

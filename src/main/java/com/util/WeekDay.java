@@ -585,7 +585,6 @@ public class WeekDay {
         try
 
         {
-            MongoConnection.dtdb("bookingIDForCustomer",bookingIDForCustomer);
             HashMap<String, String> bookingdetails = null;
             HttpPost putRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/5698b013edb73b4fe14090da/controlPanel/addMaintenanceInfo");
             putRequest.addHeader("content-type", "application/json");
@@ -620,8 +619,7 @@ public class WeekDay {
         } finally
 
         {
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
+            MongoConnection.dtdb("bookingIDForCustomer",bookingIDForCustomer);
         }
 
 
@@ -729,6 +727,47 @@ public class WeekDay {
         {
             //Important: Close the connect
             // httpClient.getConnectionManager().shutdown();
+        }
+
+    }
+
+    @Test(priority = 16)
+    //Below method is used to add mobile no to hub
+    public static void addHubMobileNo() throws Exception {
+
+        try
+
+        {
+            HashMap<String, String> bookingdetails = null;
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/hub/numbers/add");
+            postRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("accessToken", Logins.accessToken);
+            object.put("adminID", Logins.adminid);
+            object.put("hubID","55fb26fb2fa41dba37c67c45");
+            object.put("mobileNumber","9642235588");
+            String message;
+            message = object.toString();
+            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(postRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            System.out.println(resMessage);
+        }
+        finally
+
+        {
+            MongoConnection.dtdb("bookingIDForCustomer",bookingIDForCustomer);
         }
 
 
