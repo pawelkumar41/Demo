@@ -626,5 +626,39 @@ public class WeekDay {
 
 
     }
+    @Test(priority = 13)
+    public static void getHubPanel() throws Exception {
+        try
+
+        {
+            HashMap<String, String> bookingdetails = null;
+            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubIDsList");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            System.out.println(resMessage);
+        }
+        finally
+
+        {
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
+        }
+
+
+    }
 
 }

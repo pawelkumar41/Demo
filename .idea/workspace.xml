@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a00fb33d-60da-4f60-85c4-6ce1880cef01" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/WeekdayAutomation.xml" afterPath="$PROJECT_DIR$/sanitySuite.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sanitySuite.xml" afterPath="$PROJECT_DIR$/sanitySuite.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" afterPath="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" />
     </list>
     <ignored path="RevvApp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -64,21 +64,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sanitySuite.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sanitySuite.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.9626168">
-              <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+            <state vertical-scroll-proportion="-5.625">
+              <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WeekDay.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="WeekDay.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="583" column="33" selection-start-line="583" selection-start-column="23" selection-end-line="583" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.57990116">
+              <caret line="647" column="10" selection-start-line="647" selection-start-column="10" selection-end-line="647" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -167,7 +167,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/testdata/weekendModify.txt" />
         <option value="$PROJECT_DIR$/WeekendAutomation.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" />
         <option value="$PROJECT_DIR$/target/surefire-reports/emailable-report.html" />
         <option value="$PROJECT_DIR$/target/surefire-reports/old/Main Test Suite/WeekdayAutomation.properties" />
         <option value="$PROJECT_DIR$/target/surefire-reports/old/Main Test Suite/WeekendAutomation.properties" />
@@ -175,6 +174,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com/util/WeekEnd.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/sanitySuite.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" />
       </list>
     </option>
   </component>
@@ -435,6 +435,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RevvApp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="revvautomation" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -457,7 +487,7 @@
     <property name="SearchEverywhereHistoryKey" value="comm&#9;FILE&#9;file:///Users/pawelkumar/Documents/revvautomation/src/main/java/com/common/commons.java&#10;weekda&#9;FILE&#9;file:///Users/pawelkumar/Documents/revvautomation/src/main/java/com/testdata/weekDay.txt&#10;wee&#9;FILE&#9;file:///Users/pawelkumar/Documents/revvautomation/src/main/java/com/util/weekDay.java" />
     <property name="add_unversioned_files" value="true" />
   </component>
-  <component name="RunManager" selected="TestNG./Users/pawelkumar/Documents/revvautomation/testsuite/WeekendAutomation.xml">
+  <component name="RunManager" selected="TestNG./Users/pawelkumar/Documents/revvautomation/sanitySuite.xml">
     <configuration default="false" name="/Users/pawelkumar/Documents/revvautomation/testsuite/WeekdayAutomation.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="RevvApp" />
@@ -542,17 +572,22 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="/Users/pawelkumar/Documents/revvautomation/testsuite/PromoCodeAutomation.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="WeekDay" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.android.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="RevvApp" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testsuite/PromoCodeAutomation.xml" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.android" />
+      <option name="MAIN_CLASS_NAME" value="com.android.WeekDay" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -570,22 +605,17 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="false" name="WeekDay" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.android.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="false" name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="RevvApp" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" value="com.android" />
-      <option name="MAIN_CLASS_NAME" value="com.android.WeekDay" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/sanitySuite.xml" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="TEST_OBJECT" value="SUITE" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -919,16 +949,16 @@
       <item index="1" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/testsuite/WeekdayAutomation.xml" />
       <item index="2" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" />
       <item index="3" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/testsuite/WeekendAutomation.xml" />
-      <item index="4" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/testsuite/PromoCodeAutomation.xml" />
-      <item index="5" class="java.lang.String" itemvalue="TestNG.WeekDay" />
+      <item index="4" class="java.lang.String" itemvalue="TestNG.WeekDay" />
+      <item index="5" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/testsuite/WeekendAutomation.xml" />
-        <item index="1" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" />
-        <item index="2" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/testsuite/WeekdayAutomation.xml" />
-        <item index="3" class="java.lang.String" itemvalue="TestNG.WeekDay" />
-        <item index="4" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/testsuite/PromoCodeAutomation.xml" />
+        <item index="0" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" />
+        <item index="1" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/testsuite/WeekendAutomation.xml" />
+        <item index="2" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" />
+        <item index="3" class="java.lang.String" itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/testsuite/WeekdayAutomation.xml" />
+        <item index="4" class="java.lang.String" itemvalue="TestNG.WeekDay" />
       </list>
     </recent_temporary>
   </component>
@@ -946,23 +976,23 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_WeekdayAutomation_xml - 2018.05.27 at 01h 33m 02s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_WeekdayAutomation_xml - 2018.05.27 at 01h 33m 45s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_WeekdayAutomation_xml - 2018.05.27 at 01h 37m 59s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_WeekdayAutomation_xml - 2018.05.27 at 01h 39m 07s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_WeekdayAutomation_xml - 2018.05.27 at 01h 52m 35s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="_Users_pawelkumar_Documents_revvautomation_WeekdayAutomation_xml - 2018.05.27 at 02h 08m 12s.xml">
       <configuration name="/Users/pawelkumar/Documents/revvautomation/WeekdayAutomation.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 15h 10m 23s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 15h 12m 56s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 15h 21m 56s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 15h 23m 52s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2018.05.28 at 15h 24m 35s.xml">
+      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
     </history-entry>
     <history-entry file="_Users_pawelkumar_Documents_revvautomation_testsuite_WeekdayAutomation_xml - 2018.05.15 at 17h 02m 25s.xml">
       <configuration name="/Users/pawelkumar/Documents/revvautomation/testsuite/WeekdayAutomation.xml" configurationId="TestNG" />
@@ -988,7 +1018,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="727" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.49673203" order="9" side_tool="false" content_ui="tabs" />
@@ -999,9 +1029,9 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32755905" sideWeight="0.49673203" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.77480316" sideWeight="0.4749596" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7496063" sideWeight="0.4644588" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7496063" sideWeight="0.4644588" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26655897" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26655897" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24877651" sideWeight="0.48815167" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1357,14 +1387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="583" column="33" selection-start-line="583" selection-start-column="23" selection-end-line="583" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/common/Logins.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1399,8 +1421,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9626168">
-          <caret line="14" column="8" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+        <state vertical-scroll-proportion="-5.625">
+          <caret line="9" column="44" selection-start-line="9" selection-start-column="44" selection-end-line="9" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57990116">
+          <caret line="647" column="10" selection-start-line="647" selection-start-column="10" selection-end-line="647" selection-end-column="10" />
           <folding />
         </state>
       </provider>
