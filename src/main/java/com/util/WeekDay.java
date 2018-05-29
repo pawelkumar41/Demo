@@ -45,7 +45,6 @@ public class WeekDay {
     public static void login() throws Exception {
         Logins.main();
     }
-
     @Test(priority = 2)
     //Below method is used to fetch cars available
     public static void getCarInfo() throws Exception {
@@ -585,6 +584,7 @@ public class WeekDay {
         try
 
         {
+            MongoConnection.mblock();
             HashMap<String, String> bookingdetails = null;
             HttpPost putRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/5698b013edb73b4fe14090da/controlPanel/addMaintenanceInfo");
             putRequest.addHeader("content-type", "application/json");
@@ -619,7 +619,7 @@ public class WeekDay {
         } finally
 
         {
-            MongoConnection.dtdb("bookingIDForCustomer",bookingIDForCustomer);
+
         }
 
 
@@ -738,6 +738,7 @@ public class WeekDay {
         try
 
         {
+            MongoConnection.deleteAttachNo();
             HashMap<String, String> bookingdetails = null;
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/hub/numbers/add");
             postRequest.addHeader("content-type", "application/json");
@@ -767,7 +768,7 @@ public class WeekDay {
         finally
 
         {
-            MongoConnection.dtdb("bookingIDForCustomer",bookingIDForCustomer);
+
         }
 
 
