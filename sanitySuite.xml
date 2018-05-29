@@ -9,7 +9,7 @@
         <classes>
             <class name="com.util.WeekDay"/>
             <class name="com.util.WeekEnd"/>
+            <class name="com.util.HubsPickDelivery"/>
         </classes>
-
     </test>
 </suite>

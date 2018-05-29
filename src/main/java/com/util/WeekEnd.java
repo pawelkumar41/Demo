@@ -9,6 +9,7 @@ import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
@@ -43,13 +44,12 @@ public class WeekEnd {
 
     public static DefaultHttpClient httpClient = new DefaultHttpClient();
 
-    /*@Test(priority = 1)
-
+    @BeforeTest
     public static void login() throws Exception {
         Logins.main();
-    }*/
+    }
 
-    @Test(priority = 2)
+    @Test(priority = 1)
     //Below method is used to fetch cars available
     public static void getCarInfo() throws Exception {
 
@@ -103,7 +103,7 @@ public class WeekEnd {
         }
     }
 
-    @Test(priority = 3)
+    @Test(priority = 2)
     //Below method is used to fetch generated priceinfo for booking creation
     public static void getPriceInfoWeekday() throws Exception {
 
@@ -155,7 +155,7 @@ public class WeekEnd {
         }
     }
 
-    @Test(priority = 4)
+    @Test(priority = 3)
     //Below method is used to create booking
     public static void book() throws Exception {
 
@@ -210,7 +210,7 @@ public class WeekEnd {
 
     }
 
-    @Test(priority = 5)
+    @Test(priority = 4)
     //Below method is used to fetch available cars for modification
     public static void getCarModifyInfo() throws Exception {
 
@@ -266,7 +266,7 @@ public class WeekEnd {
 
     }
 
-    @Test(priority = 6)
+    @Test(priority = 5)
     //Below method is used to fetch priceinfo for modification
     public static void getPriceInfoModifyWeekend() throws Exception {
 
@@ -318,7 +318,7 @@ public class WeekEnd {
         }
     }
 
-    @Test(priority = 7)
+    @Test(priority = 6)
     //Below method is to modify booking for x hrs i.e. addition of hrs
     public static void modifyBookingWeekend() throws Exception {
 
@@ -373,7 +373,7 @@ public class WeekEnd {
 
     }
 
-    @Test(priority = 8)
+    @Test(priority = 7)
     // Below method is used to fetch available cars
     public static void getCarModifyInfo_1() throws Exception {
 
@@ -429,7 +429,7 @@ public class WeekEnd {
 
     }
 
-    @Test(priority = 9)
+    @Test(priority = 8)
     //Below method is used to fetch priceinfo for further modification
     public static void getPriceInfoModifyWeekend_1() throws Exception {
 
@@ -483,7 +483,7 @@ public class WeekEnd {
 
 
 
-    @Test(priority = 10)
+    @Test(priority = 9)
     //Below method is used to modify booking, subtract x hrs
     public static void modifyBooking_1() throws Exception {
 
@@ -538,7 +538,7 @@ public class WeekEnd {
 
     }
 
-    @Test(priority = 11)
+    @Test(priority = 10)
     //Cancel booking
     public static void weekendCancelBooking() throws Exception {
         try {
@@ -568,8 +568,7 @@ public class WeekEnd {
             String resMessage = object1.getString("message");
             object1 = object1.getJSONObject("data");
         } finally {
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
+
         }
     }
 
