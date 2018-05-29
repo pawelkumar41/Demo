@@ -36,7 +36,7 @@ public class MongoConnection {
         DB db = mongoClient.getDB("drive_car");
         DBCollection coll1=db.getCollection("maintblock");
         BasicDBObject query1 = new BasicDBObject();
-        query1.append("active", 1);
+        query1.append("regn_no", "KA03AE0376");
         coll1.remove(query1);
     }
 

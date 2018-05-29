@@ -28,6 +28,7 @@ public class WeekDay {
     private static String latitude1 = "";
     private static String latitude2 = "";
     private static String carModelId = "";
+    private static String oid="";
     private static String model;
     private static String bookingIDForCustomer="";
     private static String _id = "";
@@ -586,8 +587,8 @@ public class WeekDay {
         {
             MongoConnection.mblock();
             HashMap<String, String> bookingdetails = null;
-            HttpPost putRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/5698b013edb73b4fe14090da/controlPanel/addMaintenanceInfo");
-            putRequest.addHeader("content-type", "application/json");
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/5698b013edb73b4fe14090da/controlPanel/addMaintenanceInfo");
+            postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             object.put("accessLevel", 0);
             object.put("accessToken", Logins.accessToken);
@@ -601,10 +602,55 @@ public class WeekDay {
             object.put("startDate","2018-06-27T18:30:00.000Z");
             String message;
             message = object.toString();
-            putRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(putRequest);
+            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(postRequest);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            object1 = object1.getJSONObject("data");
+            oid=object1.getString("$oid");
+        } finally
+
+        {
+
+        }
+
+
+    }
+
+    @Test(priority = 13)
+    public static void editMaintBlock() throws Exception {
+        try
+
+        {
+            HashMap<String, String> bookingdetails = null;
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/5698b013edb73b4fe14090da/controlPanel/EditMaintenanceInfo");
+            postRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("accessLevel", 0);
+            object.put("accessToken", Logins.accessToken);
+            object.put("_id", ""+oid+"");
+            object.put("blockType","1");
+            object.put("comments","Staging test on maintblock");
+            object.put("endDate","2018-06-29T23:00:00.000Z");
+            object.put("reason","Running Repair");
+            object.put("registrationNumber","KA03AE0376");
+            object.put("startDate","2018-06-27T18:30:00.000Z");
+            String message;
+            message = object.toString();
+            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(postRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 201) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
             }
             System.out.println(statusCode);
@@ -624,7 +670,8 @@ public class WeekDay {
 
 
     }
-    @Test(priority = 13)
+
+    @Test(priority = 14)
     //get hub list from hub panel
     public static void getHubPanel() throws Exception {
         try
@@ -660,7 +707,7 @@ public class WeekDay {
 
     }
 
-    @Test(priority = 14)
+    @Test(priority = 15)
     // get driver list from hub
     public static void getDriverList() throws Exception {
         try
@@ -696,7 +743,7 @@ public class WeekDay {
 
     }
 
-    @Test(priority = 15)
+    @Test(priority = 16)
     //get bookings for delivery and pickup of a hub
     public static void getDeliveryPickupList() throws Exception {
         try
@@ -731,7 +778,7 @@ public class WeekDay {
 
     }
 
-    @Test(priority = 16)
+    @Test(priority = 17)
     //Below method is used to add mobile no to hub
     public static void addHubMobileNo() throws Exception {
 
