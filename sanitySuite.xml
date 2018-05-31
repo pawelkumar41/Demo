@@ -10,6 +10,7 @@
             <class name="com.util.WeekDay"/>
             <class name="com.util.WeekEnd"/>
             <class name="com.util.HubsPickDelivery"/>
+            <class name="com.util.ControlPanel"/>
         </classes>
     </test>
 </suite>
