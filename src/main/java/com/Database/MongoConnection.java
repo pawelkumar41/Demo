@@ -48,4 +48,13 @@ public class MongoConnection {
         query1.append("mobileNumber","9642235588");
         coll1.remove(query1);
     }
+
+    public static void deletecar(){
+        MongoClient mongoClient = new MongoClient("13.126.78.55", 27017);
+        DB db = mongoClient.getDB("drive_car");
+        DBCollection coll1=db.getCollection("carinfos");
+        BasicDBObject query1 = new BasicDBObject();
+        query1.append("registrationNumber","AutomationTest");
+        coll1.remove(query1);
+    }
 }

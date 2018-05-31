@@ -1,8 +1,11 @@
 package com.util;
 
+import com.Database.MongoConnection;
 import com.common.Logins;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeTest;
@@ -177,6 +180,87 @@ public class ControlPanel{
         {
             System.out.println("controlPanel load successfull");
         }
+
+    }
+
+    @Test
+    //car list
+    public static void getServiceCityList() throws Exception {
+        try
+
+        {
+            HashMap<String, String> bookingdetails = null;
+            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getServiceCityList");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            System.out.println(resMessage);
+        }
+        finally
+
+        {
+            System.out.println("ServiceCityList load successfull");
+        }
+
+    }
+
+    @Test
+    //add car
+    public static void addcar() throws Exception {
+        try
+
+        {
+            HashMap<String, String> bookingdetails = null;
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/"+Logins.adminid+"/"+Logins.accessToken+"/controlPanel/addCar");
+            postRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("accessLevel", 0);
+            object.put("currentKmReading", "0");
+            object.put("carModelID", "55fb290a2fa41dba37c67c47");
+            object.put("hubID", "55fb26fb2fa41dba37c67c45");
+            object.put("registrationNumber", "AutomationTest");
+            object.put("serviceCityID", "5614f2caed142d0983f9124d");
+            String message;
+            message = object.toString();
+            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(postRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 201) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            object1 = object1.getJSONObject("data");
+            System.out.print(resMessage);
+
+
+
+        }
+        finally
+
+        {
+            MongoConnection.deletecar();
+        }
+
 
     }
 
