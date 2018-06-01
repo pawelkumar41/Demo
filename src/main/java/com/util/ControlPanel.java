@@ -51,8 +51,8 @@ public class ControlPanel{
     //car list
     public static void getModelList() throws Exception {
         try
-
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/ModelList");
             JSONObject object = new JSONObject();
@@ -77,6 +77,7 @@ public class ControlPanel{
 
         {
             System.out.println("ModelList load successfull");
+            httpClient.close();
         }
 
     }
@@ -87,6 +88,7 @@ public class ControlPanel{
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubIDsList");
             JSONObject object = new JSONObject();
@@ -111,6 +113,7 @@ public class ControlPanel{
 
         {
             System.out.println("HubIDsList load successfull");
+            httpClient.close();
         }
 
     }
@@ -121,6 +124,7 @@ public class ControlPanel{
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/routeIPP/get");
             JSONObject object = new JSONObject();
@@ -145,6 +149,7 @@ public class ControlPanel{
 
         {
             System.out.println("routeIPP load successfull");
+            httpClient.close();
         }
 
     }
@@ -155,6 +160,7 @@ public class ControlPanel{
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/controlPanel/all");
             JSONObject object = new JSONObject();
@@ -179,6 +185,7 @@ public class ControlPanel{
 
         {
             System.out.println("controlPanel load successfull");
+            httpClient.close();
         }
 
     }
@@ -189,6 +196,7 @@ public class ControlPanel{
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getServiceCityList");
             JSONObject object = new JSONObject();
@@ -213,6 +221,7 @@ public class ControlPanel{
 
         {
             System.out.println("ServiceCityList load successfull");
+            httpClient.close();
         }
 
     }
@@ -223,6 +232,7 @@ public class ControlPanel{
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/"+Logins.adminid+"/"+Logins.accessToken+"/controlPanel/addCar");
             postRequest.addHeader("content-type", "application/json");
@@ -259,6 +269,7 @@ public class ControlPanel{
 
         {
             MongoConnection.deletecar();
+            httpClient.close();
         }
 
 

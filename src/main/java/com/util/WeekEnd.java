@@ -56,6 +56,7 @@ public class WeekEnd {
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekEnd.txt");
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + Logins.customerid + "&deviceType=panel");
@@ -98,6 +99,7 @@ public class WeekEnd {
         } finally
 
         {
+            httpClient.close();
             //Important: Close the connect
             //  httpClient.getConnectionManager().shutdown();
         }
@@ -110,6 +112,7 @@ public class WeekEnd {
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekEnd.txt");
             //Define a postRequest request
@@ -150,6 +153,7 @@ public class WeekEnd {
         } finally
 
         {
+            httpClient.close();
             //Important: Close the connect
             // httpClient.getConnectionManager().shutdown();
         }
@@ -162,6 +166,7 @@ public class WeekEnd {
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekEnd.txt");
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/booking/bookByAdmin");
@@ -203,6 +208,7 @@ public class WeekEnd {
         } finally
 
         {
+            httpClient.close();
             //Important: Close the connect
             // httpClient.getConnectionManager().shutdown();
         }
@@ -217,6 +223,7 @@ public class WeekEnd {
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
@@ -259,6 +266,7 @@ public class WeekEnd {
         } finally
 
         {
+            httpClient.close();
             //Important: Close the connect
             //  httpClient.getConnectionManager().shutdown();
         }
@@ -273,6 +281,7 @@ public class WeekEnd {
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             //Define a postRequest request
@@ -313,6 +322,7 @@ public class WeekEnd {
         } finally
 
         {
+            httpClient.close();
             //Important: Close the connect
             // httpClient.getConnectionManager().shutdown();
         }
@@ -325,6 +335,7 @@ public class WeekEnd {
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/modifyBookingByAdmin");
@@ -366,6 +377,7 @@ public class WeekEnd {
         } finally
 
         {
+            httpClient.close();
             //Important: Close the connect
             // httpClient.getConnectionManager().shutdown();
         }
@@ -380,6 +392,7 @@ public class WeekEnd {
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate1") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
@@ -422,6 +435,7 @@ public class WeekEnd {
         } finally
 
         {
+            httpClient.close();
             //Important: Close the connect
             //  httpClient.getConnectionManager().shutdown();
         }
@@ -436,6 +450,7 @@ public class WeekEnd {
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             //Define a postRequest request
@@ -476,6 +491,7 @@ public class WeekEnd {
         } finally
 
         {
+            httpClient.close();
             //Important: Close the connect
             // httpClient.getConnectionManager().shutdown();
         }
@@ -490,6 +506,7 @@ public class WeekEnd {
         try
 
         {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/modifyBookingByAdmin");
@@ -531,6 +548,7 @@ public class WeekEnd {
         } finally
 
         {
+            httpClient.close();
             //Important: Close the connect
             // httpClient.getConnectionManager().shutdown();
         }
@@ -542,6 +560,7 @@ public class WeekEnd {
     //Cancel booking
     public static void weekendCancelBooking() throws Exception {
         try {
+            httpClient = new DefaultHttpClient();
             HashMap<String, String> bookingdetails = null;
             HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/cancel");
             putRequest.addHeader("content-type", "application/json");
@@ -568,6 +587,7 @@ public class WeekEnd {
             String resMessage = object1.getString("message");
             object1 = object1.getJSONObject("data");
         } finally {
+            httpClient.close();
 
         }
     }
