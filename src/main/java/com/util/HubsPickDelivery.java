@@ -3,7 +3,8 @@ package com.util;
 import com.common.Logins;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -37,7 +38,7 @@ public class HubsPickDelivery {
     private static String accessLevel="";
     static HashMap<String, String> has = new HashMap<String, String>();
 
-    public static DefaultHttpClient httpClient = new DefaultHttpClient();
+    public static CloseableHttpClient httpClient = HttpClients.createDefault();
 
     @BeforeTest
     public static void login() throws Exception {
@@ -51,7 +52,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/55fb26fb2fa41dba37c67c45?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -87,7 +88,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/5614fa2654893b914967ad93?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -123,7 +124,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/565725997dd9cd5d0c006ce2?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -160,7 +161,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/568e2c46e604ffb655acb753?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -196,7 +197,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/570666e1c7cdb98d13ed383a?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -232,7 +233,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/5772594fe61f902b24096192?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -268,7 +269,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/5876133eb034386fbe3ac1fd?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -304,7 +305,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/5876f03fcbe76e994421027c?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -340,7 +341,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/58b80e218c6024af87e29ccf?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -376,7 +377,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/58d51d4315ae23c461c85adc?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -411,7 +412,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/58e3945d2267bd96537a2ea0?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -446,7 +447,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/59c16ed3a94dc44ff572fa5d?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
@@ -483,7 +484,7 @@ public class HubsPickDelivery {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/59c1799ba94dc45a9f73db0f?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();

@@ -6,7 +6,8 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -40,7 +41,7 @@ public class ControlPanel{
     private static String accessLevel="";
     static HashMap<String, String> has = new HashMap<String, String>();
 
-    public static DefaultHttpClient httpClient = new DefaultHttpClient();
+    public static CloseableHttpClient httpClient = HttpClients.createDefault();
 
     @BeforeTest
     public static void login() throws Exception {
@@ -52,7 +53,7 @@ public class ControlPanel{
     public static void getModelList() throws Exception {
         try
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/ModelList");
             JSONObject object = new JSONObject();
@@ -88,7 +89,7 @@ public class ControlPanel{
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubIDsList");
             JSONObject object = new JSONObject();
@@ -124,7 +125,7 @@ public class ControlPanel{
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/routeIPP/get");
             JSONObject object = new JSONObject();
@@ -160,7 +161,7 @@ public class ControlPanel{
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/controlPanel/all");
             JSONObject object = new JSONObject();
@@ -196,7 +197,7 @@ public class ControlPanel{
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getServiceCityList");
             JSONObject object = new JSONObject();
@@ -232,7 +233,7 @@ public class ControlPanel{
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/"+Logins.adminid+"/"+Logins.accessToken+"/controlPanel/addCar");
             postRequest.addHeader("content-type", "application/json");

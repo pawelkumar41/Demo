@@ -7,7 +7,8 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -42,7 +43,7 @@ public class WeekEnd {
      */
 
 
-    public static DefaultHttpClient httpClient = new DefaultHttpClient();
+    public static CloseableHttpClient httpClient = HttpClients.createDefault();
 
     @BeforeTest
     public static void login() throws Exception {
@@ -56,7 +57,7 @@ public class WeekEnd {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekEnd.txt");
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + Logins.customerid + "&deviceType=panel");
@@ -112,7 +113,7 @@ public class WeekEnd {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekEnd.txt");
             //Define a postRequest request
@@ -166,7 +167,7 @@ public class WeekEnd {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekEnd.txt");
             HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/booking/bookByAdmin");
@@ -223,7 +224,7 @@ public class WeekEnd {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
@@ -281,7 +282,7 @@ public class WeekEnd {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             //Define a postRequest request
@@ -335,7 +336,7 @@ public class WeekEnd {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/modifyBookingByAdmin");
@@ -392,7 +393,7 @@ public class WeekEnd {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate1") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
@@ -450,7 +451,7 @@ public class WeekEnd {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             //Define a postRequest request
@@ -506,7 +507,7 @@ public class WeekEnd {
         try
 
         {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekendModify.txt");
             HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/modifyBookingByAdmin");
@@ -560,7 +561,7 @@ public class WeekEnd {
     //Cancel booking
     public static void weekendCancelBooking() throws Exception {
         try {
-            httpClient = new DefaultHttpClient();
+            httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/cancel");
             putRequest.addHeader("content-type", "application/json");
