@@ -1,10 +1,21 @@
 package com.Database;
+
+import com.common.Commons;
 import com.mongodb.*;
+import org.bson.types.ObjectId;
 import org.testng.Assert;
+
+import java.io.FileNotFoundException;
+import java.util.HashMap;
+
+
 
 public class MongoConnection {
     public static String dbresponse="";
     public static String carInfoID="";
+    public static String NCR = "";
+    public static String rateCardVersion="";
+    static HashMap<String, String> has = new HashMap<String, String>();
     //protected static String
 
     public static void dtdb (String bookingIDForCustomer, String realbookingIDForCustomer){
@@ -57,4 +68,39 @@ public class MongoConnection {
         query1.append("registrationNumber","AutomationTest");
         coll1.remove(query1);
     }
+
+    //Verify door step for NCR in current version
+    public static void doorStepNCR() throws FileNotFoundException {
+        HashMap<String, String> bookingdetails;
+        bookingdetails = Commons.getHashmapfromtxt("rateCard.txt");
+        MongoClient mongoClient = new MongoClient("13.126.78.55", 27017);
+        DB db = mongoClient.getDB("drive_car");
+        // query to get total count
+        DBCollection coll1=db.getCollection("ratecards");
+        BasicDBObject query = new BasicDBObject();
+        String rateCardVersion=bookingdetails.get("rateCardVersion");
+        int rateCardVersion1=Integer.parseInt(rateCardVersion);
+        query.put("serviceCityID",new ObjectId("5614f2caed142d0983f9124d"));
+        query.put("rateCardVersion",rateCardVersion1);
+        query.put("pricingType",new BasicDBObject("$ne", 5));
+        System.out.println(query);
+        DBCursor cursor = coll1.find(query);
+        int total_count = coll1.find(query).count();
+        System.out.println(total_count);
+
+        DBCollection coll2=db.getCollection("ratecards");
+        BasicDBObject query1 = new BasicDBObject();
+        String NCR = bookingdetails.get("NCR");
+        int NCR1=Integer.parseInt(NCR);
+        query1.put("serviceCityID",new ObjectId("5614f2caed142d0983f9124d"));
+        query1.put("rateCardVersion",rateCardVersion1);
+        query1.put("doorStepDeliveryCharges",NCR1);
+        DBCursor cursor1 = coll2.find(query1);
+        System.out.println(query1);
+        //System.out.println(coll1.find(query).count());
+        int delivery_chk = coll2.find(query1).count();
+        System.out.println(delivery_chk);
+        Assert.assertTrue(total_count==delivery_chk);
+    }
+
 }
