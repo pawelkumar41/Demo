@@ -45,7 +45,8 @@ public class DBCrash
                 serviceCity = cursor.curr().get("name").toString();
                 hMap1.put(serviceCity,serviceCityID);
             }
-            System.out.println(hMap1.get("ncr"));
+            System.out.println(hMap1.get("ncr"))
+            ;
 
         } finally {
             cursor.close();
