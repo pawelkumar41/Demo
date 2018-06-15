@@ -48,6 +48,7 @@ public class WeekDay {
     @BeforeTest
     public static void login() throws Exception {
         Logins.main();
+
     }
 
     @Test(priority = 1)

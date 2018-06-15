@@ -3,12 +3,12 @@
  */
 package com.common;
 
+import com.pricing.DBCrash;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
-import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -29,6 +29,7 @@ public class Logins {
     public static void main() throws Exception {
         Logins.adminLogin();
         Logins.userLogin();
+        DBCrash.serviceCityRead();
         //Logins.androidUserLogin();
 
     }
