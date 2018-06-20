@@ -1,6 +1,5 @@
 package com.util;
 
-import com.Database.MongoConnection;
 import com.common.Commons;
 import com.common.Logins;
 import org.apache.http.HttpResponse;
@@ -16,8 +15,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.Properties;
 
 public class WeekDay {
 
@@ -41,14 +43,19 @@ public class WeekDay {
     private static String getPriceInfoId2="";
     private static String accessLevel="";
     static HashMap<String, String> has = new HashMap<String, String>();
-
-
+    static Properties prop = new Properties();
+    static InputStream input = null;
+    static String sActive="";
     public static CloseableHttpClient httpClient = HttpClients.createDefault();
 
     @BeforeTest
     public static void login() throws Exception {
         Logins.main();
+        input = new FileInputStream("config.properties");
 
+        // load a properties file
+        prop.load(input);
+        sActive= prop.getProperty("Active");
     }
 
     @Test(priority = 1)
@@ -61,12 +68,13 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + Logins.customerid + "&deviceType=panel");
+            HttpGet getRequest = new HttpGet( prop.getProperty(sActive)+"/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + Logins.customerid + "&deviceType=panel");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
             HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest+"Pawel Dalal");
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -118,7 +126,7 @@ public class WeekDay {
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             //Define a postRequest request
-            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v1/booking/setPriceInfo");
+            HttpPost postRequest = new HttpPost(prop.getProperty(sActive)+"/api/v1/booking/setPriceInfo");
             System.out.println(postRequest);
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -171,7 +179,7 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
-            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/booking/bookByAdmin");
+            HttpPost postRequest = new HttpPost(prop.getProperty(sActive)+"/api/booking/bookByAdmin");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             object.put("customerID", Logins.customerid);
@@ -207,7 +215,7 @@ public class WeekDay {
             object1 = object1.getJSONObject("data");
             bookingIDForCustomer = object1.getString("bookingIDForCustomer");
             System.out.println("++Pawel++" + bookingIDForCustomer);
-            MongoConnection.dtdb("bookingIDForCustomer",bookingIDForCustomer);
+            //MongoConnection.dtdb("bookingIDForCustomer",bookingIDForCustomer);
 
 
         }
@@ -232,7 +240,7 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekdayModify.txt");
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             String message;
@@ -291,7 +299,7 @@ public class WeekDay {
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekdayModify.txt");
             //Define a postRequest request
-            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v1/booking/setPriceInfo");
+            HttpPost postRequest = new HttpPost(prop.getProperty(sActive)+"/api/v1/booking/setPriceInfo");
             System.out.println(postRequest);
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -346,7 +354,7 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekdayModify.txt");
-            HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/modifyBookingByAdmin");
+            HttpPut putRequest = new HttpPut(prop.getProperty(sActive)+"/api/booking/modifyBookingByAdmin");
             putRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             object.put("customerID", Logins.customerid);
@@ -403,7 +411,7 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekdayModify.txt");
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate1") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate1") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             String message;
@@ -462,7 +470,7 @@ public class WeekDay {
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekdayModify.txt");
             //Define a postRequest request
-            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v1/booking/setPriceInfo");
+            HttpPost postRequest = new HttpPost(prop.getProperty(sActive)+"/api/v1/booking/setPriceInfo");
             System.out.println(postRequest);
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -517,7 +525,7 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
             bookingdetails = Commons.getHashmapfromtxt("weekdayModify.txt");
-            HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/modifyBookingByAdmin");
+            HttpPut putRequest = new HttpPut(prop.getProperty(sActive)+"/api/booking/modifyBookingByAdmin");
             putRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             object.put("customerID", Logins.customerid);
@@ -572,7 +580,7 @@ public class WeekDay {
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
-            HttpPut putRequest = new HttpPut("http://staging.admin.revv.co.in/api/booking/cancel");
+            HttpPut putRequest = new HttpPut(prop.getProperty(sActive)+"/api/booking/cancel");
             putRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             object.put("customerID", Logins.customerid);
@@ -605,7 +613,7 @@ public class WeekDay {
 
 
     }
-    @Test(priority = 11)
+    /*@Test(priority = 11)
     public static void maintBlock() throws Exception {
         try
 
@@ -613,7 +621,7 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             MongoConnection.mblock();
             HashMap<String, String> bookingdetails = null;
-            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/5698b013edb73b4fe14090da/controlPanel/addMaintenanceInfo");
+            HttpPost postRequest = new HttpPost(prop.getProperty(sActive)+"/api/admin/5698b013edb73b4fe14090da/controlPanel/addMaintenanceInfo");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             object.put("accessLevel", 0);
@@ -651,16 +659,16 @@ public class WeekDay {
         }
 
 
-    }
+    }*/
 
-    @Test(priority = 12)
+    /*@Test(priority = 12)
     public static void editMaintBlock() throws Exception {
         try
 
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
-            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/5698b013edb73b4fe14090da/controlPanel/EditMaintenanceInfo");
+            HttpPost postRequest = new HttpPost(prop.getProperty(sActive)+"/api/admin/5698b013edb73b4fe14090da/controlPanel/EditMaintenanceInfo");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             object.put("accessLevel", 0);
@@ -697,7 +705,7 @@ public class WeekDay {
         }
 
 
-    }
+    }*/
 
     @Test(priority = 13)
     //get hub list from hub panel
@@ -707,7 +715,7 @@ public class WeekDay {
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubIDsList");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubIDsList");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -745,7 +753,7 @@ public class WeekDay {
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/controlPanel/55fb26fb2fa41dba37c67c45/driverList");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/controlPanel/55fb26fb2fa41dba37c67c45/driverList");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -775,7 +783,7 @@ public class WeekDay {
 
     }
 
-    @Test(priority = 15)
+    /*@Test(priority = 15)
     //get bookings for delivery and pickup of a hub
     public static void getDeliveryPickupList() throws Exception {
         try
@@ -783,11 +791,12 @@ public class WeekDay {
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/55fb26fb2fa41dba37c67c45?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/55fb26fb2fa41dba37c67c45?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
             HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest+"PawelDalal");
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -810,9 +819,9 @@ public class WeekDay {
             // httpClient.getConnectionManager().shutdown();
         }
 
-    }
+    }*/
 
-    @Test(priority = 16)
+    /*@Test(priority = 16)
     //Below method is used to add mobile no to hub
     public static void addHubMobileNo() throws Exception {
 
@@ -822,7 +831,7 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             MongoConnection.deleteAttachNo();
             HashMap<String, String> bookingdetails = null;
-            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/hub/numbers/add");
+            HttpPost postRequest = new HttpPost(prop.getProperty(sActive)+"/api/admin/hub/numbers/add");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             object.put("accessToken", Logins.accessToken);
@@ -855,6 +864,6 @@ public class WeekDay {
         }
 
 
-    }
+    }*/
 
 }

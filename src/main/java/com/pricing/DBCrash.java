@@ -24,7 +24,7 @@ public class DBCrash
     @Test
    public static void  serviceCityRead() {
         String dbresponse="";
-        MongoClient mongoClient = new MongoClient("35.154.205.66", 27017);
+        MongoClient mongoClient = new MongoClient("13.126.78.55", 27017);
         DB db = mongoClient.getDB("drive_car");
         System.out.println("Connect to database successfully");
         DBCollection coll = db.getCollection("servicecities");

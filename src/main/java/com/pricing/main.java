@@ -7,9 +7,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.bson.types.ObjectId;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -32,10 +30,32 @@ public class main {
     static HashMap<String,String> hMap2=null;
     static List<String> rateCardArray = new ArrayList<String>();
     static HashMap<String,List<String>> map= new HashMap<String, List<String>>();;
+    public static String StBuild="";
+
+
+
+
+
+
+
+    static FileWriter   fstream;
+    static BufferedWriter out ;
+
     public static void main(String args[]) {
         try {
-            readXLSXFile();
 
+
+            {
+                try {
+                    fstream = new FileWriter("out.txt");
+                      out = new BufferedWriter(fstream);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            readXLSXFile();
+out.write(String.valueOf(StBuild));
+            out.close();
         } catch (Exception e) {
             System.out.println("Exception !!!" + e.toString() + e);
         }
@@ -67,9 +87,12 @@ public class main {
             row = (XSSFRow) rows.next();
             Iterator cells = row.cellIterator();
             try {
-                System.out.println("readxls starts"+row.getCell(1)+"    "+row.getCell(0));
-                System.out.println("readxls starts1"+hMap1.get(row.getCell(1))+"    "+hMap.get(row.getCell(0)));
-                List<String> values = databaseRead(hMap1.get(row.getCell(1)), hMap.get(row.getCell(0)), rateCardVersion);
+                System.out.println("car for amaze:: "+hMap.get("Amaze"));
+                String sCar=row.getCell(0).getStringCellValue();
+                String sCity=row.getCell(1).getStringCellValue();
+                System.out.println("readxls starts"+sCity+"    "+sCar);
+                System.out.println("readxls starts1"+hMap1.get(sCity)+"    "+hMap.get(sCar));
+                List<String> values = databaseRead(hMap1.get(sCity), hMap.get(sCar), rateCardVersion);
             }catch(Exception e){
                 e.printStackTrace();
             }
@@ -229,35 +252,51 @@ public class main {
                     pricing = "hourlyTariffPeak";
                     pricingtype = 8;
                 }
-                System.out.println("finalVal     "+finalVal);
-                //System.out.println("ssval[]"+ssval);
+                System.out.println("finalVal     "+finalVal+":::"+pricingtype);
+
                 try {
                     String  val[] = finalVal.split(";");
-                    // System.out.println("1111111     " +  val[0] + "  " +  hMap1.get( val[2]) + "  " +  hMap.get( val[1]));
+                    List<String> sVal=map.get(String.valueOf(pricingtype));
+                   // System.out.println(" map.get"+ sVal.toString()+":::::"+sVal.get(6));
+                    // System.out.println("1111111     " +  val[0] + "  " +  map.get(pricingtype).get(6) + "  " );
 
-
+String sType="";
+                    if(val[4].contains("wd")){
+                        sType=sVal.get(3);
+                    }
+                    else if(val[4].contains("we")){
+                        sType=sVal.get(4);
+                    }else{
+                        sType=sVal.get(5);
+                    }
                     if("1".equalsIgnoreCase(val[0])){
-                        System.out.println(Double.parseDouble( map.get(pricing).get(6))+"::"+Double.parseDouble(val[4])
-                                +"  "+Double.parseDouble(val[6])+"::"+Double.parseDouble(map.get(pricing).get(8))
-                                +"  "+Double.parseDouble(val[7])+"::"+Double.parseDouble(map.get(pricing).get(7)));
-                        if(Double.parseDouble(map.get(pricing).get(6))==Double.parseDouble(val[4].toString()) && Double.parseDouble(val[6])==Double.parseDouble(map.get(pricing).get(8))
-                                && Double.parseDouble(val[7])==Double.parseDouble(map.get(pricing).get(7))){
+                        System.out.println(Double.parseDouble( sVal.get(6))+"::"+Double.parseDouble(val[5])
+                                +"  "+Double.parseDouble(val[6])+"::"+Double.parseDouble(sVal.get(8))
+                                +"  "+Double.parseDouble(val[7])+"::"+Double.parseDouble(sVal.get(7)));
+                        if(Double.parseDouble(sType)==Double.parseDouble(val[4].toString()) && Double.parseDouble(sVal.get(6))==Double.parseDouble(val[5].toString()) && Double.parseDouble(val[6])==Double.parseDouble(sVal.get(8))
+                                && Double.parseDouble(val[7])==Double.parseDouble(sVal.get(7))){
                             System.out.println("1 matcheddd");
                         }
                         else{
                             System.out.println("2 not matcheddd");
+                            StBuild= StBuild+(val[1]+":"+val[2]+"----->"+val[3]+"*****"+Double.parseDouble(sType)+"::"+Double.parseDouble(val[4].toString())+"   "  +Double.parseDouble( sVal.get(6))+"::"+Double.parseDouble(val[5])
+                                    +"  "+Double.parseDouble(val[6])+"::"+Double.parseDouble(sVal.get(8))
+                                    +"  "+Double.parseDouble(val[7])+"::"+Double.parseDouble(sVal.get(7)))+"\n";
                         }
                     }else{
-                        System.out.println("ff"+map.get(pricing));
-                        System.out.println(Double.parseDouble( map.get(pricing).get(6))+"::"+Double.parseDouble(val[5])
-                                +"  "+Double.parseDouble(val[6])+"::"+Double.parseDouble(map.get(pricing).get(8))
-                                +"  "+Double.parseDouble(val[7])+"::"+Double.parseDouble(map.get(pricing).get(7)));
+                        System.out.println("ff"+sVal.get(6));
+                        System.out.println(Double.parseDouble( sVal.get(6))+"::"+Double.parseDouble(val[5])
+                                +"  "+Double.parseDouble(val[6])+"::"+Double.parseDouble(sVal.get(8))
+                                +"  "+Double.parseDouble(val[7])+"::"+Double.parseDouble(sVal.get(7)));
 
-                        if(Double.parseDouble(map.get(pricing).get(6))==Double.parseDouble(val[5].toString()) && Double.parseDouble(val[6])==Double.parseDouble(map.get(pricing).get(8))
-                                && Double.parseDouble(val[7])==Double.parseDouble(map.get(pricing).get(7))){
+                        if(Double.parseDouble(sType)==Double.parseDouble(val[4].toString()) && Double.parseDouble(sVal.get(6))==Double.parseDouble(val[5].toString()) && Double.parseDouble(val[6])==Double.parseDouble(sVal.get(8))
+                                && Double.parseDouble(val[7])==Double.parseDouble(sVal.get(7))){
                             System.out.println("3 matcheddd");
                         }else {
                             System.out.println("4 not matcheddd");
+                            StBuild= StBuild+(val[1]+":"+val[2]+"----->"+val[3]+"*****"+Double.parseDouble(sType)+"::"+Double.parseDouble(val[4].toString())+"   "  +Double.parseDouble( sVal.get(6))+"::"+Double.parseDouble(val[5])
+                                    +"  "+Double.parseDouble(val[6])+"::"+Double.parseDouble(sVal.get(8))
+                                    +"  "+Double.parseDouble(val[7])+"::"+Double.parseDouble(sVal.get(7)))+"\n";
                         }
                     }
                 }catch(Exception e){
@@ -297,7 +336,7 @@ public class main {
         }*/
 
     public static void carModelRead() {
-        MongoClient mongoClient = new MongoClient("35.154.205.66", 27017);
+        MongoClient mongoClient = new MongoClient("13.126.78.55", 27017);
         DB db = mongoClient.getDB("drive_car");
         System.out.println("Connect to database successfully");
         DBCollection coll = db.getCollection("carmodels");
@@ -354,7 +393,7 @@ public class main {
         }*/
 
     public static void  serviceCityRead() {
-        MongoClient mongoClient = new MongoClient("35.154.205.66", 27017);
+        MongoClient mongoClient = new MongoClient("13.126.78.55", 27017);
         DB db = mongoClient.getDB("drive_car");
         System.out.println("Connect to database successfully");
         DBCollection coll = db.getCollection("servicecities");
@@ -421,7 +460,7 @@ public class main {
         }*/
 
     public static List<String>  databaseRead(String serviceCityID, String carModelID,  int rateCardVersion) {
-        MongoClient mongoClient = new MongoClient("35.154.205.66", 27017);
+        MongoClient mongoClient = new MongoClient("13.126.78.55", 27017);
         DB db = mongoClient.getDB("drive_car");
         // query to get total count
         DBCollection coll1 = db.getCollection("ratecards");
@@ -479,7 +518,7 @@ public class main {
                 sPricingType = cursor.curr().get("pricingType").toString();
 
             }
-
+rateCardArray=new ArrayList<String>();
             rateCardArray.add(sCarModelID);
             rateCardArray.add(sServiceCityID);
             rateCardArray.add(sRateCardVersion);
@@ -493,12 +532,25 @@ public class main {
             map.put(sPricingType,rateCardArray);
             System.out.println(dbresponse+"Pawellllllawel");
             System.out.println("rateCard:::"+rateCardArray);
+            System.out.println("mappppp"+map.get("8").get(2));
         } finally {
 
             cursor.close();
             return rateCardArray;
         }
 
+    }
+    public static void WriteToFile(String Data){
+        try{
+            // Create file
+            FileWriter fstream = new FileWriter("out.txt");
+            BufferedWriter out = new BufferedWriter(fstream);
+            out.write(Data);
+            //Close the output stream
+            out.close();
+        }catch (Exception e){//Catch exception if any
+            System.err.println("Error: " + e.getMessage());
+        }
     }
 }
 

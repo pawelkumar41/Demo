@@ -1,0 +1,122 @@
+Aspire:chandigarh----->doorstepDelivery*****265.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Aspire:chandigarh----->doorstepDelivery*****265.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Aspire:chandigarh----->doorstepDelivery*****265.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Xcent:chandigarh----->15km fuel wd*****265.0::195.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Xcent:chandigarh----->15km fuel we*****265.0::229.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Xcent:chandigarh----->extraKmChargeFuel*****265.0::15.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Xcent:chandigarh----->securityDeposit*****265.0::5000.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Xcent:chandigarh----->doorstepDelivery*****265.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Xcent:chandigarh----->doorstepDelivery*****265.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Xcent:chandigarh----->doorstepDelivery*****265.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+i10:chandigarh----->15km fuel wd*****265.0::155.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+i10:chandigarh----->15km fuel we*****265.0::219.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+i10:chandigarh----->15km fuel pk*****265.0::235.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+i10:chandigarh----->extraKmChargeFuel*****265.0::12.0   15.0::9.0  5000.0::5000.0  0.0::0.0
+i10:chandigarh----->securityDeposit*****265.0::5000.0   15.0::9.0  5000.0::5000.0  0.0::0.0
+i10:chandigarh----->doorstepDelivery*****265.0::0.0   15.0::9.0  5000.0::5000.0  0.0::0.0
+i10:chandigarh----->doorstepDelivery*****265.0::0.0   15.0::9.0  5000.0::5000.0  0.0::0.0
+i10:chandigarh----->doorstepDelivery*****265.0::0.0   15.0::9.0  5000.0::5000.0  0.0::0.0
+Dzire:chandigarh----->15km fuel wd*****265.0::195.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Dzire:chandigarh----->15km fuel we*****265.0::229.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Dzire:chandigarh----->extraKmChargeFuel*****265.0::15.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Dzire:chandigarh----->securityDeposit*****265.0::5000.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Dzire:chandigarh----->doorstepDelivery*****265.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Dzire:chandigarh----->doorstepDelivery*****229.0::0.0   12.0::11.0  5000.0::5000.0  0.0::0.0
+Dzire:chandigarh----->doorstepDelivery*****229.0::0.0   12.0::11.0  5000.0::5000.0  0.0::0.0
+Celerio:chandigarh----->15km fuel wd*****229.0::149.0   12.0::12.0  5000.0::5000.0  0.0::0.0
+Celerio:chandigarh----->15km fuel we*****229.0::215.0   12.0::12.0  5000.0::5000.0  0.0::0.0
+Celerio:chandigarh----->extraKmChargeFuel*****229.0::12.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Celerio:chandigarh----->securityDeposit*****229.0::5000.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Celerio:chandigarh----->doorstepDelivery*****229.0::0.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Celerio:chandigarh----->doorstepDelivery*****245.0::0.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Celerio:chandigarh----->doorstepDelivery*****245.0::0.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Swift:chandigarh----->15km fuel wd*****245.0::159.0   12.0::12.0  5000.0::5000.0  0.0::0.0
+Swift:chandigarh----->15km fuel we*****245.0::225.0   12.0::12.0  5000.0::5000.0  0.0::0.0
+Swift:chandigarh----->extraKmChargeFuel*****245.0::12.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Swift:chandigarh----->securityDeposit*****245.0::5000.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Swift:chandigarh----->doorstepDelivery*****245.0::0.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Swift:chandigarh----->doorstepDelivery*****229.0::0.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Swift:chandigarh----->doorstepDelivery*****229.0::0.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Tiago:chandigarh----->15km fuel wd*****229.0::149.0   12.0::12.0  5000.0::5000.0  0.0::0.0
+Tiago:chandigarh----->15km fuel we*****229.0::215.0   12.0::12.0  5000.0::5000.0  0.0::0.0
+Tiago:chandigarh----->extraKmChargeFuel*****229.0::12.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Tiago:chandigarh----->securityDeposit*****229.0::5000.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Tiago:chandigarh----->doorstepDelivery*****229.0::0.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Tiago:chandigarh----->doorstepDelivery*****245.0::0.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Tiago:chandigarh----->doorstepDelivery*****245.0::0.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Elite i20:chandigarh----->15km fuel wd*****245.0::155.0   12.0::12.0  5000.0::5000.0  0.0::0.0
+Elite i20:chandigarh----->15km fuel we*****245.0::215.0   12.0::12.0  5000.0::5000.0  0.0::0.0
+Elite i20:chandigarh----->extraKmChargeFuel*****245.0::12.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Elite i20:chandigarh----->securityDeposit*****245.0::5000.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Elite i20:chandigarh----->doorstepDelivery*****245.0::0.0   12.0::9.0  5000.0::5000.0  0.0::0.0
+Elite i20:chandigarh----->doorstepDelivery*****499.0::0.0   18.0::9.0  5000.0::5000.0  0.0::0.0
+Elite i20:chandigarh----->doorstepDelivery*****499.0::0.0   18.0::9.0  5000.0::5000.0  0.0::0.0
+A3:chandigarh----->15km fuel wd*****499.0::339.0   18.0::18.0  5000.0::5000.0  0.0::0.0
+A3:chandigarh----->15km fuel we*****499.0::459.0   18.0::18.0  5000.0::5000.0  0.0::0.0
+A3:chandigarh----->extraKmChargeFuel*****499.0::18.0   18.0::16.0  5000.0::5000.0  0.0::0.0
+A3:chandigarh----->securityDeposit*****499.0::5000.0   18.0::16.0  5000.0::5000.0  0.0::0.0
+A3:chandigarh----->doorstepDelivery*****499.0::0.0   18.0::16.0  5000.0::5000.0  0.0::0.0
+A3:chandigarh----->doorstepDelivery*****649.0::0.0   18.0::16.0  5000.0::5000.0  0.0::0.0
+A3:chandigarh----->doorstepDelivery*****649.0::0.0   18.0::16.0  5000.0::5000.0  0.0::0.0
+Q3:chandigarh----->15km fuel wd*****649.0::405.0   18.0::18.0  5000.0::5000.0  0.0::0.0
+Q3:chandigarh----->15km fuel we*****649.0::559.0   18.0::18.0  5000.0::5000.0  0.0::0.0
+Q3:chandigarh----->extraKmChargeFuel*****649.0::18.0   18.0::16.0  5000.0::5000.0  0.0::0.0
+Q3:chandigarh----->securityDeposit*****649.0::5000.0   18.0::16.0  5000.0::5000.0  0.0::0.0
+Q3:chandigarh----->doorstepDelivery*****649.0::0.0   18.0::16.0  5000.0::5000.0  0.0::0.0
+Q3:chandigarh----->doorstepDelivery*****649.0::0.0   18.0::16.0  5000.0::5000.0  0.0::0.0
+Q3:chandigarh----->doorstepDelivery*****649.0::0.0   18.0::16.0  5000.0::5000.0  0.0::0.0
+Crysta:chandigarh----->15km fuel wd*****649.0::269.0   18.0::15.0  5000.0::5000.0  0.0::0.0
+Crysta:chandigarh----->15km fuel we*****649.0::345.0   18.0::15.0  5000.0::5000.0  0.0::0.0
+Crysta:chandigarh----->15km fuel pk*****649.0::395.0   18.0::15.0  5000.0::5000.0  0.0::0.0
+Crysta:chandigarh----->extraKmChargeFuel*****649.0::15.0   18.0::12.0  5000.0::5000.0  0.0::0.0
+Crysta:chandigarh----->securityDeposit*****649.0::5000.0   18.0::12.0  5000.0::5000.0  0.0::0.0
+Crysta:chandigarh----->doorstepDelivery*****649.0::0.0   18.0::12.0  5000.0::5000.0  0.0::0.0
+Crysta:chandigarh----->doorstepDelivery*****385.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Crysta:chandigarh----->doorstepDelivery*****385.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Innova:chandigarh----->15km fuel wd*****385.0::259.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Innova:chandigarh----->15km fuel we*****385.0::335.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Innova:chandigarh----->extraKmChargeFuel*****385.0::15.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Innova:chandigarh----->securityDeposit*****385.0::5000.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Innova:chandigarh----->doorstepDelivery*****385.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Innova:chandigarh----->doorstepDelivery*****259.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Innova:chandigarh----->doorstepDelivery*****259.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Baleno:chandigarh----->15km fuel wd*****259.0::179.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Baleno:chandigarh----->15km fuel we*****259.0::215.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Baleno:chandigarh----->extraKmChargeFuel*****259.0::15.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Baleno:chandigarh----->securityDeposit*****259.0::5000.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Baleno:chandigarh----->doorstepDelivery*****259.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Baleno:chandigarh----->doorstepDelivery*****259.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Baleno:chandigarh----->doorstepDelivery*****259.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Corolla:chandigarh----->15km fuel we*****259.0::335.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Corolla:chandigarh----->15km fuel pk*****259.0::385.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Corolla:chandigarh----->extraKmChargeFuel*****259.0::15.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Corolla:chandigarh----->securityDeposit*****259.0::5000.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Corolla:chandigarh----->doorstepDelivery*****259.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Corolla:chandigarh----->doorstepDelivery*****299.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Corolla:chandigarh----->doorstepDelivery*****299.0::0.0   15.0::12.0  5000.0::5000.0  0.0::0.0
+Ciaz:chandigarh----->15km fuel wd*****299.0::205.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Ciaz:chandigarh----->15km fuel we*****299.0::265.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Ciaz:chandigarh----->extraKmChargeFuel*****299.0::15.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Ciaz:chandigarh----->securityDeposit*****299.0::5000.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Ciaz:chandigarh----->doorstepDelivery*****299.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Ciaz:chandigarh----->doorstepDelivery*****305.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Ciaz:chandigarh----->doorstepDelivery*****305.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Ciaz AT:chandigarh----->15km fuel wd*****305.0::209.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Ciaz AT:chandigarh----->15km fuel we*****305.0::269.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Ciaz AT:chandigarh----->extraKmChargeFuel*****305.0::15.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Ciaz AT:chandigarh----->securityDeposit*****305.0::5000.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Ciaz AT:chandigarh----->doorstepDelivery*****305.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Ciaz AT:chandigarh----->doorstepDelivery*****299.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Ciaz AT:chandigarh----->doorstepDelivery*****299.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+City:chandigarh----->15km fuel wd*****299.0::205.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+City:chandigarh----->15km fuel we*****299.0::265.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+City:chandigarh----->extraKmChargeFuel*****299.0::15.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+City:chandigarh----->securityDeposit*****299.0::5000.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+City:chandigarh----->doorstepDelivery*****299.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+City:chandigarh----->doorstepDelivery*****289.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+City:chandigarh----->doorstepDelivery*****289.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Sunny:chandigarh----->15km fuel wd*****289.0::195.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Sunny:chandigarh----->15km fuel we*****289.0::255.0   15.0::15.0  5000.0::5000.0  0.0::0.0
+Sunny:chandigarh----->extraKmChargeFuel*****289.0::15.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Sunny:chandigarh----->securityDeposit*****289.0::5000.0   15.0::11.0  5000.0::5000.0  0.0::0.0
+Sunny:chandigarh----->doorstepDelivery*****289.0::0.0   15.0::11.0  5000.0::5000.0  0.0::0.0

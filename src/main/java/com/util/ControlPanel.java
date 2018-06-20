@@ -1,11 +1,8 @@
 package com.util;
 
-import com.Database.MongoConnection;
 import com.common.Logins;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.json.JSONObject;
@@ -13,8 +10,11 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.Properties;
 
 /**
  * Created by pawelkumar on 31/05/18.
@@ -39,6 +39,9 @@ public class ControlPanel{
     private static String priceInfoId1="";
     private static String getPriceInfoId2="";
     private static String accessLevel="";
+    static Properties prop1 = new Properties();
+    static InputStream input = null;
+    static String sActive="";
     static HashMap<String, String> has = new HashMap<String, String>();
 
     public static CloseableHttpClient httpClient = HttpClients.createDefault();
@@ -46,6 +49,11 @@ public class ControlPanel{
     @BeforeTest
     public static void login() throws Exception {
         Logins.main();
+        input = new FileInputStream("config.properties");
+
+        // load a properties file
+        prop1.load(input);
+        sActive= prop1.getProperty("Active");
     }
 
     @Test
@@ -55,7 +63,7 @@ public class ControlPanel{
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/ModelList");
+            HttpGet getRequest = new HttpGet(prop1.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/ModelList");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -91,7 +99,7 @@ public class ControlPanel{
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubIDsList");
+            HttpGet getRequest = new HttpGet(prop1.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubIDsList");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -127,7 +135,7 @@ public class ControlPanel{
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/routeIPP/get");
+            HttpGet getRequest = new HttpGet(prop1.getProperty(sActive)+"/api/routeIPP/get");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -163,7 +171,7 @@ public class ControlPanel{
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/controlPanel/all");
+            HttpGet getRequest = new HttpGet(prop1.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/controlPanel/all");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -199,7 +207,7 @@ public class ControlPanel{
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails = null;
-            HttpGet getRequest = new HttpGet("http://staging.admin.revv.co.in/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getServiceCityList");
+            HttpGet getRequest = new HttpGet(prop1.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getServiceCityList");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -227,7 +235,7 @@ public class ControlPanel{
 
     }
 
-    @Test
+    /*@Test
     //add car
     public static void addcar() throws Exception {
         try
@@ -274,7 +282,7 @@ public class ControlPanel{
         }
 
 
-    }
+    }*/
 
 
 }
