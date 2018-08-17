@@ -10,6 +10,10 @@ import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.HashMap;
@@ -22,6 +26,10 @@ public class Logins {
     public static String c_accessToken = "";
     private static String _id = "";
     public static String adminid = "";
+    public static String b_st;
+    public static String b_et;
+    public static String m_et;
+    public static String m_et2;
     static HashMap<String, String> has = new HashMap<String, String>();
 
     public static DefaultHttpClient httpClient = new DefaultHttpClient();
@@ -82,6 +90,20 @@ public class Logins {
         try
 
         {
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            Calendar c = Calendar.getInstance();
+            c.setTime(new Date());
+            c.add(Calendar.DATE, 88);
+            String output1 = sdf.format(c.getTime());
+            System.out.println(output1);
+            b_st=output1.concat("T00:00:00");
+            b_et=output1.concat("T10:00:00");
+            m_et=output1.concat("T12:00:00");
+            m_et2=output1.concat("T11:00:00");
+            System.out.println(b_st);
+            System.out.println(b_et);
+            System.out.println(m_et);
+            System.out.println(m_et2);
             HashMap<String, String> userDetails = null;
             userDetails = Commons.getHashmapfromtxt("logindetails.txt");
             HttpPost postRequest = new HttpPost("https://admin.revv.co.in/api/v2/customer/login");

@@ -2,6 +2,7 @@ package com.util;
 
 import com.common.Commons;
 import com.common.Logins;
+import com.sun.jna.platform.win32.WinNT;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -13,6 +14,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.json.JSONObject;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import sun.rmi.runtime.Log;
 
 import java.io.BufferedReader;
 import java.io.FileInputStream;
@@ -68,7 +70,7 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
-            HttpGet getRequest = new HttpGet( prop.getProperty(sActive)+"/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + Logins.customerid + "&deviceType=panel");
+            HttpGet getRequest = new HttpGet( prop.getProperty(sActive)+"/api/v2/carInfo/startDate=" + Logins.b_st + "&endDate=" + Logins.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?" + "customerID=" + Logins.customerid + "&deviceType=panel");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             String message;
@@ -135,8 +137,8 @@ public class WeekDay {
             object.put("carModelID", carModelId);
             object.put("latitude", bookingdetails.get("latitude1"));
             object.put("longitude", bookingdetails.get("longitude1"));
-            object.put("startDate", bookingdetails.get("startdate"));
-            object.put("endDate", bookingdetails.get("enddate"));
+            object.put("startDate", Logins.b_st);
+            object.put("endDate", Logins.b_et);
             object.put("promoCodeName", "");
             object.put("deviceType", bookingdetails.get("panel"));
             object.put("pricingType", 1);
@@ -189,8 +191,8 @@ public class WeekDay {
             object.put("latitude2", bookingdetails.get("latitude2"));
             object.put("longitude1", bookingdetails.get("longitude1"));
             object.put("longitude2", bookingdetails.get("longitude2"));
-            object.put("startDate", bookingdetails.get("startdate"));
-            object.put("endDate", bookingdetails.get("enddate"));
+            object.put("startDate", Logins.b_st);
+            object.put("endDate", Logins.b_et);
             object.put("alternateIDProofType", "2");
             object.put("adminID", Logins.adminid);
             object.put("pickUpLocation1", bookingdetails.get("pickUpLocation1"));
@@ -240,7 +242,7 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekdayModify.txt");
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/v2/carInfo/startDate=" + Logins.b_st + "&endDate=" + Logins.m_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             String message;
@@ -308,8 +310,8 @@ public class WeekDay {
             object.put("carModelID", carModelId);
             object.put("latitude", bookingdetails.get("latitude1"));
             object.put("longitude", bookingdetails.get("longitude1"));
-            object.put("startDate", bookingdetails.get("startdate"));
-            object.put("endDate", bookingdetails.get("enddate"));
+            object.put("startDate", Logins.b_st);
+            object.put("endDate", Logins.m_et);
             object.put("promoCodeName", "");
             object.put("deviceType", bookingdetails.get("panel"));
             object.put("pricingType", 1);
@@ -364,8 +366,8 @@ public class WeekDay {
             object.put("latitude2", bookingdetails.get("latitude2"));
             object.put("longitude1", bookingdetails.get("longitude1"));
             object.put("longitude2", bookingdetails.get("longitude2"));
-            object.put("startDate", bookingdetails.get("startdate"));
-            object.put("endDate", bookingdetails.get("enddate"));
+            object.put("startDate", Logins.b_st);
+            object.put("endDate", Logins.m_et);
             object.put("bookingID",bookingIDForCustomer);
             object.put("adminID", Logins.adminid);
             object.put("pickUpLocation1", bookingdetails.get("pickUpLocation1"));
@@ -411,7 +413,7 @@ public class WeekDay {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
             bookingdetails = Commons.getHashmapfromtxt("weekdayModify.txt");
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/v2/carInfo/startDate=" + bookingdetails.get("startdate") + "&endDate=" + bookingdetails.get("enddate1") + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/v2/carInfo/startDate=" + Logins.b_st + "&endDate=" + Logins.m_et2 + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId="+bookingIDForCustomer+"?" + "customerID=" + Logins.customerid);
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             String message;
@@ -479,8 +481,8 @@ public class WeekDay {
             object.put("carModelID", carModelId);
             object.put("latitude", bookingdetails.get("latitude1"));
             object.put("longitude", bookingdetails.get("longitude1"));
-            object.put("startDate", bookingdetails.get("startdate"));
-            object.put("endDate", bookingdetails.get("enddate1"));
+            object.put("startDate", Logins.b_st);
+            object.put("endDate", Logins.m_et2);
             object.put("promoCodeName", "");
             object.put("deviceType", bookingdetails.get("panel"));
             object.put("pricingType", 1);
@@ -535,8 +537,8 @@ public class WeekDay {
             object.put("latitude2", bookingdetails.get("latitude2"));
             object.put("longitude1", bookingdetails.get("longitude1"));
             object.put("longitude2", bookingdetails.get("longitude2"));
-            object.put("startDate", bookingdetails.get("startdate"));
-            object.put("endDate", bookingdetails.get("enddate1"));
+            object.put("startDate", Logins.b_st);
+            object.put("endDate", Logins.m_et2);
             object.put("bookingID",bookingIDForCustomer);
             object.put("adminID", Logins.adminid);
             object.put("pickUpLocation1", bookingdetails.get("pickUpLocation1"));
