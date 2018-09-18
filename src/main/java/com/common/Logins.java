@@ -3,19 +3,17 @@
  */
 package com.common;
 
-import com.pricing.DBCrash;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.json.JSONObject;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
 import java.util.HashMap;
 
 public class Logins {
@@ -37,7 +35,7 @@ public class Logins {
     public static void main() throws Exception {
         Logins.adminLogin();
         Logins.userLogin();
-        DBCrash.serviceCityRead();
+        //DBCrash.serviceCityRead();
         //Logins.androidUserLogin();
 
     }

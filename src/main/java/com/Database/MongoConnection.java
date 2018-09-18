@@ -21,7 +21,7 @@ public class MongoConnection {
     public static void dtdb (String bookingIDForCustomer, String realbookingIDForCustomer){
 
         {
-            MongoClient mongoClient = new MongoClient("13.126.78.55", 27017);
+            /*MongoClient mongoClient = new MongoClient("13.126.78.55", 27017);
             DB db = mongoClient.getDB("drive_car");
             System.out.println("Connect to database successfully");
             DBCollection coll=db.getCollection("bookingdetails");
@@ -37,7 +37,7 @@ public class MongoConnection {
                 }
             } finally {
                 cursor.close();
-            }
+            }*/
 
         }
     }
