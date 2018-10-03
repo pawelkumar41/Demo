@@ -70,5 +70,47 @@ public class Dump {
 
     }
 
+    @Test(priority = 2)
+    public static void getDriverInOutTime() throws Exception {
+
+        try
+
+        {
+            httpClient = HttpClients.createDefault();
+            HttpPost postRequest = new HttpPost(prop.getProperty(sActive)+"/api/admin/getDriverInOutTime");
+            postRequest.addHeader("content-type", "application/json");
+            JSONObject object = new JSONObject();
+            object.put("email", "pawel.kumar@revv.co.in");
+            object.put("fromDate", "2018-10-01T00:00:00.000Z");
+            object.put("toDate", "2018-10-02T00:00:00.000Z");
+            String message;
+            message = object.toString();
+            System.out.println(message);
+            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            System.out.println(postRequest);
+            HttpResponse response = httpClient.execute(postRequest);
+            System.out.println(response);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode==200){
+                System.out.println(statusCode);
+                System.out.println("Success");
+            }
+            else if(statusCode != 200){
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+
+        }
+        finally
+
+        {
+            httpClient.close();
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
+        }
+
+
+    }
+
+
 
 }
