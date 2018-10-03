@@ -22,18 +22,15 @@ public class Dump {
 
     @BeforeTest
     public static void login() throws Exception {
-        //Logins.main();
         input = new FileInputStream("config.properties");
-
         // load a properties file
         prop.load(input);
         sActive= prop.getProperty("Active");
     }
 
 
-    @Test(priority = 3)
-    //Below method is used to create booking
-    public static void book() throws Exception {
+    @Test(priority = 1)
+    public static void getCarHubDump() throws Exception {
 
         try
 
