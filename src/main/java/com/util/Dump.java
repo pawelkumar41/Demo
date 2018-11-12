@@ -58,6 +58,7 @@ public class Dump {
                 System.out.println("Success");
             }
             else if(statusCode != 200){
+                System.out.println(statusCode);
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
             }
 
@@ -84,7 +85,7 @@ public class Dump {
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             object.put("email", "pawel.kumar@revv.co.in");
-            object.put("fromDate", "2018-10-01T00:00:00.000Z");
+            object.put("fromDate", "2018-10-01T00:00:00.000Z)";
             object.put("toDate", "2018-10-02T00:00:00.000Z");
             String message;
             message = object.toString();
