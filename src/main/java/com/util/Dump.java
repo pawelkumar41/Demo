@@ -98,6 +98,7 @@ public class Dump {
                 System.out.println(statusCode);
                 System.out.println("Success");
             } else if (statusCode != 200) {
+                System.out.println(statusCode);
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
             }
 
@@ -130,6 +131,7 @@ public class Dump {
                     System.out.println("Success");
                 }
                 else if(statusCode != 200){
+                    System.out.println(statusCode);
                     throw new RuntimeException("Failed with HTTP error code : " + statusCode);
                 }
 
