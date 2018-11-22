@@ -47,7 +47,7 @@ public class Logins {
             HashMap<String, String> adminDetails = null;
             adminDetails = Commons.getHashmapfromtxt("adminlogin.txt");
             //Define a postRequest request
-            HttpPost postRequest = new HttpPost("https://admin.revv.co.in/api/admin/login");
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/admin/login");
             //Set the API media type in http content-type header
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -104,7 +104,7 @@ public class Logins {
             System.out.println(m_et2);
             HashMap<String, String> userDetails = null;
             userDetails = Commons.getHashmapfromtxt("logindetails.txt");
-            HttpPost postRequest = new HttpPost("https://admin.revv.co.in/api/v2/customer/login");
+            HttpPost postRequest = new HttpPost("http://staging.admin.revv.co.in/api/v2/customer/login");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
             object.put("email", userDetails.get("email"));
