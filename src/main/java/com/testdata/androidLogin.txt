@@ -1,1 +1,1 @@
-email=pawel.kumar@revv.co.in|password=revv!2345|deviceType=android|deviceName=MOTOROLA+XT1562|deviceToken=APA91bHbn-n5UufM14YBQjYGjal8belCXmQtwVQhoeZ8phfQsfsRuZgc_hoPNA9o3oCpVjnOvrwiI-Vog2_4EpzNa3DAeoIJ_UMnhcRIzAsi1JNbrjKpdYg|appVersion=212|
+email=automation.user@revv.co.in|password=revv!2345|deviceType=android|deviceName=MOTOROLA+XT1562|deviceToken=APA91bHbn-n5UufM14YBQjYGjal8belCXmQtwVQhoeZ8phfQsfsRuZgc_hoPNA9o3oCpVjnOvrwiI-Vog2_4EpzNa3DAeoIJ_UMnhcRIzAsi1JNbrjKpdYg|appVersion=212|

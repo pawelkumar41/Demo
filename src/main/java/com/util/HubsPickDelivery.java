@@ -528,4 +528,76 @@ public class HubsPickDelivery {
 
     }
 
+    @Test(priority = 14)
+    //get bookings for delivery and pickup of a Mangalore hub
+    public static void getDeliveryPickupList13() throws Exception {
+        try
+
+        {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails = null;
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/5b8e67caa755cb11875bb00f?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            System.out.println(resMessage);
+        }
+        finally
+
+        {
+            System.out.println("Mangalore load successfull");
+            httpClient.close();
+        }
+
+    }
+
+    @Test(priority = 15)
+    //get bookings for delivery and pickup of a Kolkata hub
+    public static void getDeliveryPickupList14() throws Exception {
+        try
+
+        {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails = null;
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/5b956db4a755cb1be2485cb5?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            System.out.println(resMessage);
+        }
+        finally
+
+        {
+            System.out.println("Kolkata load successfull");
+            httpClient.close();
+        }
+
+    }
+
 }
