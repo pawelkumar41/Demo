@@ -600,4 +600,113 @@ public class HubsPickDelivery {
 
     }
 
+    @Test(priority = 16)
+    //get bookings for delivery and pickup of a Ahmedabad hub
+    public static void getDeliveryPickupList15() throws Exception {
+        try
+
+        {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails = null;
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/5b9572dda755cb21ac2602b9?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            System.out.println(resMessage);
+        }
+        finally
+
+        {
+            System.out.println("Ahmedabad load successfull");
+            httpClient.close();
+        }
+
+    }
+
+    @Test(priority = 17)
+    //get bookings for delivery and pickup of a Kochi hub
+    public static void getDeliveryPickupList16() throws Exception {
+        try
+
+        {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails = null;
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/5b957466a755cb23458c539f?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            System.out.println(resMessage);
+        }
+        finally
+
+        {
+            System.out.println("Kochi load successfull");
+            httpClient.close();
+        }
+
+    }
+
+    @Test(priority = 18)
+    //get bookings for delivery and pickup of a Surat hub
+    public static void getDeliveryPickupList17() throws Exception {
+        try
+
+        {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails = null;
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/admin/" + Logins.adminid + "/" + Logins.accessToken + "/getHubPanel/5bfeeff2a1e85bd5ba325f4b?page=1&perPage=20&searchKey=%7B%7D&sortParams=%7B%22sortKey%22:%22rescheduleTime%22,%22sortOrder%22:1%7D");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+            JSONObject object1 = null;
+            while ((output = br.readLine()) != null) {
+                object1 = new JSONObject(output);
+            }
+            String resMessage = object1.getString("message");
+            System.out.println(resMessage);
+        }
+        finally
+
+        {
+            System.out.println("Surat load successfull");
+            httpClient.close();
+        }
+
+    }
+
+
 }
