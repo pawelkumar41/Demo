@@ -1,0 +1,1 @@
+startdate=2018-10-05T00:00:00|enddate=2018-10-05T10:00:00|longitude1=77.584239|longitude2=77.584239|latitude1=12.990761|latitude2=12.990761|deviceType=panel|pickupLocation=Bangalore|

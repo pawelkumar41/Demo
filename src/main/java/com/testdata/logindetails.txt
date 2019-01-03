@@ -1,1 +1,1 @@
-email=automation.user@revv.co.in|password=revv!2345|deviceType=ios|deviceName=WEB|deviceToken=revv_desktop|appVersion=1.0|
+email=pawel.kumar@revv.co.in|password=revv!2345|deviceType=ios|deviceName=WEB|deviceToken=revv_desktop|appVersion=1.0|
