@@ -1,5 +1,6 @@
 package com.util;
 
+import com.common.CityData;
 import com.common.Commons;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -24,6 +25,15 @@ import java.util.Properties;
 
 
 public class ServiceCitiesList {
+    public static String b_st;
+    public static String b_et;
+    public static String m_et;
+    public static String m_et2;
+    public static CloseableHttpClient httpClient = HttpClients.createDefault();
+    static HashMap<String, String> has = new HashMap<String, String>();
+    static Properties prop = new Properties();
+    static InputStream input = null;
+    static String sActive = "";
     private static String customerid = "";
     private static String accessToken = "";
     private static String c_accessToken = "";
@@ -37,21 +47,12 @@ public class ServiceCitiesList {
     private static String oid = "";
     private static String model;
     private static String bookingIDForCustomer = "";
-    public static String b_st;
-    public static String b_et;
-    public static String m_et;
-    public static String m_et2;
     private static String _id = "";
     private static String adminid = "";
     private static String priceInfoId = "";
     private static String priceInfoId1 = "";
     private static String getPriceInfoId2 = "";
     private static String accessLevel = "";
-    static HashMap<String, String> has = new HashMap<String, String>();
-    static Properties prop = new Properties();
-    static InputStream input = null;
-    static String sActive = "";
-    public static CloseableHttpClient httpClient = HttpClients.createDefault();
 
 
     @BeforeTest
@@ -60,8 +61,9 @@ public class ServiceCitiesList {
 
         // load a properties file
         prop.load(input);
-        sActive= prop.getProperty("Active");
+        sActive = prop.getProperty("Active");
     }
+
     @BeforeTest
     public static void userLogin() throws Exception {
         try
@@ -121,7 +123,6 @@ public class ServiceCitiesList {
 
     }
 
-
     @Test(priority = 1)
     public static void bangaloreCityLoad() throws Exception {
         try
@@ -129,9 +130,9 @@ public class ServiceCitiesList {
         {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
-            bookingdetails = Commons.getHashmapfromtxt("Bangalore_City.txt");
-            System.out.println("--Date--"+ServiceCitiesList.b_st);
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive)+"/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID="+ServiceCitiesList.customerid+"&pickupLocation=Bangalore");
+            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Bangalore");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -140,8 +141,7 @@ public class ServiceCitiesList {
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            else{
+            } else {
                 System.out.println("BANGALORE LOAD SUCCESSFULL");
             }
         } finally
@@ -150,4 +150,247 @@ public class ServiceCitiesList {
             httpClient.close();
         }
     }
+
+    @Test(priority = 2)
+    public static void HydCityLoad() throws Exception {
+        try {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails;
+            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Hyderabad");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            } else {
+                System.out.println("Hyderabad LOAD SUCCESSFULL");
+            }
+        } finally
+
+        {
+            httpClient.close();
+        }
+    }
+
+
+    @Test(priority = 3)
+    public static void NCR() throws Exception {
+        try {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails;
+            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Delhi-NCR");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            } else {
+                System.out.println("NCR LOAD SUCCESSFULL");
+            }
+        } finally
+
+        {
+            httpClient.close();
+        }
+    }
+        @Test(priority = 4)
+        public static void Mumbai() throws Exception {
+            try {
+                httpClient = HttpClients.createDefault();
+                HashMap<String, String> bookingdetails;
+                bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+                System.out.println("--Date--" + ServiceCitiesList.b_st);
+                HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Mumbai");
+                JSONObject object = new JSONObject();
+                String message;
+                message = object.toString();
+                HttpResponse response = httpClient.execute(getRequest);
+                System.out.println(getRequest);
+                int statusCode = response.getStatusLine().getStatusCode();
+                if (statusCode != 200) {
+                    throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+                } else {
+                    System.out.println("Mumbai LOAD SUCCESSFULL");
+                }
+            } finally
+
+            {
+                httpClient.close();
+            }
+    }
+
+
+    @Test(priority = 5)
+    public static void Chennai() throws Exception {
+        try {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails;
+            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Mumbai");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            } else {
+                System.out.println("Mumbai LOAD SUCCESSFULL");
+            }
+        } finally
+
+        {
+            httpClient.close();
+        }
+    }
+
+    @Test(priority = 6)
+    public static void Pune() throws Exception {
+        try {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails;
+            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Pune");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            } else {
+                System.out.println("Pune LOAD SUCCESSFULL");
+            }
+        } finally
+
+        {
+            httpClient.close();
+        }
+    }
+
+
+    @Test(priority = 7)
+    public static void Jaipur() throws Exception {
+        try {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails;
+            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Jaipur");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            } else {
+                System.out.println("Jaipur LOAD SUCCESSFULL");
+            }
+        } finally
+
+        {
+            httpClient.close();
+        }
+    }
+
+    @Test(priority = 8)
+    public static void Mysore() throws Exception {
+        try {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails;
+            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Mysore");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            } else {
+                System.out.println("Mysore LOAD SUCCESSFULL");
+            }
+        } finally
+
+        {
+            httpClient.close();
+        }
+    }
+
+    @Test(priority = 9)
+    public static void Vizag() throws Exception {
+        try {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails;
+            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Vizag");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            } else {
+                System.out.println("Vizag LOAD SUCCESSFULL");
+            }
+        } finally
+
+        {
+            httpClient.close();
+        }
+    }
+
+    @Test(priority = 10)
+    public static void Coimbatore() throws Exception {
+        try {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails;
+            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Coimbatore");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            } else {
+                System.out.println("Coimbatore LOAD SUCCESSFULL");
+            }
+        } finally
+
+        {
+            httpClient.close();
+        }
+    }
+
+
+
+
+
+
+
 }

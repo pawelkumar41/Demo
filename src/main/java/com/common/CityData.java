@@ -12,11 +12,11 @@ import java.util.HashMap;
 /**
  * Created by pawelkumar on 19/04/16.
  */
-public class Commons {
 
-    public static HashMap<String, String> getHashmapfromtxt(String filename) throws FileNotFoundException {
+public class CityData {
+    public static HashMap<String, String> getHashmapfromtxt1(String filename) throws FileNotFoundException {
         HashMap<String, String> hash = new HashMap<String, String>();
-        BufferedReader br = new BufferedReader(new FileReader("./src/main/java/com/testdata/" + filename));
+        BufferedReader br = new BufferedReader(new FileReader("./src/main/java/CitiesData/" + filename));
 
         try {
 
@@ -43,4 +43,5 @@ public class Commons {
         Date date = df.parse(dateString);
         return date;
     }
+
 }

@@ -1,0 +1,1 @@
+longitude1=76.6393805|latitude1=12.2958104|longitude2=76.6393805|latitude2=12.2958104|pickupLocation=Mysore|
