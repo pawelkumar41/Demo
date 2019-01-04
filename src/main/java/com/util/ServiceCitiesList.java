@@ -387,6 +387,33 @@ public class ServiceCitiesList {
         }
     }
 
+    @Test(priority = 11)
+    public static void Chandigarh() throws Exception {
+        try {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails;
+            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Chandigarh");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            } else {
+                System.out.println("Chandigarh LOAD SUCCESSFULL");
+            }
+        } finally
+
+        {
+            httpClient.close();
+        }
+    }
+
+
 
 
 
