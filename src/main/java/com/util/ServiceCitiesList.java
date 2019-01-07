@@ -183,9 +183,9 @@ public class ServiceCitiesList {
         try {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
-            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            bookingdetails = CityData.getHashmapfromtxt1("NCR.txt");
             System.out.println("--Date--" + ServiceCitiesList.b_st);
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Delhi-NCR");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Delhi-NCR");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -208,9 +208,9 @@ public class ServiceCitiesList {
             try {
                 httpClient = HttpClients.createDefault();
                 HashMap<String, String> bookingdetails;
-                bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+                bookingdetails = CityData.getHashmapfromtxt1("Mumbai.txt");
                 System.out.println("--Date--" + ServiceCitiesList.b_st);
-                HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Mumbai");
+                HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Mumbai");
                 JSONObject object = new JSONObject();
                 String message;
                 message = object.toString();
@@ -235,9 +235,9 @@ public class ServiceCitiesList {
         try {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
-            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            bookingdetails = CityData.getHashmapfromtxt1("Chennai.txt");
             System.out.println("--Date--" + ServiceCitiesList.b_st);
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Mumbai");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Chennai");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -247,7 +247,7 @@ public class ServiceCitiesList {
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
             } else {
-                System.out.println("Mumbai LOAD SUCCESSFULL");
+                System.out.println("Chennai LOAD SUCCESSFULL");
             }
         } finally
 
@@ -261,9 +261,9 @@ public class ServiceCitiesList {
         try {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
-            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            bookingdetails = CityData.getHashmapfromtxt1("Pune.txt");
             System.out.println("--Date--" + ServiceCitiesList.b_st);
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Pune");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Pune");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -288,9 +288,9 @@ public class ServiceCitiesList {
         try {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
-            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            bookingdetails = CityData.getHashmapfromtxt1("Jaipur.txt");
             System.out.println("--Date--" + ServiceCitiesList.b_st);
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Jaipur");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Jaipur");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -314,9 +314,9 @@ public class ServiceCitiesList {
         try {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
-            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            bookingdetails = CityData.getHashmapfromtxt1("Mysore.txt");
             System.out.println("--Date--" + ServiceCitiesList.b_st);
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Mysore");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Mysore");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -340,9 +340,9 @@ public class ServiceCitiesList {
         try {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
-            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            bookingdetails = CityData.getHashmapfromtxt1("Vizag.txt");
             System.out.println("--Date--" + ServiceCitiesList.b_st);
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Vizag");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Vizag");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -366,9 +366,9 @@ public class ServiceCitiesList {
         try {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
-            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            bookingdetails = CityData.getHashmapfromtxt1("Coimbatore.txt");
             System.out.println("--Date--" + ServiceCitiesList.b_st);
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Coimbatore");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Coimbatore");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -392,9 +392,9 @@ public class ServiceCitiesList {
         try {
             httpClient = HttpClients.createDefault();
             HashMap<String, String> bookingdetails;
-            bookingdetails = CityData.getHashmapfromtxt1("Bangalore.txt");
+            bookingdetails = CityData.getHashmapfromtxt1("Chandigarh.txt");
             System.out.println("--Date--" + ServiceCitiesList.b_st);
-            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude11") + "&latitude1=" + bookingdetails.get("latitude11") + "&longitude2=" + bookingdetails.get("longitude22") + "&latitude2=" + bookingdetails.get("latitude22") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Chandigarh");
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Chandigarh");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
@@ -413,11 +413,57 @@ public class ServiceCitiesList {
         }
     }
 
+        @Test(priority = 12)
+        public static void Mangalore () throws Exception {
+            try {
+                httpClient = HttpClients.createDefault();
+                HashMap<String, String> bookingdetails;
+                bookingdetails = CityData.getHashmapfromtxt1("Mangalore.txt");
+                System.out.println("--Date--" + ServiceCitiesList.b_st);
+                HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Mangalore");
+                JSONObject object = new JSONObject();
+                String message;
+                message = object.toString();
+                HttpResponse response = httpClient.execute(getRequest);
+                System.out.println(getRequest);
+                int statusCode = response.getStatusLine().getStatusCode();
+                if (statusCode != 200) {
+                    throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+                } else {
+                    System.out.println("Mangalore LOAD SUCCESSFULL");
+                }
+            } finally
+
+            {
+                httpClient.close();
+            }
+        }
+
+    @Test(priority = 13)
+    public static void Kolkata () throws Exception {
+        try {
+            httpClient = HttpClients.createDefault();
+            HashMap<String, String> bookingdetails;
+            bookingdetails = CityData.getHashmapfromtxt1("Kolkata.txt");
+            System.out.println("--Date--" + ServiceCitiesList.b_st);
+            HttpGet getRequest = new HttpGet(prop.getProperty(sActive) + "/api/v2/carInfo/startDate=" + ServiceCitiesList.b_st + "&endDate=" + ServiceCitiesList.b_et + "&longitude1=" + bookingdetails.get("longitude1") + "&latitude1=" + bookingdetails.get("latitude1") + "&longitude2=" + bookingdetails.get("longitude2") + "&latitude2=" + bookingdetails.get("latitude2") + "&carInfoID=0&bookingId=0?&customerID=" + ServiceCitiesList.customerid + "&pickupLocation=Kolkata");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(getRequest);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            } else {
+                System.out.println("Kolkat LOAD SUCCESSFULL");
+            }
+        } finally
+
+        {
+            httpClient.close();
+        }
+    }
 
 
-
-
-
-
-
-}
+    }
