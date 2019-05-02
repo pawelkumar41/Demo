@@ -8,10 +8,10 @@
     <test name="sanitySuite">
         <classes>
             <class name="com.util.WeekDay"/>
-            <class name="com.util.ControlPanel"/>
+            <!--<class name="com.util.ControlPanel"/>
             <class name="com.util.Dump"/>
             <class name="com.util.HubsPickDelivery"/>
-            <class name="com.util.ServiceCitiesList"/>
+            <class name="com.util.ServiceCitiesList"/>-->
         </classes>
     </test>
 </suite>
