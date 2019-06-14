@@ -644,7 +644,6 @@ public class Registration {
     }
 
 
-
     @Test(priority = 17)
     //Below method is used to create booking
     public static void goldAmtOption() throws Exception {
@@ -715,7 +714,6 @@ public class Registration {
     }
 
 
-
     @Test(priority = 17)
     //Below method is used to create booking
     public static void kycOption1() throws Exception {
@@ -749,7 +747,6 @@ public class Registration {
             // httpClient.getConnectionManager().shutdown();
         }
     }
-
 
 
     @Test(priority = 18)
