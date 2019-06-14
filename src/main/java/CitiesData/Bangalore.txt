@@ -1,1 +1,0 @@
-longitude1=77.584239|latitude1=12.990761|longitude2=77.584239|latitude2=12.990761|pickupLocation=Bangalore|longitude11=78.384005|latitude11=17.421472|longitude22=78.384005|latitude22=17.421472|pickupLocation=Hyderabad|

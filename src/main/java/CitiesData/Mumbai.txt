@@ -1,1 +1,0 @@
-longitude1=72.84343|latitude1=19.106129|longitude2=72.84343|latitude2=19.106129|pickupLocation=Mumbai|

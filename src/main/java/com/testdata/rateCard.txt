@@ -1,1 +1,0 @@
-rateCardVersion=47|NCR=350|Jaipur=0|Chandigarh=0|Hyderabad=350|Chennai=300|Bangalore=300|Mumbai=350|Pune=350|Coimbatore=0|Vizag=100|Mysore=150|

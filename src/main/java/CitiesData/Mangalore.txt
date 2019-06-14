@@ -1,1 +1,0 @@
-longitude1=74.8716065866089|latitude1=12.9722376459604|longitude2=74.8716065866089|latitude2=12.9722376459604|pickupLocation=Mangalore|

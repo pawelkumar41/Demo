@@ -1,1 +1,0 @@
-longitude1=72.831062|latitude1=21.17024|longitude2=72.831062|latitude2=21.17024|pickupLocation=Surat|

@@ -1,1 +1,0 @@
-longitude1=88.3639|latitude1=22.5726|longitude2=88.3639|latitude2=22.5726|pickupLocation=Kolkata|

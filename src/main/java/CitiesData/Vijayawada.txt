@@ -1,1 +1,0 @@
-longitude1=80.7|latitude1=16.5|longitude2=80.7|latitude2=16.5|pickupLocation=Vijayawada|

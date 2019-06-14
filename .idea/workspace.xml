@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="390832e0-9de9-47cb-a4d9-df5fd8058a9b" name="Default" comment="">
+    <list default="true" id="4c71b936-2a24-4075-b7c1-856129bf0d1e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/revvuiauto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sanitySuite.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sanitySuite.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Ahmedabad.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Bangalore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Chandigarh.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Chennai.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Coimbatore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Jaipur.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Kochi.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Kolkata.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Mangalore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Mumbai.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Mysore.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/NCR.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Pune.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Surat.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Tirupati.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Trivandrum.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Vijayawada.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CitiesData/Vizag.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/android/WeekDay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/CityData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/Commons.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/common/Logins.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pricing/DBCrash.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pricing/Deleteable.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pricing/main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/adminlogin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/androidLogin.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/androidWeekDay.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/androidWeekDayModify.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/logindetails.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/peakSeason.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/peakSeasonModify.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/rateCard.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/test.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/weekDay.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/weekEnd.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/weekdayModify.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/testdata/weekendModify.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/util/ControlPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/util/Dump.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/util/HubsPickDelivery.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/util/PeakSeason.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/util/PromoCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/util/ServiceCitiesList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/util/VerifyRateCard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/util/WeekEnd.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -13,45 +64,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/RevvApi$ServiceCitiesList_NCR.ic" NAME="ServiceCitiesList.NCR Coverage Results" MODIFIED="1546846242348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>com.util.*</FILTER>
-    </SUITE>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="sanitySuite.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
+      <file leaf-file-name="Registration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/util/Registration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ControlPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/util/ControlPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-end-line="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adminlogin.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/adminlogin.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="9" selection-start-column="9" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Commons.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/common/Commons.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="11175">
+              <caret line="754" column="23" selection-start-line="754" selection-start-column="23" selection-end-line="754" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -59,56 +78,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CityData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/common/CityData.java">
+      <file leaf-file-name="sanitySuite.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+            <state relative-caret-position="240">
+              <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Logins.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/common/Logins.java">
+      <file leaf-file-name="JSONTokener.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/json/json/20131018/json-20131018.jar!/org/json/JSONTokener.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+            <state relative-caret-position="4065">
+              <caret line="283" selection-start-line="283" selection-end-line="283" />
+              <folding>
+                <element signature="e#7584#7585#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logindetails.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/logindetails.txt">
+      <file leaf-file-name="JSONObject.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/json/json/20131018/json-20131018.jar!/org/json/JSONObject.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="34" selection-start-column="34" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1715">
-              <caret line="50" column="16" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="HubsPickDelivery.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/util/HubsPickDelivery.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1230">
-              <caret line="96" column="5" selection-start-line="89" selection-start-column="7" selection-end-line="96" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WeekEnd.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekEnd.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="1545">
+              <caret line="122" selection-start-line="122" selection-end-line="122" />
             </state>
           </provider>
         </entry>
@@ -122,97 +117,27 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>vizag</find>
-      <find>userLogin</find>
-      <find>b_st</find>
-      <find>bang</find>
-      <find>Bangalore_City.txt</find>
-    </findStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
   </component>
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../spring-rest-sample" value="PREVIEW" />
+        <entry key="$USER_HOME$/Documents/spring-rest-sample" value="PREVIEW" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/Database/MongoConnection.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/util/ControlPanel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/invoiceDump.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/util/Dump.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/testdata/androidLogin.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/util/HubsPickDelivery.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/testdata/Bangalore_City.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/testdata/AllCities" />
-        <option value="$PROJECT_DIR$/src/main/java/com/testdata/AllCities.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/testdata/restCities.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Bangalore.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/common/Commons1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/common/Same.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/common/Data.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/common/Commons.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/common/CityData.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/NCR.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Mumbai.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Chennai.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Pune.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Jaipur.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Mysore.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Coimbatore.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/testdata/logindetails.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Chandigarh.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Mangalore.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Kolkata.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Vizag.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Kochi.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Ahmedabad.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Trivandrum.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Surat.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Tirupati.txt" />
-        <option value="$PROJECT_DIR$/src/main/java/com/util/ServiceCitiesList.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CitiesData/Vijayawada.txt" />
-        <option value="$PROJECT_DIR$/config.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/common/Logins.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/util/PromoCode.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/util/Registration.java" />
         <option value="$PROJECT_DIR$/sanitySuite.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="MavenProjectNavigator">
-    <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="RevvAutomationTest" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-      </expand>
-      <select />
-    </treeState>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="303" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="727" />
   </component>
@@ -223,6 +148,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -230,71 +157,14 @@
               <item name="RevvApi" type="b2602c69:ProjectViewProjectNode" />
               <item name="revvautomation" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="RevvApi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="revvautomation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RevvApi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="revvautomation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RevvApi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="revvautomation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RevvApi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="revvautomation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RevvApi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="revvautomation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RevvApi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="revvautomation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="testdata" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RevvApi" type="b2602c69:ProjectViewProjectNode" />
-              <item name="revvautomation" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="ServiceCitiesList&#9;FILE&#9;file:///Users/pawelkumar/Documents/revvautomation/src/main/java/com/util/ServiceCitiesList.java" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/target/classes/com/util/ServiceCitiesList.class" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.other" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -308,7 +178,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG./Users/pawelkumar/Documents/revvautomation/sanitySuite.xml">
+  <component name="RunManager" selected="TestNG.Registration">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -331,8 +201,8 @@
       </option>
       <patterns />
     </configuration>
-    <configuration name="ServiceCitiesList.NCR" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RevvApi" />
+    <configuration name="Registration" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Demo" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.util.*" />
@@ -343,10 +213,10 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.util" />
-      <option name="MAIN_CLASS_NAME" value="com.util.ServiceCitiesList" />
-      <option name="METHOD_NAME" value="NCR" />
+      <option name="MAIN_CLASS_NAME" value="com.util.Registration" />
+      <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -360,16 +230,22 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="RevvApi" />
+    <configuration name="Registration.book" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/sanitySuite.xml" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="com.util" />
+      <option name="MAIN_CLASS_NAME" value="com.util.Registration" />
+      <option name="METHOD_NAME" value="book" />
       <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="SUITE" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -406,13 +282,13 @@
       <listeners />
     </configuration>
     <list>
-      <item itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" />
-      <item itemvalue="TestNG.ServiceCitiesList.NCR" />
+      <item itemvalue="TestNG.Registration.book" />
+      <item itemvalue="TestNG.Registration" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG./Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" />
-        <item itemvalue="TestNG.ServiceCitiesList.NCR" />
+        <item itemvalue="TestNG.Registration" />
+        <item itemvalue="TestNG.Registration.book" />
       </list>
     </recent_temporary>
   </component>
@@ -421,374 +297,106 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="390832e0-9de9-47cb-a4d9-df5fd8058a9b" name="Default" comment="" />
-      <created>1535101534473</created>
+      <changelist id="4c71b936-2a24-4075-b7c1-856129bf0d1e" name="Default" comment="" />
+      <created>1560494571203</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1535101534473</updated>
+      <updated>1560494571203</updated>
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2019.01.07 at 14h 03m 23s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    <history-entry file="Registration - 2019.06.14 at 13h 14m 45s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2019.01.07 at 14h 28m 36s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    <history-entry file="Registration - 2019.06.14 at 13h 17m 20s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2019.01.07 at 14h 29m 50s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    <history-entry file="Registration - 2019.06.14 at 13h 20m 25s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2019.01.07 at 14h 35m 29s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    <history-entry file="Registration - 2019.06.14 at 13h 21m 30s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2019.01.07 at 14h 37m 57s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    <history-entry file="Registration - 2019.06.14 at 13h 24m 05s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2019.01.07 at 14h 46m 19s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    <history-entry file="Registration - 2019.06.14 at 13h 26m 42s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2019.01.22 at 13h 19m 34s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    <history-entry file="Registration - 2019.06.14 at 13h 28m 05s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2019.04.01 at 13h 11m 46s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    <history-entry file="Registration - 2019.06.14 at 13h 28m 10s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2019.04.01 at 13h 12m 07s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    <history-entry file="Registration - 2019.06.14 at 13h 29m 24s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="_Users_pawelkumar_Documents_revvautomation_sanitySuite_xml - 2019.04.01 at 13h 17m 33s.xml">
-      <configuration name="/Users/pawelkumar/Documents/revvautomation/sanitySuite.xml" configurationId="TestNG" />
+    <history-entry file="Registration - 2019.06.14 at 13h 32m 47s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
     </history-entry>
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="727" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="727" extended-state="0" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32857144" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5024233" side_tool="true" weight="0.784127" />
-      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32956383" />
-      <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.49919224" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.49411765" />
-      <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32956383" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49757674" weight="0.5285714" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5714286" />
+      <window_info anchor="right" id="Mongo Explorer" order="3" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32857144" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.24959612" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Coverage" order="4" side_tool="true" weight="0.32956383" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.5205882" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32857144" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32857144" />
     </layout>
-    <layout-to-restore>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.74264705" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49757674" weight="0.63529414" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32857144" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49919224" weight="0.32857144" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info anchor="right" id="Mongo Explorer" order="4" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32857144" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Coverage" order="9" side_tool="true" weight="0.32956383" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5024233" side_tool="true" weight="0.784127" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.5205882" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="11" />
-    </breakpoint-manager>
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/androidWeekDayModify.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/peakSeasonModify.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/weekdayModify.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/weekendModify.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/Dump.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="83" column="106" selection-start-line="83" selection-start-column="77" selection-end-line="83" selection-end-column="106" />
+        <state relative-caret-position="11175">
+          <caret line="754" column="23" selection-start-line="754" selection-start-column="23" selection-end-line="754" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/rateCard.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/weekEnd.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/demoApplication.log.1">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/weekDay.txt">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/json/json/20131018/json-20131018.jar!/org/json/JSONTokener.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" selection-end-column="279" />
+        <state relative-caret-position="4245">
+          <caret line="283" selection-start-line="283" selection-end-line="283" />
+          <folding>
+            <element signature="e#7584#7585#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/AllCities" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/restCities.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/Bangalore_City.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/peakSeason.txt">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/json/json/20131018/json-20131018.jar!/org/json/JSONObject.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" lean-forward="true" selection-end-column="310" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8-sources.jar!/org/testng/SuiteRunnerWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/Commons1.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/Same.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/Data.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Mumbai.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Mysore.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="107" selection-start-column="107" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Pune.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="22" lean-forward="true" selection-end-column="94" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Coimbatore.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="91" selection-start-column="91" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/target/classes/com/util/ServiceCitiesList.class" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Chennai.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-end-column="105" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Mangalore.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="110" selection-start-column="110" selection-end-column="110" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Chandigarh.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="107" selection-start-column="107" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Bangalore.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="52" selection-start-column="52" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/NCR.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Jaipur.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-end-column="104" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Vizag.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="63" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Kochi.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="92" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Ahmedabad.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="98" selection-end-column="99" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Trivandrum.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="105" selection-end-column="106" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Kolkata.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="96" selection-start-column="96" selection-end-column="96" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Surat.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="100" selection-end-column="101" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Tirupati.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="85" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CitiesData/Vijayawada.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="87" selection-start-column="87" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/ServiceCitiesList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="120" column="30" selection-start-line="120" selection-start-column="30" selection-end-line="120" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4290">
-          <caret line="307" column="56" selection-start-line="307" selection-start-column="12" selection-end-line="307" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="37" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/VerifyRateCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/PromoCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/adminlogin.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/HubsPickDelivery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1230">
-          <caret line="96" column="5" selection-start-line="89" selection-start-column="7" selection-end-line="96" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekEnd.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/CityData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="16" column="42" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
+        <state relative-caret-position="1830">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
         </state>
       </provider>
     </entry>
@@ -799,41 +407,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/Commons.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/Commons.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/Logins.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/json/json/20131018/json-20131018.jar!/org/json/JSONTokener.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="4065">
+          <caret line="283" selection-start-line="283" selection-end-line="283" />
+          <folding>
+            <element signature="e#7584#7585#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/json/json/20131018/json-20131018.jar!/org/json/JSONObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1545">
+          <caret line="122" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/Registration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11175">
+          <caret line="754" column="23" selection-start-line="754" selection-start-column="23" selection-end-line="754" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/testdata/logindetails.txt">
+    <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1715">
-          <caret line="50" column="16" lean-forward="true" selection-start-line="50" selection-start-column="16" selection-end-line="50" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/util/ControlPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="50" column="12" lean-forward="true" selection-start-line="50" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/common/Logins.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="56" column="40" selection-start-line="56" selection-start-column="40" selection-end-line="56" selection-end-column="40" />
+        <state relative-caret-position="240">
+          <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
         </state>
       </provider>
     </entry>

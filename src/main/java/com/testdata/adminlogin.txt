@@ -1,1 +1,0 @@
-email=pawel.kumar@revv.co.in|password=revv!2345|

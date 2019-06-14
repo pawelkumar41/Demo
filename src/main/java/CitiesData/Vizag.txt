@@ -1,1 +1,0 @@
-longitude1=83.3|latitude1=17.71|longitude2=83.3|latitude2=17.71|pickupLocation=Vizag|
