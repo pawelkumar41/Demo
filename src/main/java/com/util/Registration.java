@@ -10,6 +10,8 @@ import org.testng.annotations.Test;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
+//Not its a demo, assertions are not there
+
 public class Registration {
 
 
