@@ -26,8 +26,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -54,8 +52,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -67,8 +63,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -101,8 +95,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/termsandconditions");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -123,8 +115,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -136,8 +126,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/kyc1");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -172,8 +160,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/kyc2");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -216,8 +202,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/kyc");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -250,8 +234,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/products/gold?action=&type=&amount=&currency=");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -271,8 +253,7 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
+
         }
     }
 
@@ -284,8 +265,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/products/gold/prices?currency=&days_limit=");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -305,8 +284,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -318,8 +295,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/products/gold/installment?amount=100000&tenure=6&type=currency&currency=IDR&gold=2");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -339,8 +314,7 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
+
         }
     }
 
@@ -352,8 +326,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold?trans_type=buy&start_date=&end_date=&page=&limit=");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -373,8 +345,7 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
+
         }
     }
 
@@ -386,8 +357,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction?transaction_number=TRX123&type=buy");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -407,8 +376,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -420,8 +387,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/po");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -446,8 +411,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -459,8 +422,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/installment");
             postRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -485,8 +446,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -498,8 +457,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/installment/transaction_number");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -519,8 +476,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -531,8 +486,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/installment/transaction_number");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -552,8 +505,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -565,8 +516,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/totalSell");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -586,8 +535,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -599,8 +546,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/termsandconditions");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -620,8 +565,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -633,8 +576,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/option/goldinstallment");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -654,8 +595,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -667,8 +606,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/option/tenure");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -688,8 +625,7 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
+
         }
     }
 
@@ -701,8 +637,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/option/kyc1");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -722,8 +656,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -735,8 +667,6 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            //HashMap<String, String> bookingdetails = null;
-            //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
             HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/option/kyc2");
             getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
@@ -756,8 +686,6 @@ public class Registration {
 
         {
             httpClient.close();
-            //Important: Close the connect
-            // httpClient.getConnectionManager().shutdown();
         }
     }
 

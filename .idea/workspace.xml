@@ -17,8 +17,8 @@
       <file leaf-file-name="Registration.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/util/Registration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="10920">
-              <caret line="728" lean-forward="true" selection-start-line="728" selection-end-line="728" />
+            <state relative-caret-position="125">
+              <caret line="687" column="31" selection-start-line="687" selection-start-column="31" selection-end-line="687" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -555,8 +555,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/util/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="10920">
-          <caret line="728" lean-forward="true" selection-start-line="728" selection-end-line="728" />
+        <state relative-caret-position="125">
+          <caret line="687" column="31" selection-start-line="687" selection-start-column="31" selection-end-line="687" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
