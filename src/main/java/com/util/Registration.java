@@ -1,4 +1,5 @@
 package com.util;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
@@ -7,6 +8,7 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.json.JSONObject;
 import org.testng.annotations.Test;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
@@ -17,8 +19,7 @@ public class Registration {
 
     private static CloseableHttpClient httpClient;
 
-    @Test(priority = 1)
-    //Below method is used to create booking
+    @Test
     public static void reg() throws Exception {
 
         try
@@ -59,8 +60,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 2)
-    //Below method is used to create booking
+    @Test
     public static void getAccountBalance() throws Exception {
 
         try
@@ -94,8 +94,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 3)
-    //Below method is used to create booking
+    @Test
     public static void terms() throws Exception {
 
         try
@@ -130,8 +129,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 4)
-    //Below method is used to create booking
+    @Test
     public static void kyc() throws Exception {
 
         try
@@ -167,8 +165,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 5)
-    //Below method is used to create booking
+    @Test
     public static void kyc2() throws Exception {
 
         try
@@ -212,8 +209,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 6)
-    //Below method is used to create booking
+    @Test
     public static void kycStatus() throws Exception {
 
         try
@@ -247,8 +243,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 7)
-    //Below method is used to create booking
+    @Test
     public static void calculateGOldPrice() throws Exception {
 
         try
@@ -282,8 +277,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 8)
-    //Below method is used to create booking
+    @Test
     public static void currentGoldPrice() throws Exception {
 
         try
@@ -317,8 +311,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 8)
-    //Below method is used to create booking
+    @Test
     public static void calcualateInstallment() throws Exception {
 
         try
@@ -352,8 +345,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 9)
-    //Below method is used to create booking
+    @Test
     public static void listGoldTransationHistory() throws Exception {
 
         try
@@ -387,8 +379,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 10)
-    //Below method is used to create booking
+    @Test
     public static void transactionStatus() throws Exception {
 
         try
@@ -422,8 +413,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 11)
-    //Below method is used to create booking
+    @Test
     public static void goldSell() throws Exception {
 
         try
@@ -462,8 +452,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 12)
-    //Below method is used to create booking
+    @Test
     public static void goldInstallmentSubmission() throws Exception {
 
         try
@@ -502,8 +491,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 13)
-    //Below method is used to create booking
+    @Test
     public static void inquiryInstallmentDetail() throws Exception {
 
         try
@@ -536,8 +524,7 @@ public class Registration {
         }
     }
 
-    @Test(priority = 14)
-    //Below method is used to create booking
+    @Test
     public static void installmentPaymnet() throws Exception {
 
         try
@@ -546,18 +533,13 @@ public class Registration {
             httpClient = HttpClients.createDefault();
             //HashMap<String, String> bookingdetails = null;
             //bookingdetails = Commons.getHashmapfromtxt("weekDay.txt");
-            HttpPost postRequest = new HttpPost("private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/installment/transaction_number");
-            postRequest.addHeader("content-type", "application/json");
+            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/installment/transaction_number");
+            getRequest.addHeader("content-type", "application/json");
             JSONObject object = new JSONObject();
-            object.put("total_amount", 565075.32);
-            object.put("currency", "IDR");
-            object.put("reference", "REF-0001");
-            object.put("signature", "{{signature}}");
-            object.put("installment_index", 3);
             String message;
             message = object.toString();
-            postRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(postRequest);
+            //getRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(getRequest);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -576,8 +558,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 15)
-    //Below method is used to create booking
+@Test
     public static void goldSellHistory() throws Exception {
 
         try
@@ -611,8 +592,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 16)
-    //Below method is used to create booking
+    @Test
     public static void termsAndc() throws Exception {
 
         try
@@ -646,8 +626,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 17)
-    //Below method is used to create booking
+    @Test
     public static void goldAmtOption() throws Exception {
 
         try
@@ -681,8 +660,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 17)
-    //Below method is used to create booking
+    @Test
     public static void goldTenureOption() throws Exception {
 
         try
@@ -716,8 +694,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 17)
-    //Below method is used to create booking
+    @Test
     public static void kycOption1() throws Exception {
 
         try
@@ -751,8 +728,7 @@ public class Registration {
     }
 
 
-    @Test(priority = 18)
-    //Below method is used to create booking
+    @Test
     public static void kycOption2() throws Exception {
 
         try
@@ -784,6 +760,7 @@ public class Registration {
             // httpClient.getConnectionManager().shutdown();
         }
     }
+
 }
 
 
