@@ -11,7 +11,6 @@ import org.testng.annotations.Test;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-
 //Note its a demo, assertions are not there
 
 public class Registration {
@@ -26,52 +25,27 @@ public class Registration {
 
         {
             httpClient = HttpClients.createDefault();
-            HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account");
+            HttpPost postRequest = new HttpPost("https://staging-b2b.emasdigi.com/api/vendor/v1/account/");
             postRequest.addHeader("content-type", "application/json");
+            postRequest.addHeader("api-key", "ab059da0-d80e-11e8-b534-51e13309b637");
+            postRequest.addHeader("User-Agent", "vendor-id:1");
             JSONObject object = new JSONObject();
-            object.put("name", "Zeus Olympus");
-            object.put("phone", "+62811717823");
-            object.put("email", "zeus@gmail.com");
-            object.put("birthdate", "1986-10-06");
-            object.put("identity_card_number", "2938399222");
-            object.put("tnc", true);
-            object.put("signature", "{signature_local}");
+            object.put("spouse_name", "Hera Olympus");
+            object.put("emergency_contact_name", "Ares Olympus");
+            object.put("emergency_contact_number", "0811717823");
+            object.put("emergency_contact_relationship", "Anak Kandung");
+            object.put("tax_id_number", "01.234.567-9.012.345");
+            object.put("job", "Karyawan Swasta");
+            object.put("company_name", "PT Great Olympus");
+            object.put("yearly_salary", "Rp. 250.000.000 - Rp. 500.000.000");
+            object.put("mother_maiden_name", "Rhea Olympus");
+            object.put("property_ownership", 2);
             String message;
             message = object.toString();
             postRequest.setEntity(new StringEntity(message, "UTF8"));
             HttpResponse response = httpClient.execute(postRequest);
             int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            System.out.println(statusCode);
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-
-        } finally
-
-        {
-            httpClient.close();
-        }
-    }
-
-
-    @Test
-    public static void getAccountBalance() throws Exception {
-
-        try
-
-        {
-            httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id");
-            getRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            String message;
-            message = object.toString();
-            //getRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(getRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
+            if (statusCode == 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
             }
             System.out.println(statusCode);
@@ -89,14 +63,50 @@ public class Registration {
 
 
     @Test
-    public static void terms() throws Exception {
+    public static void getAccountBalance() throws Exception {
 
         try
 
         {
             httpClient = HttpClients.createDefault();
-            HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/termsandconditions");
+            HttpGet getRequest = new HttpGet("http://staging-b2b.emasdigi.com/api/vendor/v1/account/739");
+            getRequest.addHeader("content-type", "application/json");
+            getRequest.addHeader("api-key", "ab059da0-d80e-11e8-b534-51e13309b637");
+            getRequest.addHeader("User-Agent", "vendor-id:7");
+            JSONObject object = new JSONObject();
+            String message;
+            message = object.toString();
+            //getRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(response);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+
+        } finally
+
+        {
+            httpClient.close();
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
+        }
+    }
+
+    @Test
+    public static void ternsAndCond() throws Exception {
+
+        try
+
+        {
+            httpClient = HttpClients.createDefault();
+            HttpPost postRequest = new HttpPost("staging-b2b.emasdigi.com/api/vendor/v1/account/739/termsandconditions");
             postRequest.addHeader("content-type", "application/json");
+            postRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            postRequest.addHeader("User-Agent", "vendor-id:7");
             JSONObject object = new JSONObject();
             object.put("approved", "true");
             String message;
@@ -115,26 +125,31 @@ public class Registration {
 
         {
             httpClient.close();
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
         }
     }
 
 
     @Test
-    public static void kyc() throws Exception {
+    public static void updateKyc1() throws Exception {
+
+        //Update KYC 1
 
         try
 
         {
             httpClient = HttpClients.createDefault();
-            HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/kyc1");
-            postRequest.addHeader("content-type", "application/json");
+            HttpGet getRequest = new HttpGet("http://staging-b2b.emasdigi.com/api/vendor/v1/account/739");
+            getRequest.addHeader("content-type", "application/json");
+            getRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            getRequest.addHeader("User-Agent", "vendor-id:7");
             JSONObject object = new JSONObject();
-            object.put("id_card_picture", "<multi-part>");
-            object.put("self_potrait_picture", "<multi-part>");
             String message;
             message = object.toString();
-            postRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(postRequest);
+            //getRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(response);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -154,29 +169,24 @@ public class Registration {
 
 
     @Test
-    public static void kyc2() throws Exception {
+    public static void geyKycStatus() throws Exception {
+
+        //Get KYC Status
 
         try
 
         {
             httpClient = HttpClients.createDefault();
-            HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/kyc2");
-            postRequest.addHeader("content-type", "application/json");
+            HttpGet getRequest = new HttpGet("http://staging-b2b.emasdigi.com/api/vendor/v1/account/739/kyc");
+            getRequest.addHeader("content-type", "application/json");
+            getRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            getRequest.addHeader("User-Agent", "vendor-id:7");
             JSONObject object = new JSONObject();
-            object.put("spouse_name", "Hera Olympus");
-            object.put("emergency_contact_name", "Ares Olympus");
-            object.put("emergency_contact_number", "0811717823");
-            object.put("emergency_contact_relationship", "Anak Kandung");
-            object.put("tax_id_number", "01.234.567-9.012.345");
-            object.put("job", "Karyawan Swasta");
-            object.put("company_name", "PT Great Olympus");
-            object.put("yearly_salary", "Rp. 250.000.000 - Rp. 500.000.000");
-            object.put("mother_maiden_name", "Rhea Olympus");
-            object.put("property_ownership", 2);
             String message;
             message = object.toString();
-            postRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(postRequest);
+            //getRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(response);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -196,19 +206,24 @@ public class Registration {
 
 
     @Test
-    public static void kycStatus() throws Exception {
+    public static void calculateTheGoldPrice() throws Exception {
+
+        //Calculate the gold prices
 
         try
 
         {
             httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/kyc");
+            HttpGet getRequest = new HttpGet("http://staging-b2b.emasdigi.com/api/vendor/v1/products/gold?action=sell&type=gram&amount=14.97&currency=IDR");
             getRequest.addHeader("content-type", "application/json");
+            getRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            getRequest.addHeader("User-Agent", "vendor-id:7");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
             //getRequest.setEntity(new StringEntity(message, "UTF8"));
             HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(response);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -228,19 +243,24 @@ public class Registration {
 
 
     @Test
-    public static void calculateGOldPrice() throws Exception {
+    public static void goldPrice() throws Exception {
+
+        //Calculate the gold prices
 
         try
 
         {
             httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/products/gold?action=&type=&amount=&currency=");
+            HttpGet getRequest = new HttpGet("http://staging-b2b.emasdigi.com/api/vendor/v1/products/gold/prices");
             getRequest.addHeader("content-type", "application/json");
+            getRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            getRequest.addHeader("User-Agent", "vendor-id:7");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
             //getRequest.setEntity(new StringEntity(message, "UTF8"));
             HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(response);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -253,25 +273,31 @@ public class Registration {
 
         {
             httpClient.close();
-
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
         }
     }
 
 
     @Test
-    public static void currentGoldPrice() throws Exception {
+    public static void calculateGOldInstallment() throws Exception {
+
+        //Calculate Gold Installment
 
         try
 
         {
             httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/products/gold/prices?currency=&days_limit=");
+            HttpGet getRequest = new HttpGet("http://staging-b2b.emasdigi.com/api/vendor/v1/products/gold/installment?amount=100000&tenure=6&currency=IDR");
             getRequest.addHeader("content-type", "application/json");
+            getRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            getRequest.addHeader("User-Agent", "vendor-id:7");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
             //getRequest.setEntity(new StringEntity(message, "UTF8"));
             HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(response);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -284,24 +310,30 @@ public class Registration {
 
         {
             httpClient.close();
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
         }
     }
 
 
     @Test
-    public static void calcualateInstallment() throws Exception {
+    public static void listGoldTransactionHistory() throws Exception {
 
+        //Gold Transaction History
         try
 
         {
             httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/products/gold/installment?amount=100000&tenure=6&type=currency&currency=IDR&gold=2");
+            HttpGet getRequest = new HttpGet("http://staging-b2b.emasdigi.com/api/vendor/v1/account/739/transaction/gold");
             getRequest.addHeader("content-type", "application/json");
+            getRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            getRequest.addHeader("User-Agent", "vendor-id:7");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
             //getRequest.setEntity(new StringEntity(message, "UTF8"));
             HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(response);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -314,38 +346,8 @@ public class Registration {
 
         {
             httpClient.close();
-
-        }
-    }
-
-
-    @Test
-    public static void listGoldTransationHistory() throws Exception {
-
-        try
-
-        {
-            httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold?trans_type=buy&start_date=&end_date=&page=&limit=");
-            getRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            String message;
-            message = object.toString();
-            //getRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(getRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            System.out.println(statusCode);
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-
-        } finally
-
-        {
-            httpClient.close();
-
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
         }
     }
 
@@ -353,17 +355,21 @@ public class Registration {
     @Test
     public static void transactionStatus() throws Exception {
 
+        //Transaction Status
         try
 
         {
             httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction?transaction_number=TRX123&type=buy");
+            HttpGet getRequest = new HttpGet("http://staging-b2b.emasdigi.com/api/vendor/v1/account/739/transaction?transaction_number=TRX123&type=buy");
             getRequest.addHeader("content-type", "application/json");
+            getRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            getRequest.addHeader("User-Agent", "vendor-id:7");
             JSONObject object = new JSONObject();
             String message;
             message = object.toString();
             //getRequest.setEntity(new StringEntity(message, "UTF8"));
             HttpResponse response = httpClient.execute(getRequest);
+            System.out.println(response);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -376,29 +382,35 @@ public class Registration {
 
         {
             httpClient.close();
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
         }
     }
 
 
     @Test
-    public static void goldSell() throws Exception {
+    public static void goldBuyTransaction() throws Exception {
 
+        //Gold Buy Transaction
         try
 
         {
             httpClient = HttpClients.createDefault();
-            HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/po");
+            HttpPost postRequest = new HttpPost("http://staging-b2b.emasdigi.com/api/vendor/v1/account/739/transaction/gold/po");
             postRequest.addHeader("content-type", "application/json");
+            postRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            postRequest.addHeader("User-Agent", "vendor-id:7");
             JSONObject object = new JSONObject();
-            object.put("amount", 1);
-            object.put("unit_price", "578050");
-            object.put("currency", "IDR");
             object.put("reference", "REF-0001");
+            object.put("amount", 1);
+            object.put("unit_price", 582330);
+            object.put("currency", "IDR");
             object.put("signature", "{{signature_local}}");
             String message;
             message = object.toString();
-            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            //getRequest.setEntity(new StringEntity(message, "UTF8"));
             HttpResponse response = httpClient.execute(postRequest);
+            System.out.println(response);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -411,29 +423,77 @@ public class Registration {
 
         {
             httpClient.close();
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
         }
     }
+
+
+    @Test
+    public static void goldSellTransaction() throws Exception {
+
+        //Gold Sell Transaction
+        try
+
+        {
+            httpClient = HttpClients.createDefault();
+            HttpPost postRequest = new HttpPost("http://staging-b2b.emasdigi.com/api/vendor/v1/account/739/transaction/gold/so");
+            postRequest.addHeader("content-type", "application/json");
+            postRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            postRequest.addHeader("User-Agent", "vendor-id:7");
+            JSONObject object = new JSONObject();
+            object.put("reference", "REF-0001");
+            object.put("amount", 1);
+            object.put("unit_price", 582330);
+            object.put("currency", "IDR");
+            object.put("signature", "{{signature_local}}");
+            String message;
+            message = object.toString();
+            //getRequest.setEntity(new StringEntity(message, "UTF8"));
+            HttpResponse response = httpClient.execute(postRequest);
+            System.out.println(response);
+            int statusCode = response.getStatusLine().getStatusCode();
+            if (statusCode != 200) {
+                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
+            }
+            System.out.println(statusCode);
+            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
+            String output;
+
+        } finally
+
+        {
+            httpClient.close();
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
+        }
+    }
+
 
 
     @Test
     public static void goldInstallmentSubmission() throws Exception {
 
+        //Gold Installment Transaction
         try
 
         {
             httpClient = HttpClients.createDefault();
-            HttpPost postRequest = new HttpPost("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/installment");
+            HttpPost postRequest = new HttpPost("http://staging-b2b.emasdigi.com/api/vendor/v1/account/139/transaction/gold/installment");
             postRequest.addHeader("content-type", "application/json");
+            postRequest.addHeader("api-key", "GaPWnbVwMKI5j7s7fEQtaF5S2Voe5Ix");
+            postRequest.addHeader("User-Agent", "vendor-id:7");
             JSONObject object = new JSONObject();
-            object.put("gold_amount", 10);
-            object.put("tenure", 2);
-            object.put("currency", "IDR");
             object.put("reference", "REF-0001");
+            object.put("amount", 1);
+            object.put("unit_price", 582330);
+            object.put("currency", "IDR");
             object.put("signature", "{{signature_local}}");
             String message;
             message = object.toString();
-            postRequest.setEntity(new StringEntity(message, "UTF8"));
+            //getRequest.setEntity(new StringEntity(message, "UTF8"));
             HttpResponse response = httpClient.execute(postRequest);
+            System.out.println(response);
             int statusCode = response.getStatusLine().getStatusCode();
             if (statusCode != 200) {
                 throw new RuntimeException("Failed with HTTP error code : " + statusCode);
@@ -446,254 +506,8 @@ public class Registration {
 
         {
             httpClient.close();
+            //Important: Close the connect
+            // httpClient.getConnectionManager().shutdown();
         }
     }
-
-
-    @Test
-    public static void inquiryInstallmentDetail() throws Exception {
-
-        try
-
-        {
-            httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/installment/transaction_number");
-            getRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            String message;
-            message = object.toString();
-            //getRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(getRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            System.out.println(statusCode);
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-
-        } finally
-
-        {
-            httpClient.close();
-        }
-    }
-
-    @Test
-    public static void installmentPaymnet() throws Exception {
-
-        try
-
-        {
-            httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/installment/transaction_number");
-            getRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            String message;
-            message = object.toString();
-            //getRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(getRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            System.out.println(statusCode);
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-
-        } finally
-
-        {
-            httpClient.close();
-        }
-    }
-
-
-@Test
-    public static void goldSellHistory() throws Exception {
-
-        try
-
-        {
-            httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/account/account_id/transaction/gold/totalSell");
-            getRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            String message;
-            message = object.toString();
-            //getRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(getRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            System.out.println(statusCode);
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-
-        } finally
-
-        {
-            httpClient.close();
-        }
-    }
-
-
-    @Test
-    public static void termsAndc() throws Exception {
-
-        try
-
-        {
-            httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/termsandconditions");
-            getRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            String message;
-            message = object.toString();
-            //getRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(getRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            System.out.println(statusCode);
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-
-        } finally
-
-        {
-            httpClient.close();
-        }
-    }
-
-
-    @Test
-    public static void goldAmtOption() throws Exception {
-
-        try
-
-        {
-            httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/option/goldinstallment");
-            getRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            String message;
-            message = object.toString();
-            //getRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(getRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            System.out.println(statusCode);
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-
-        } finally
-
-        {
-            httpClient.close();
-        }
-    }
-
-
-    @Test
-    public static void goldTenureOption() throws Exception {
-
-        try
-
-        {
-            httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/option/tenure");
-            getRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            String message;
-            message = object.toString();
-            //getRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(getRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            System.out.println(statusCode);
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-
-        } finally
-
-        {
-            httpClient.close();
-
-        }
-    }
-
-
-    @Test
-    public static void kycOption1() throws Exception {
-
-        try
-
-        {
-            httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/option/kyc1");
-            getRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            String message;
-            message = object.toString();
-            //getRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(getRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            System.out.println(statusCode);
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-
-        } finally
-
-        {
-            httpClient.close();
-        }
-    }
-
-
-    @Test
-    public static void kycOption2() throws Exception {
-
-        try
-
-        {
-            httpClient = HttpClients.createDefault();
-            HttpGet getRequest = new HttpGet("https://private-anon-3d1d0e6245-edgglobalapidocumentationv11.apiary-mock.com/vendor/v1/option/kyc2");
-            getRequest.addHeader("content-type", "application/json");
-            JSONObject object = new JSONObject();
-            String message;
-            message = object.toString();
-            //getRequest.setEntity(new StringEntity(message, "UTF8"));
-            HttpResponse response = httpClient.execute(getRequest);
-            int statusCode = response.getStatusLine().getStatusCode();
-            if (statusCode != 200) {
-                throw new RuntimeException("Failed with HTTP error code : " + statusCode);
-            }
-            System.out.println(statusCode);
-            BufferedReader br = new BufferedReader(new InputStreamReader((response.getEntity().getContent())));
-            String output;
-
-        } finally
-
-        {
-            httpClient.close();
-        }
-    }
-
 }
-
-
-
-
-
-
-
