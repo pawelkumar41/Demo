@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c71b936-2a24-4075-b7c1-856129bf0d1e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/util/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/util/Registration.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,14 +14,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Registration.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Registration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/util/Registration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6962">
-              <caret line="15" column="25" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="25" />
+            <state relative-caret-position="11167">
+              <caret line="773" column="29" lean-forward="true" selection-start-line="773" selection-start-column="29" selection-end-line="773" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sanitySuite.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -214,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.Registration.goldSellTransaction">
+  <component name="RunManager" selected="TestNG.Registration">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -266,7 +272,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="Registration.goldBuyTransaction" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Registration.installmentGoldAmountOptions" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Demo" />
       <extension name="coverage">
         <pattern>
@@ -279,7 +285,7 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.util" />
       <option name="MAIN_CLASS_NAME" value="com.util.Registration" />
-      <option name="METHOD_NAME" value="goldBuyTransaction" />
+      <option name="METHOD_NAME" value="installmentGoldAmountOptions" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -295,7 +301,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="Registration.goldSellTransaction" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Registration.installmentGoldTenumreOptions" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Demo" />
       <extension name="coverage">
         <pattern>
@@ -308,7 +314,7 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.util" />
       <option name="MAIN_CLASS_NAME" value="com.util.Registration" />
-      <option name="METHOD_NAME" value="goldSellTransaction" />
+      <option name="METHOD_NAME" value="installmentGoldTenumreOptions" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -324,7 +330,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="Registration.reg" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Registration.kycOption1" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Demo" />
       <extension name="coverage">
         <pattern>
@@ -337,7 +343,7 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.util" />
       <option name="MAIN_CLASS_NAME" value="com.util.Registration" />
-      <option name="METHOD_NAME" value="reg" />
+      <option name="METHOD_NAME" value="kycOption1" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -353,7 +359,7 @@
       <properties />
       <listeners />
     </configuration>
-    <configuration name="Registration.ternsAndCond" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="Registration.kycOption2" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Demo" />
       <extension name="coverage">
         <pattern>
@@ -366,7 +372,7 @@
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="com.util" />
       <option name="MAIN_CLASS_NAME" value="com.util.Registration" />
-      <option name="METHOD_NAME" value="ternsAndCond" />
+      <option name="METHOD_NAME" value="kycOption2" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="METHOD" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -405,19 +411,19 @@
       <listeners />
     </configuration>
     <list>
+      <item itemvalue="TestNG.Registration.installmentGoldAmountOptions" />
+      <item itemvalue="TestNG.Registration.installmentGoldTenumreOptions" />
+      <item itemvalue="TestNG.Registration.kycOption1" />
+      <item itemvalue="TestNG.Registration.kycOption2" />
       <item itemvalue="TestNG.Registration" />
-      <item itemvalue="TestNG.Registration.reg" />
-      <item itemvalue="TestNG.Registration.ternsAndCond" />
-      <item itemvalue="TestNG.Registration.goldBuyTransaction" />
-      <item itemvalue="TestNG.Registration.goldSellTransaction" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.Registration.goldSellTransaction" />
-        <item itemvalue="TestNG.Registration.goldBuyTransaction" />
         <item itemvalue="TestNG.Registration" />
-        <item itemvalue="TestNG.Registration.ternsAndCond" />
-        <item itemvalue="TestNG.Registration.reg" />
+        <item itemvalue="TestNG.Registration.kycOption2" />
+        <item itemvalue="TestNG.Registration.kycOption1" />
+        <item itemvalue="TestNG.Registration.installmentGoldTenumreOptions" />
+        <item itemvalue="TestNG.Registration.installmentGoldAmountOptions" />
       </list>
     </recent_temporary>
   </component>
@@ -435,35 +441,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Registration - 2019.06.19 at 14h 05m 11s.xml">
-      <configuration name="Registration" configurationId="TestNG" />
+    <history-entry file="Registration_installmentPayment - 2019.06.19 at 16h 31m 11s.xml">
+      <configuration name="Registration.installmentPayment" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Registration - 2019.06.19 at 14h 06m 12s.xml">
-      <configuration name="Registration" configurationId="TestNG" />
+    <history-entry file="Registration_installmentPayment - 2019.06.19 at 17h 00m 19s.xml">
+      <configuration name="Registration.installmentPayment" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Registration_goldBuyTransaction - 2019.06.19 at 14h 07m 13s.xml">
-      <configuration name="Registration.goldBuyTransaction" configurationId="TestNG" />
+    <history-entry file="Registration_totalGoldSell - 2019.06.19 at 17h 02m 13s.xml">
+      <configuration name="Registration.totalGoldSell" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Registration_goldBuyTransaction - 2019.06.19 at 14h 09m 02s.xml">
-      <configuration name="Registration.goldBuyTransaction" configurationId="TestNG" />
+    <history-entry file="Registration_totalGoldSell - 2019.06.19 at 17h 02m 59s.xml">
+      <configuration name="Registration.totalGoldSell" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Registration_goldBuyTransaction - 2019.06.19 at 14h 10m 47s.xml">
-      <configuration name="Registration.goldBuyTransaction" configurationId="TestNG" />
+    <history-entry file="Registration_totalGoldSell - 2019.06.19 at 17h 14m 29s.xml">
+      <configuration name="Registration.totalGoldSell" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Registration_goldBuyTransaction - 2019.06.19 at 14h 11m 31s.xml">
-      <configuration name="Registration.goldBuyTransaction" configurationId="TestNG" />
+    <history-entry file="Registration_termsAndConditions - 2019.06.19 at 17h 14m 48s.xml">
+      <configuration name="Registration.termsAndConditions" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Registration_goldBuyTransaction - 2019.06.19 at 14h 14m 15s.xml">
-      <configuration name="Registration.goldBuyTransaction" configurationId="TestNG" />
+    <history-entry file="Registration_installmentGoldAmountOptions - 2019.06.19 at 17h 16m 39s.xml">
+      <configuration name="Registration.installmentGoldAmountOptions" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Registration_goldBuyTransaction - 2019.06.19 at 14h 16m 06s.xml">
-      <configuration name="Registration.goldBuyTransaction" configurationId="TestNG" />
+    <history-entry file="Registration_installmentGoldTenumreOptions - 2019.06.19 at 17h 18m 01s.xml">
+      <configuration name="Registration.installmentGoldTenumreOptions" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Registration_goldBuyTransaction - 2019.06.19 at 14h 17m 42s.xml">
-      <configuration name="Registration.goldBuyTransaction" configurationId="TestNG" />
+    <history-entry file="Registration_kycOption1 - 2019.06.19 at 17h 19m 12s.xml">
+      <configuration name="Registration.kycOption1" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="Registration_goldSellTransaction - 2019.06.19 at 14h 17m 58s.xml">
-      <configuration name="Registration.goldSellTransaction" configurationId="TestNG" />
+    <history-entry file="Registration_kycOption2 - 2019.06.19 at 17h 20m 08s.xml">
+      <configuration name="Registration.kycOption2" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -489,10 +495,10 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4983845" weight="0.5714286" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32857144" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32956383" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4983845" visible="true" weight="0.5253968" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4983845" weight="0.5253968" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24959612" />
       <window_info id="UI Designer" order="2" />
@@ -754,7 +760,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/util/WeekDay.java" />
-    <entry file="file://$PROJECT_DIR$/sanitySuite.xml" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/util/CloseableHttpClient.java" />
     <entry file="file://$PROJECT_DIR$/RevvApp.iml">
       <provider selected="true" editor-type-id="text-editor" />
@@ -826,11 +831,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/util/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6962">
-          <caret line="15" column="25" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="25" />
+        <state relative-caret-position="11167">
+          <caret line="773" column="29" lean-forward="true" selection-start-line="773" selection-start-column="29" selection-end-line="773" selection-end-column="29" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
