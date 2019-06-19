@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4c71b936-2a24-4075-b7c1-856129bf0d1e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/util/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/util/Registration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,8 +17,8 @@
       <file leaf-file-name="Registration.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/util/Registration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11167">
-              <caret line="773" column="29" lean-forward="true" selection-start-line="773" selection-start-column="29" selection-end-line="773" selection-end-column="29" />
+            <state relative-caret-position="12015">
+              <caret line="801" column="31" lean-forward="true" selection-start-line="801" selection-start-column="31" selection-end-line="801" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -26,7 +26,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sanitySuite.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="sanitySuite.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="150">
@@ -58,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2072">
-              <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+            <state relative-caret-position="1785">
+              <caret line="119" column="17" lean-forward="true" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -93,8 +98,8 @@
         <option value="$PROJECT_DIR$/sanitySuite.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/util/CloseableHttpClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/util/TestObjectProperty.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/util/Registration.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -441,9 +446,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Registration_installmentPayment - 2019.06.19 at 16h 31m 11s.xml">
-      <configuration name="Registration.installmentPayment" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="Registration_installmentPayment - 2019.06.19 at 17h 00m 19s.xml">
       <configuration name="Registration.installmentPayment" configurationId="TestNG" />
     </history-entry>
@@ -471,6 +473,9 @@
     <history-entry file="Registration_kycOption2 - 2019.06.19 at 17h 20m 08s.xml">
       <configuration name="Registration.kycOption2" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="Registration - 2019.06.19 at 17h 21m 49s.xml">
+      <configuration name="Registration" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -495,10 +500,10 @@
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4983845" weight="0.5714286" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32857144" />
       <window_info anchor="right" id="Mongo Explorer" order="3" weight="0.32956383" />
-      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.4983845" weight="0.5253968" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.4983845" visible="true" weight="0.5253968" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24959612" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24959612" />
       <window_info id="UI Designer" order="2" />
@@ -552,13 +557,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8-sources.jar!/org/testng/SuiteRunnerWorker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="86" selection-start-line="86" selection-end-line="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/6.8/testng-6.8-sources.jar!/org/testng/TestNG.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15150">
@@ -822,27 +820,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2072">
-          <caret line="19" column="17" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="17" />
+        <state relative-caret-position="150">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/util/Registration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11167">
-          <caret line="773" column="29" lean-forward="true" selection-start-line="773" selection-start-column="29" selection-end-line="773" selection-end-column="29" />
+        <state relative-caret-position="12015">
+          <caret line="801" column="31" lean-forward="true" selection-start-line="801" selection-start-column="31" selection-end-line="801" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sanitySuite.xml">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+        <state relative-caret-position="1785">
+          <caret line="119" column="17" lean-forward="true" selection-start-line="119" selection-start-column="17" selection-end-line="119" selection-end-column="17" />
         </state>
       </provider>
     </entry>
